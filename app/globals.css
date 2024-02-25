@@ -79,6 +79,10 @@ html {
     line-height: 1.15;
 }
 
+a {
+    background-color: transparent;
+}
+
 .text-shadow{
     text-shadow:rgba(0, 0, 0, 0.24) 0 1px 0
 }

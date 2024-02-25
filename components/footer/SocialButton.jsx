@@ -6,7 +6,7 @@ export const SocialButton = () => {
 
     return (
         <div className={"flex mt-8 items-baseline"}>
-            <Image className={"invisible"} src={"/icons/hiddenFooter.svg"} width={81.65} height={41.73} alt={"hiddenFooter"}/>
+            <Image className={"invisible"} src={"/icons/hiddenFooter.svg"} width={52.8} height={41.72} alt={"hiddenFooter"}/>
             <div className={"mr-6 flex flex-wrap w-[calc(100% + 1rem)]"}>
                 {socialIcon.map((item, i) => (
                     <div className={"box-border p-[calc(0.5rem)]"} key={i}>
