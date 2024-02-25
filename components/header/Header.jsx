@@ -1,4 +1,4 @@
-import {HeaderServices} from "@/app/HeaderServices";
+import {HeaderServices} from "@/components";
 
 
 export const Header = () => {

@@ -1,5 +1,5 @@
 import './globals.css'
-import {Header} from "@/app/Header";
+import {Footer, Header} from "@/components";
 
 export const metadata = {
   title: 'اسنپ فود | سفارش آنلاین غذا از تمامی رستوران ها و فست فودها',
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
       <Header/>
       {children}
+      <Footer/>
       </body>
     </html>
   )
