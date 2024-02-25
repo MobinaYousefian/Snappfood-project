@@ -3,25 +3,184 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --sf-surface-main: #F9FAFB;
+    --sf-surface-dark: #EBEDF0;
+    --sf-surface-light: #FFFFFF;
+    --sf-surface-overlay: #3A3D42;
+    --sf-surface-alphaLight: rgba(249, 250, 251, 0.06);
+    --sf-surface-alphaMedium: rgba(249, 250, 251, 0.12);
+    --sf-surface-alphaHigh: rgba(249, 250, 251, 0.24);
+    --sf-carbon-main: #3A3D42;
+    --sf-carbon-dark: #181B1F;
+    --sf-carbon-light: #53565C;
+    --sf-carbon-overlay: #FFFFFF;
+    --sf-carbon-alphaLight: rgba(58, 61, 66, 0.06);
+    --sf-carbon-alphaMedium: rgba(58, 61, 66, 0.12);
+    --sf-carbon-alphaHigh: rgba(24, 28, 32, 0.2);
+    --sf-accent-main: #FF00A6;
+    --sf-accent-dark: #E00096;
+    --sf-accent-light: #FF38AC;
+    --sf-accent-overlay: #FFFFFF;
+    --sf-accent-alphaLight: rgba(255, 0, 166, 0.06);
+    --sf-accent-alphaMedium: rgba(255, 0, 166, 0.12);
+    --sf-accent-alphaHigh: rgba(255, 0, 166, 0.24);
+    --sf-accent2-main: #00B862;
+    --sf-accent2-dark: #008542;
+    --sf-accent2-light: #18C775;
+    --sf-accent2-overlay: #FFFFFF;
+    --sf-accent2-alphaLight: rgba(0, 133, 66, 0.06);
+    --sf-accent2-alphaMedium: rgba(0, 133, 66, 0.1);
+    --sf-accent2-alphaHigh: rgba(0, 133, 66, 0.2);
+    --sf-alert-main: #FA284B;
+    --sf-alert-dark: #E00025;
+    --sf-alert-light: #FF3D5D;
+    --sf-alert-overlay: #FFFFFF;
+    --sf-alert-alphaLight: rgba(250, 40, 75, 0.04);
+    --sf-alert-alphaMedium: rgba(250, 40, 75, 0.12);
+    --sf-alert-alphaHigh: rgba(250, 40, 75, 0.24);
+    --sf-attention-main: #FACB0F;
+    --sf-attention-dark: #9E6900;
+    --sf-attention-light: #FFD83D;
+    --sf-attention-overlay: #000000;
+    --sf-attention-alphaLight: rgba(250, 203, 15, 0.1);
+    --sf-attention-alphaMedium: rgba(250, 203, 15, 0.2);
+    --sf-attention-alphaHigh: rgba(250, 203, 15, 0.36);
+    --sf-inactive-main: #EDEFF0;
+    --sf-inactive-dark: #A6AAAD;
+    --sf-inactive-light: #EDEFF0;
+    --sf-inactive-overlay: #EDEFF0;
+    --sf-inactive-alphaLight: #EDEFF0;
+    --sf-inactive-alphaMedium: #EDEFF0;
+    --sf-inactive-alphaHigh: #EDEFF0;
+    --sf-scales-default: 1rem;
+    --sf-scales-caption: 0.75rem;
+    --sf-scales-xlarge: 1.5rem;
+    --sf-scales-xxlarge: 1.75rem;
+    --sf-scales-large: 1.125rem;
+    --sf-scales-body: 0.875rem;
+    --sf-scales-tiny: 0.625rem;
+    --sf-lineHeight-default: 1.5rem;
+    --sf-lineHeight-caption: 1rem;
+    --sf-lineHeight-xlarge: 2rem;
+    --sf-lineHeight-xxlarge: 2.25rem;
+    --sf-lineHeight-large: 1.75rem;
+    --sf-lineHeight-body: 1.25rem;
+    --sf-lineHeight-tiny: 0.75rem;
+    --sf-weight-bold: 700;
+    --sf-weight-regular: 500;
+    --sf-weight-normal: 400;
+    --sf-weight-light: 300;
+    --sf-spacing-0: 0rem;
+    --sf-spacing-1: 0.5rem;
+    --sf-spacing-2: 1rem;
+    --sf-spacing-3: 1.5rem;
+    --sf-spacing-4: 2rem;
+    --sf-spacing-5: 2.5rem;
+    --sf-spacing-6: 3rem;
+    --sf-spacing-7: 3.5rem;
+    --sf-spacing-8: 4rem;
+    --sf-spacing-9: 4.5rem;
+    --sf-spacing-10: 5rem;
+    --sf-breakpoints-xs: 0px;
+    --sf-breakpoints-sm: 600px;
+    --sf-breakpoints-md: 960px;
+    --sf-breakpoints-lg: 1280px;
+    --sf-breakpoints-xl: 1920px;
+    --sf-borders-xs: 0.09375rem;
+    --sf-borders-md: 0.1875rem;
+    --sf-borders-lg: 0.375rem;
+    --sf-shadows-inset: inset 0px 1px 6px rgba(0, 0, 0, 0.04);
+    --sf-shadows-small: 0px 1px 0px rgba(58, 61, 66, 0.06), 0px 2px 8px -2px rgba(0, 0, 0, 0.05);
+    --sf-shadows-medium: 0px 1px 0px rgba(58, 61, 66, 0.06), 0px 4px 16px -8px rgba(0, 0, 0, 0.2);
+    --sf-shadows-high: 0px 1px 0px rgba(58, 61, 66, 0.06), 0px 8px 32px -16px rgba(0, 0, 0, 0.3);
+    --sf-shadows-modal: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 8px 32px rgba(0, 0, 0, 0.16);
+    --sf-shadows-none: none;
+    /*--sf-gradients-party: (e="#FC5F99",t="#E12492")=>`radial-gradient(100% 303.06% at 0% 0%,${t} 0%,${e} 100%)`;*/
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/IRANSansWeb.woff2');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+    font-family: 'IRANSansBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../public/fonts/IRANSansWeb_Bold.woff2');
+}
+
+@font-face {
+    font-family: 'SnapWeb';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/SnappWeb2.0-Regular.woff');
+    /*font-display: block;*/
+}
+
+@font-face {
+    font-family: 'SnapWebBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../public/fonts/SnappWeb2.0-Bold.woff');
+    /*font-display: block;*/
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+    line-height: 1.15;
+}
+
+.text-shadow{
+    text-shadow:rgba(0, 0, 0, 0.24) 0 1px 0
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #0000;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border: 3px solid #fff;
+    border-radius: 16px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 3px solid #f4f4f4;
+}
+::-webkit-scrollbar-track:hover {
+    background-color: #f4f4f4;
+}
+
+button{
+    padding: 1px 6px ;
+}
+
+.bg-food-party{
+    background: radial-gradient(100% 303.06% at 0% 0%, rgb(252, 95, 153) 0%, rgb(225, 36, 146) 100%);
+}
+
+.rounded-food-party{
+    border-radius: 0.25rem 0.25rem 7.5rem;
 }
