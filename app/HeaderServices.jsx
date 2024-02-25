@@ -12,7 +12,7 @@ export const HeaderServices = async () => {
                 <div className={"grow"} key={item.id}>
                     <div className={"flex flex-col items-center justify-center pb-4 min-w-20"}>
                         <Image className={"mb-4"} width={40} height={40} src={item.icon} alt={item.name}/>
-                        <span className={"font-iranSans text-xs text-carbon-main"}>{item.name}</span>
+                        <span className={"font-iranSans text-xs text-carbon-light"}>{item.name}</span>
                     </div>
                 </div>
             ))}

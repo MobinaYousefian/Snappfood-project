@@ -5,7 +5,7 @@ export const Header = () => {
 
     return (
         <>
-            <div>
+            <div className={"bg-surface-light shadow-sp-small"}>
                 above section
                 <HeaderServices/>
             </div>
