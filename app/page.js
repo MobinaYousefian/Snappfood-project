@@ -2,10 +2,11 @@ import {Cities} from "@/components";
 
 export default function Home() {
   return (
-    <main>
-      <div className={"text-4xl mt-4"}>
+      <div>
+          <main>
+
+          </main>
           <Cities/>
       </div>
-    </main>
   )
 }
