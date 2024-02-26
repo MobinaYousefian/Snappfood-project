@@ -84,6 +84,28 @@ a {
     background-color: transparent;
 }
 
+
+@media (min-width: 600px) {
+    .cities-mainPage {
+        max-width: 25%;
+        flex-basis: 25%;
+    }
+}
+
+@media (min-width: 960px) {
+    .cities-mainPage {
+        max-width: 16.6667%;
+        flex-basis: 16.6667%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cities-mainPage {
+        max-width: 8.33333%;
+        flex-basis: 8.33333%;
+    }
+}
+
 .text-shadow{
     text-shadow:rgba(0, 0, 0, 0.24) 0 1px 0
 }

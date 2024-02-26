@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily : {
         'iranSans' : ["IRANSans", "sans-serif"],
+        'iRANSansBold' : ["IRANSansBold", "sans-serif"],
         'SnapWeb' : ["SnapWeb", "sans-serif"],
         'SnapWebBold' : ["SnapWebBold", "sans-serif"]
       },
@@ -28,7 +29,7 @@ module.exports = {
         "carbon-alphaMedium": "rgba(58, 61, 66, 0.12)",
         "carbon-alphaHigh": "rgba(24, 28, 32, 0.2)",
         "accent-main": "#FF00A6",
-        "accent-dark":" #E00096",
+        "accent-dark": "#E00096",
         "accent-light": "#FF38AC",
         "accent-overlay": "#FFFFFF",
         "accent-alphaLight": "rgba(255, 0, 166, 0.06)",
@@ -81,7 +82,7 @@ module.exports = {
       },
       borderWidth : {
         "borderFooter" : "0.09375rem"
-      }
+      },
     },
   },
   plugins: [],
