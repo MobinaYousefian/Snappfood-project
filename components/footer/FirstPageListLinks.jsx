@@ -10,7 +10,7 @@ export const FirstPageListLinks = () => {
                 <div key={i}>
                     <Link href={"/"}>
                         <div className={"m-2"}>
-                            <p className={"font-iranSans text-xs inline-block text-carbon-main"}>{item}</p>
+                            <p className={"font-iranSans text-xs inline-block text-carbon-main hover:text-accent-dark transition-socialFooter"}>{item}</p>
                         </div>
                     </Link>
                 </div>
