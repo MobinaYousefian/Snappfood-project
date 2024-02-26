@@ -11,7 +11,7 @@ import Link from "next/link";
 export const Footer = () => {
 
     return (
-        <footer className={"bg-surface-main box-border w-full p-12"}>
+        <footer className={"w-full bg-surface-main box-border p-12 bottom-0"}>
             <SupportButton/>
             <div className={"box-border flex flex-wrap m-[calc(-2.5rem)] w-[calc(100% + 5rem)]"}>
                 <div className={"flex-grow p-10"}>

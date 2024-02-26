@@ -4,11 +4,9 @@ import {HeaderServices} from "@/components";
 export const Header = () => {
 
     return (
-        <>
-            <div className={"bg-surface-light shadow-sp-small"}>
-                above section
-                <HeaderServices/>
-            </div>
-        </>
+        <header className={"w-full z-50 bg-surface-light shadow-sp-small sticky top-0 right-0 left-0"}>
+            above section
+            <HeaderServices/>
+        </header>
     )
 }
