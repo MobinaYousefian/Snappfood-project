@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily : {
         'iranSans' : ["IRANSans", "sans-serif"],
-        'SnapWeb' : ["SnapWeb", "sans-serif"]
+        'SnapWeb' : ["SnapWeb", "sans-serif"],
+        'SnapWebBold' : ["SnapWebBold", "sans-serif"]
       },
       colors : {
         "surface-main": "#F9FAFB",
@@ -79,7 +80,7 @@ module.exports = {
         "socialFooter" : "all 150ms ease-out 0s"
       },
       borderWidth : {
-        "socialFooter" : "0.09375rem"
+        "borderFooter" : "0.09375rem"
       }
     },
   },

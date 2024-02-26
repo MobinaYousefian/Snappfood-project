@@ -133,3 +133,7 @@ button{
 .footer-padding {
     padding: calc(2.5rem);
 }
+
+.transition-spport {
+    transition: transform 0.3s ease-in 0s;
+}
