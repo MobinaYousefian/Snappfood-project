@@ -7,11 +7,13 @@ export const FirstPageListLinks = () => {
     return (
         <>
             {pageList.map( (item, i) => (
-                <Link href={"/"}>
-                    <div className={"m-2"}>
-                        <p key={i} className={"font-iranSans text-xs inline-block text-carbon-main"}>{item}</p>
-                    </div>
-                </Link>
+                <div key={i}>
+                    <Link href={"/"}>
+                        <div className={"m-2"}>
+                            <p className={"font-iranSans text-xs inline-block text-carbon-main"}>{item}</p>
+                        </div>
+                    </Link>
+                </div>
             ) )}
         </>
     )
