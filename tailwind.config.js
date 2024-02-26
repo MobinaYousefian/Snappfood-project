@@ -81,8 +81,13 @@ module.exports = {
         "socialFooter" : "all 150ms ease-out 0s"
       },
       borderWidth : {
-        "borderFooter" : "0.09375rem"
+        "spBorder" : "0.09375rem"
       },
+      screens : {
+        "sp-tablet" : "600px",
+        "sp-laptop" : "960px",
+        "sp=laptop-lg" : "1280px"
+      }
     },
   },
   plugins: [],
