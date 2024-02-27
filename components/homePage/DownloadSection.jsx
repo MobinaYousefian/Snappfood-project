@@ -1,6 +1,9 @@
 import Image from "next/image";
+import {InputDownloadSection} from "@/components";
+import {getData} from "@/lib/dataFeching";
 
-export const DownloadSection = () => {
+export const DownloadSection = async () => {
+    const jsonData = await getData()
 
     const applicationDownloader = ["myket", "bazar", "sibapp", "iapps"]
 
@@ -12,12 +15,7 @@ export const DownloadSection = () => {
                     <p className={"text-[0.875rem] leading-8 font-SnapWeb text-carbon-light mb-10"}>با اپلیکیشن اسنپ‌فود به راحتی و با چند کلیک ساده می‌توانید رستوران‌ها، کافه‌ها، شیرینی‌فروشی‌ها و سوپرمارکت‌های نزدیک خودتان را جست‌و‌جو کرده و از تجربه سفارش آسان از اسنپ‌فود لذت ببرید.</p>
                     <div className={"leading-8 mb-10"}>
                         <p className={"mb-3.5 text-xs text-carbon-light font-iRANSansBold"}>برای دریافت لینک دانلود اپلیکیشن، شماره موبایلتان را وارد کنید</p>
-                        <form className={"leading-8 box-border w-[35vw] justify-between items-center flex shadow-sp-medium border-[0.0625rem] rounded-[0.375rem] border-carbon-alphaMedium border-solid bg-surface-light mt-[0.375rem] h-12 max-w-[50%] min-w-[17.8125rem]"}>
-                            <div className={"h-full grow transition-socialFooter"}>
-                                <input className={"outline-none placeholder-carbon-main/40 text-carbon-main rounded-[0.375rem] box-border w-full h-full font-iranSans p-3 leading-6"} placeholder={"*********۰۹"}/>
-                            </div>
-                            <button className={"hover:bg-accent-light font-iRANSansBold text-[0.875rem] bg-accent-main text-surface-light rounded-[0.375rem] border-accent-main border-solid border-spBorder h-8 min-w-[6.6875rem] ml-2 inline-flex justify-center items-center transition-socialFooter"}>دریافت لینک</button>
-                        </form>
+                        <InputDownloadSection jsonData={jsonData}/>
                     </div>
                     <div className={"max-[1320px]:w-full w-[40.625rem] mb-10 flex flex-wrap"}>
                         {applicationDownloader.map( (item, i) => (
