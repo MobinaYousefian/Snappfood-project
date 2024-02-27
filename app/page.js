@@ -1,10 +1,14 @@
-import {Cities} from "@/components";
-import {Seller} from "@/components";
+import {
+    Cities,
+    DownloadSection,
+    Seller
+} from "@/components";
 
 export default function Home() {
   return (
       <div>
-          <main>
+          <main className={"mx-auto max-w-[85.375rem] pb-4 sp-tablet:pb-6 sp-laptop:pb-10"}>
+              <DownloadSection/>
               <Seller/>
           </main>
           <Cities/>
