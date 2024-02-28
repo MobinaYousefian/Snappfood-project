@@ -8,7 +8,7 @@ import {
 export default function Home() {
   return (
       <div>
-          <main className={"mx-auto max-w-[85.375rem] pb-4 sp-tablet:pb-6 sp-laptop:pb-10"}>
+          <main className={"mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
               <CategorySection/>
               <DownloadSection/>
               <Seller/>
