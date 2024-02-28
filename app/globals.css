@@ -86,6 +86,11 @@ a {
 
 
 @media (min-width: 600px) {
+    .category-mainPage {
+        max-width: 33.3333%;
+        flex-basis: 33.3333%;
+    }
+
     .cities-mainPage {
         max-width: 25%;
         flex-basis: 25%;
@@ -98,6 +103,11 @@ a {
 }
 
 @media (min-width: 960px) {
+    .category-mainPage {
+        max-width: 25%;
+        flex-basis: 25%;
+    }
+
     .cities-mainPage {
         max-width: 16.6667%;
         flex-basis: 16.6667%;
@@ -110,6 +120,11 @@ a {
 }
 
 @media (min-width: 1280px) {
+    .category-mainPage {
+        max-width: 16.6667%;
+        flex-basis: 16.6667%;
+    }
+
     .cities-mainPage {
         max-width: 8.33333%;
         flex-basis: 8.33333%;
@@ -169,4 +184,9 @@ button{
 
 .transition-spport {
     transition: transform 0.3s ease-in 0s;
+}
+
+/* used in CategorySection component */
+.parent:hover .child {
+    transform: translateX(-0.125rem);
 }

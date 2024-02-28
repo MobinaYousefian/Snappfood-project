@@ -78,7 +78,8 @@ module.exports = {
             'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       transitionProperty : {
-        "socialFooter" : "all 150ms ease-out 0s"
+        "socialFooter" : "all 150ms ease-out 0s",
+        "categoryHomePage" : "all 200ms ease-in-out 0s"
       },
       borderWidth : {
         "spBorder" : "0.09375rem"
