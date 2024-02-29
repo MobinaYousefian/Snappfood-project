@@ -1,5 +1,9 @@
 import './globals.css'
 import {Footer, Header} from "@/components";
+import {Providers} from "@/redux/provider";
+import dynamic from "next/dynamic";
+
+
 
 export const metadata = {
   title: 'اسنپ فود | سفارش آنلاین غذا از تمامی رستوران ها و فست فودها',
@@ -7,12 +11,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+    const DynamicModals = dynamic(() => import("../components/header/AddressModal"), {
+        ssr : false
+    })
+
   return (
     <html lang="en">
       <body>
-      <Header/>
-      {children}
-      <Footer/>
+      <Providers>
+          <Header/>
+          {children}
+          <Footer/>
+          <DynamicModals/>
+      </Providers>
       </body>
     </html>
   )
