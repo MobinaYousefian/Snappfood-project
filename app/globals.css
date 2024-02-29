@@ -86,6 +86,10 @@ a {
 
 
 @media (min-width: 600px) {
+    .header-address-span {
+        max-width: calc(-85px + 57vw);
+    }
+
     .category-mainPage {
         max-width: 33.3333%;
         flex-basis: 33.3333%;
@@ -103,6 +107,11 @@ a {
 }
 
 @media (min-width: 960px) {
+    .header-address-span {
+        min-width: 9.375rem;
+        max-width: calc(-85px + 24vw);
+    }
+
     .category-mainPage {
         max-width: 25%;
         flex-basis: 25%;
@@ -189,4 +198,14 @@ button{
 /* used in CategorySection component */
 .parent:hover .child {
     transform: translateX(-0.125rem);
+}
+
+.header-animation {
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: none;
 }

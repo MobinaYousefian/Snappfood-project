@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 // import * as fs from "fs";
 
 
-export const InputDownloadSection = ({jsonData}) => {
+export const InputDownloadSection = ({userNumbers}) => {
     const [number, setNumber] = useState("");
 
     const handleSetNumber = (e) => {
@@ -12,7 +12,7 @@ export const InputDownloadSection = ({jsonData}) => {
     }
 
     const handleAssignData = () => {
-        // jsonData.userNumbers.push(
+        // userNumbers.push(
         //     {
         //         "userId" : uuidv4(),
         //         "number" : number

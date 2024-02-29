@@ -3,7 +3,7 @@ import {InputDownloadSection} from "@/components";
 import {getData} from "@/lib/dataFeching";
 
 export const DownloadSection = async () => {
-    const jsonData = await getData()
+    const {userNumbers} = await getData()
 
     const applicationDownloader = ["myket", "bazar", "sibapp", "iapps"]
 
@@ -15,7 +15,7 @@ export const DownloadSection = async () => {
                     <p className={"text-[0.875rem] leading-8 font-SnapWeb text-carbon-light mb-10"}>با اپلیکیشن اسنپ‌فود به راحتی و با چند کلیک ساده می‌توانید رستوران‌ها، کافه‌ها، شیرینی‌فروشی‌ها و سوپرمارکت‌های نزدیک خودتان را جست‌و‌جو کرده و از تجربه سفارش آسان از اسنپ‌فود لذت ببرید.</p>
                     <div className={"leading-8 mb-10"}>
                         <p className={"mb-3.5 text-xs text-carbon-light font-iRANSansBold"}>برای دریافت لینک دانلود اپلیکیشن، شماره موبایلتان را وارد کنید</p>
-                        <InputDownloadSection jsonData={jsonData}/>
+                        <InputDownloadSection userNumbers={userNumbers}/>
                     </div>
                     <div className={"max-[1320px]:w-full w-[40.625rem] mb-10 flex flex-wrap"}>
                         {applicationDownloader.map( (item, i) => (

@@ -2,8 +2,7 @@ import { getData } from "@/lib/dataFeching";
 import Link from "next/link";
 
 export const Cities = async () => {
-    const data = await getData()
-    const cities = data.cities
+    const {cities} = await getData()
 
     return (
         <div className={"box-border w-full p-8 bg-surface-light border-t-[0.0625rem] border-surface-dark border-solid"}>

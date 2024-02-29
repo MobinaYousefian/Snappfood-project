@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const CategorySection = async () => {
-    const jsonData = await getData()
-    const categories = jsonData.categories
+    const {categories} = await getData()
+
     return (
         <div className={"mb-16 pt-4 mx-4 padding-size flex flex-col"}>
             <p className={"mb-8 font-iRANSansBold text-base text-carbon-light"}>دسته بندی ها</p>
