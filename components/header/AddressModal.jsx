@@ -5,9 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 const AddressModal = () => {
 
-    const headerAddress = useSelector(state => state.headerAddress)
-    // console.log(headerAddress)
-    // const { isOpen, address} =
+    const headerAddress = useSelector(state => state.isOpen)
+    console.log(`🥤🧋~: ${headerAddress}`);
     const dispatch = useDispatch()
 
     const handleCloseModal = () => {
