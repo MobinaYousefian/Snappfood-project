@@ -87,7 +87,9 @@ module.exports = {
       screens : {
         "sp-tablet" : "600px",
         "sp-laptop" : "960px",
-        "sp=laptop-lg" : "1280px"
+        "sp=laptop-lg" : "1280px",
+        "947" : "947px",
+        "1288" : "1288px"
       }
     },
   },
