@@ -1,7 +1,6 @@
 import {getData} from "@/lib/dataFeching";
 import Link from "next/link";
 import Image from "next/image";
-import {getWorkTime} from "@/components/homePage/getWorkTime";
 import clsx from "clsx";
 
 export const RestaurantsSlider = async () => {
@@ -11,7 +10,6 @@ export const RestaurantsSlider = async () => {
 
     const now = new Date();
     const currentTime = now.getHours() * 60 + now.getMinutes();  //Minutes since Midnight
-    const restaurantsWorkHour = getWorkTime()
     // const restaurantsWorkHour
 
     return (
