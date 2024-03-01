@@ -627,25 +627,21 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : {
-        "saturday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "sunday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "monday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "tuesday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "wednesday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "thursday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "friday" : ["۱۷:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"]
-      },
+      "workHour" : [
+        {"openHour" : 12, "openMinute" : 0, "closeHour" : 17, "closeMinute": 0},
+        {"openHour" : 19, "openMinute" : 0, "closeHour" : 23, "closeMinute": 0}
+      ],
       "delivery": {
         "snappExpress" : true,
         "price" : 12800
       },
-      "Coupon" : true,
-      "CouponList" : [
+      "coupon" : true,
+      "couponList" : [
         "۱۰٪ تخفیف مخصوص سفارش اول",
         "ارسال رایگان سفارش با خرید حداقل ۱.۱ میلیون تومان",
         "سوپ نودل رایگان با خرید حداقل ۴۹۰ هزار تومان"
       ],
+      "discountNumber" : "۱۰",
       "foodList" : [
         "سوشی",
         "نودل",
@@ -796,23 +792,19 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : {
-        "saturday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "sunday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "monday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "tuesday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "wednesday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "thursday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"],
-        "friday" : ["۱۶:۰۰ - ۱۲:۰۰", "۲۳:۰۰ - ۱۹:۰۰"]
-      },
+      "workHour" : [
+        {"openHour" : 12, "openMinute" : 0, "closeHour" : 16, "closeMinute": 0},
+        {"openHour" : 19, "openMinute" : 0, "closeHour" : 23, "closeMinute": 0}
+      ],
       "delivery": {
         "snappExpress" : true,
         "price" : 14900
       },
-      "Coupon" : true,
-      "CouponList" : [
+      "coupon" : true,
+      "couponList" : [
         "۱۰٪ تخفیف با خرید از دسته\u200Cی برگر"
       ],
+      "discountNumber" : "۱۰",
       "foodList" : [
         "سوخاری",
         "پیتزا",
@@ -951,20 +943,14 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : {
-        "saturday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "sunday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "monday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "tuesday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "wednesday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "thursday" : ["۲۳:۳۰ - ۱۱:۳۰"],
-        "friday" : ["۲۳:۳۰ - ۱۱:۳۰"]
-      },
+      "workHour" : [
+        {"openHour" : 11, "openMinute" : 30, "closeHour" : 23, "closeMinute": 30}
+      ],
       "delivery": {
         "snappExpress" : false,
         "price" : 15000
       },
-      "Coupon" : false,
+      "coupon" : false,
       "foodList" : [
         "سوخاری",
         "ساندویچ",
@@ -1109,20 +1095,14 @@
         "isOnline" : true,
         "isCredit" : false
       },
-      "workHour" : {
-        "saturday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "sunday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "monday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "tuesday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "wednesday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "thursday" : ["۲۳:۴۵ - ۱۱:۰۰"],
-        "friday" : ["۲۳:۴۵ - ۱۱:۰۰"]
-      },
+      "workHour" : [
+        {"openHour" : 11, "openMinute" : 0, "closeHour" : 23, "closeMinute": 45}
+      ],
       "delivery": {
         "snappExpress" : true,
         "price" : 11200
       },
-      "Coupon" : false,
+      "coupon" : false,
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1266,19 +1246,16 @@
         "isCredit" : true
       },
       "workHour" : {
-        "saturday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "sunday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "monday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "tuesday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "wednesday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "thursday" : ["۲۱:۴۵ - ۱۱:۳۰"],
-        "friday" : ["تعطیل"]
+        "weekdays" : [
+          {"openHour" : 11, "openMinute" : 30, "closeHour" : 21, "closeMinute": 45}
+        ],
+        "friday" : "تعطیل"
       },
       "delivery": {
         "snappExpress" : true,
         "price" : 12800
       },
-      "Coupon" : false,
+      "coupon" : false,
       "foodList" : [
         "چلو کباب",
         "خوراک",

@@ -209,3 +209,11 @@ button{
     animation-play-state: running;
     animation-name: none;
 }
+
+.slidersCategories-transition {
+    transition: opacity 0.7s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
+.slidersCategories-transform {
+    transform: translate3d(0px, 0px, 0px);
+}
