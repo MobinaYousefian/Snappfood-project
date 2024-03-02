@@ -1,6 +1,5 @@
 import './globals.css'
 import {Footer, Header} from "@/components";
-import {Providers} from "@/redux/provider";
 import dynamic from "next/dynamic";
 
 
@@ -19,12 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Providers>
-          <Header/>
-          {children}
-          <Footer/>
-          <DynamicModals/>
-      </Providers>
+      <Header/>
+      {children}
+      <Footer/>
+      <DynamicModals/>
       </body>
     </html>
   )
