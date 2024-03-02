@@ -1,6 +1,7 @@
 import './globals.css'
 import {Footer, Header} from "@/components";
 import dynamic from "next/dynamic";
+import {getData} from "@/lib/dataFeching";
 
 
 
@@ -9,7 +10,9 @@ export const metadata = {
   description: 'سفارش غذا با تخفیف از رستوران ها و فست فود های ایران. ارسال اکسپرس در سریع ترین زمان ممکن. خرید غذا با امکان مقایسه رستوران ها.\n',
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+    const { storeCategories } = await getData()
 
     const DynamicModals = dynamic(() => import("../components/header/AddressModal"), {
         ssr : false
@@ -18,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Header/>
+      <Header storeCategories={storeCategories}/>
       {children}
       <Footer/>
       <DynamicModals/>

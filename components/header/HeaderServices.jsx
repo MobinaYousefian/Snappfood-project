@@ -1,10 +1,7 @@
-import {getData } from "@/lib/dataFeching";
 import Image from "next/image";
 import Link from "next/link";
 
-export const HeaderServices = async () => {
-
-    const { storeCategories } = await getData()
+export const HeaderServices = ({storeCategories}) => {
 
     return (
         <nav className={"flex flex-nowrap pt-4 overflow-x-auto"}>
