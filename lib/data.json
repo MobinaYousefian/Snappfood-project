@@ -627,15 +627,16 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : [
-        {"openHour" : 12, "openMinute" : 0, "closeHour" : 17, "closeMinute": 0},
-        {"openHour" : 19, "openMinute" : 0, "closeHour" : 23, "closeMinute": 0}
-      ],
+      "openHour" : [12, 19],
+      "openMinute" : [0],
+      "closeHour" : [17, 23],
+      "closeMinute": [0],
+      "isOffWeekend" : false,
       "delivery": {
-        "snappExpress" : true,
+        "type" : "ارسال اکسپرس",
+        "express": true,
         "price" : 12800
       },
-      "coupon" : true,
       "couponList" : [
         "۱۰٪ تخفیف مخصوص سفارش اول",
         "ارسال رایگان سفارش با خرید حداقل ۱.۱ میلیون تومان",
@@ -792,15 +793,16 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : [
-        {"openHour" : 12, "openMinute" : 0, "closeHour" : 16, "closeMinute": 0},
-        {"openHour" : 19, "openMinute" : 0, "closeHour" : 23, "closeMinute": 0}
-      ],
+      "openHour" : [12, 19],
+      "openMinute" : [0],
+      "closeHour" : [16, 23],
+      "closeMinute": [0],
+      "isOffWeekend" : false,
       "delivery": {
-        "snappExpress" : true,
+        "type" : "ارسال اکسپرس",
+        "express": true,
         "price" : 14900
       },
-      "coupon" : true,
       "couponList" : [
         "۱۰٪ تخفیف با خرید از دسته\u200Cی برگر"
       ],
@@ -943,14 +945,17 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : [
-        {"openHour" : 11, "openMinute" : 30, "closeHour" : 23, "closeMinute": 30}
-      ],
+      "openHour" : [11],
+      "openMinute" : [30],
+      "closeHour" : [23],
+      "closeMinute": [30],
+      "isOffWeekend" : false,
       "delivery": {
-        "snappExpress" : false,
+        "type" : "پیک فروشنده",
+        "express": false,
         "price" : 15000
       },
-      "coupon" : false,
+      "couponList" : [],
       "foodList" : [
         "سوخاری",
         "ساندویچ",
@@ -1095,14 +1100,17 @@
         "isOnline" : true,
         "isCredit" : false
       },
-      "workHour" : [
-        {"openHour" : 11, "openMinute" : 0, "closeHour" : 23, "closeMinute": 45}
-      ],
+      "openHour" : [11],
+      "openMinute" : [0],
+      "closeHour" : [23],
+      "closeMinute": [45],
+      "isOffWeekend" : false,
       "delivery": {
-        "snappExpress" : true,
+        "type" : "ارسال اکسپرس",
+        "express": true,
         "price" : 11200
       },
-      "coupon" : false,
+      "couponList" : [],
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1245,17 +1253,17 @@
         "isOnline" : true,
         "isCredit" : true
       },
-      "workHour" : {
-        "weekdays" : [
-          {"openHour" : 11, "openMinute" : 30, "closeHour" : 21, "closeMinute": 45}
-        ],
-        "friday" : "تعطیل"
-      },
+      "openHour" : [11],
+      "openMinute" : [30],
+      "closeHour" : [21],
+      "closeMinute": [45],
+      "isOffWeekend" : true,
       "delivery": {
-        "snappExpress" : true,
+        "type" : "ارسال اکسپرس",
+        "express": true,
         "price" : 12800
       },
-      "coupon" : false,
+      "couponList" : [],
       "foodList" : [
         "چلو کباب",
         "خوراک",

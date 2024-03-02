@@ -62,7 +62,6 @@
     font-style: normal;
     font-weight: 400;
     src: url('../public/fonts/SnappWeb2.0-Regular.woff');
-    /*font-display: block;*/
 }
 
 @font-face {
@@ -70,7 +69,6 @@
     font-style: normal;
     font-weight: 700;
     src: url('../public/fonts/SnappWeb2.0-Bold.woff');
-    /*font-display: block;*/
 }
 
 html {
@@ -140,11 +138,6 @@ a {
     }
 }
 
-.text-shadow{
-    text-shadow:rgba(0, 0, 0, 0.24) 0 1px 0
-}
-
-/* width */
 ::-webkit-scrollbar {
     width: 14px;
     background-color: #f4f4f4;
@@ -154,14 +147,12 @@ a {
     display: none;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background-color: #0000;
     border-radius: 7px;
     cursor: pointer;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background-color: #babac0;
     border: 3px solid #fff;
@@ -170,21 +161,12 @@ a {
     transition: all .2s linear;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5;
     border: 3px solid #f4f4f4;
 }
 ::-webkit-scrollbar-track:hover {
     background-color: #f4f4f4;
-}
-
-button{
-    padding: 1px 6px ;
-}
-
-.rounded-food-party{
-    border-radius: 0.25rem 0.25rem 7.5rem;
 }
 
 .footer-padding {
@@ -216,4 +198,8 @@ button{
 
 .slidersCategories-transform {
     transform: translate3d(0px, 0px, 0px);
+}
+
+.restaurantSections-button-transition {
+    transition: all 500ms ease-in-out 0s;
 }

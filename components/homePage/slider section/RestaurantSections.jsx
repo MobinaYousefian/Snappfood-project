@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import {RestaurantsSlider} from "@/components";
+import {ResSlider} from "@/components";
+
+const slidersCategories = ["پیشنهاد کاربران", "تازه‌ها در اسنپ ‌فود", "برترین‌ها", "جایزه خرید", "مزه‌های خاص", "دارای تخفیف", "یک تجربه جدید", "دارای کوپن", "فقط در اسنپ‌فود"];
 
 export const RestaurantSections = ({restaurants}) => {
-
-    const slidersCategories = ["پیشنهاد کاربران", "تازه‌ها در اسنپ ‌فود", "برترین‌ها", "جایزه خرید", "مزه‌های خاص", "دارای تخفیف", "یک تجربه جدید", "دارای کوپن", "فقط در اسنپ‌فود"];
 
     return (
         slidersCategories.map( (item, i) => (
@@ -19,7 +19,7 @@ export const RestaurantSections = ({restaurants}) => {
                             </div>
                         </Link>
                     </div>
-                    <RestaurantsSlider restaurants={restaurants}/>
+                    <ResSlider restaurants={restaurants}/>
                 </section>
             </section>
         ))
