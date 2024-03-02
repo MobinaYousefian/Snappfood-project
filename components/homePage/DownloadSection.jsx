@@ -1,9 +1,7 @@
 import Image from "next/image";
 import {InputDownloadSection} from "@/components";
-import {getData} from "@/lib/dataFeching";
 
-export const DownloadSection = async () => {
-    const {userNumbers} = await getData()
+export const DownloadSection = ({userNumbers}) => {
 
     const applicationDownloader = ["myket", "bazar", "sibapp", "iapps"]
 

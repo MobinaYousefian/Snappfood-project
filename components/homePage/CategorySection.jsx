@@ -1,9 +1,7 @@
-import {getData} from "@/lib/dataFeching";
 import Link from "next/link";
 import Image from "next/image";
 
-export const CategorySection = async () => {
-    const {categories} = await getData()
+export const CategorySection = ({categories}) => {
 
     return (
         <div className={"mb-16 pt-4 mx-4 padding-size flex flex-col"}>
