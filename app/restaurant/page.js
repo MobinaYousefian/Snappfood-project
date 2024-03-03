@@ -1,7 +1,8 @@
-export default function restaurant () {
+
+export default  function restaurant () {
+
     return (
         <div>
-            sdfjsdf
         </div>
     )
 }

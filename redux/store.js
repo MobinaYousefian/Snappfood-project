@@ -6,7 +6,7 @@ import storage from "@/redux/customStorage";
 const persistConfig = {
     key : "address",
     storage : storage,
-    whitelist : ["isOpen", "address"]
+    whitelist : ["address"]
 };
 
 const rootReducer = combineReducers({

@@ -14,9 +14,9 @@ export default async function RootLayout({ children }) {
 
     const { storeCategories } = await getData()
 
-    const DynamicModals = dynamic(() => import("../components/header/AddressModal"), {
-        ssr : false
-    })
+    // const DynamicModals = dynamic(() => import("../components/header/Address"), {
+    //     ssr : false
+    // })
 
   return (
     <html lang="en">
@@ -24,7 +24,6 @@ export default async function RootLayout({ children }) {
       <Header storeCategories={storeCategories}/>
       {children}
       <Footer/>
-      <DynamicModals/>
       </body>
     </html>
   )
