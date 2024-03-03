@@ -9,7 +9,7 @@ export const Seller= () => {
                     <p className={"text-carbon-main inline-block leading-8 font-SnapWebBold mb-10 text-[2rem]"}>صاحب کسب و کار هستید؟</p>
                     <p className={"font-SnapWeb text-carbon-main inline-block text-lg mb-10"}>با اسنپ فود کسب و کارتان را آنلاین کنید و فروشتان را افزایش دهید.</p>
                     <Link href={"/"} className={"mb-10"}>
-                        <button className={"hover:bg-accent-light font-iRANSansBold text-lg bg-clip-padding bg-accent-main rounded-[0.375rem] border-accent-main border-solid spBorder transition-socialFooter h-12 inline-flex justify-center items-center box-border min-w-[6.6875rem]"}>
+                        <button className={"px-[6px] py-[1px] hover:bg-accent-light font-iRANSansBold text-lg bg-clip-padding bg-accent-main rounded-[0.375rem] border-accent-main border-solid spBorder transition-socialFooter h-12 inline-flex justify-center items-center box-border min-w-[6.6875rem]"}>
                             <Image src={"/icons/sign-seller.svg"} width={24} height={26} alt={"Snapp-seller"} className={"overflow-hidden"} />
                             <span className={"mr-2 text-surface-light"}>ثبت نام فروشندگان</span>
                         </button>
