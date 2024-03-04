@@ -12,7 +12,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
 
-    const { storeCategories } = await getData()
+    const { storeCategories, user } = await getData()
 
     // const DynamicModals = dynamic(() => import("../components/header/Address"), {
     //     ssr : false
@@ -21,7 +21,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Header storeCategories={storeCategories}/>
+      <Header storeCategories={storeCategories} user={user}/>
       {children}
       <Footer/>
       </body>

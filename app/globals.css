@@ -110,6 +110,13 @@ a {
         max-width: calc(-85px + 24vw);
     }
 
+    .header-searchBox {
+        right: 0;
+        margin: auto;
+        width: 29vw;
+        background-color: rgb(235, 237, 240);
+    }
+
     .category-mainPage {
         max-width: 25%;
         flex-basis: 25%;
