@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
-import clsx from "clsx";
 import {UserProfile} from "@/components";
 
 export const UserAccount = ({user}) => {
@@ -9,12 +8,19 @@ export const UserAccount = ({user}) => {
     const profileRef = useRef(null);
 
     const handleOpenProfile = () => {setOpen(!open)};
+    const handleCloseProfile = () => {setOpen(false);}
 
     useEffect(() => {
-        document.addEventListener('click', () => setOpen(!open));
+
+        const handleClickOutside = (e) => {
+            if (profileRef.current && !profileRef.current.contains(e.target)) {
+                handleCloseProfile()
+            }
+        }
+        document.addEventListener('click', handleClickOutside);
 
         return () => {
-            document.removeEventListener("click", () => setOpen(!open))
+            document.removeEventListener("click", handleClickOutside)
         }
     },[open]);
 
@@ -23,8 +29,8 @@ export const UserAccount = ({user}) => {
         <div onClick={handleOpenProfile} className={"p-4 cursor-pointer flex sp-laptop:ml-[0.5625rem]"}>
             <Image src={"/icons/user.svg"} width={14} height={16} alt={"icon"} className={"ml-2"}/>
         </div>
-            <div ref={profileRef} className={clsx( !open && "hidden", "relative sp-laptop:ml-[0.5625rem]")}>
-                <UserProfile user={user}/>
+            <div ref={profileRef} className={"relative sp-laptop:ml-[0.5625rem]"}>
+                {open && <UserProfile user={user}/>}
             </div>
         </>
     )
