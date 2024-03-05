@@ -69,7 +69,7 @@
     },
     {
       "id" : 2,
-      "name" : "فست فود",
+      "name" : "فست\u200Cفود",
       "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg"
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "id" : 11,
-      "name" : "بین الملل",
+      "name" : "بین\u200Cالملل",
       "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg"
     },
     {

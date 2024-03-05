@@ -4,7 +4,7 @@ export const Cities = ({cities}) => {
 
     return (
         <div className={"box-border w-full p-8 bg-surface-light border-t-[0.0625rem] border-surface-dark border-solid"}>
-            <h2 className={"mb-8 font-iRANSansBold text-base text-carbon-main inline-block"}>اسنپ‌ فود در شهرهای ایران</h2>
+            <h2 className={"mb-8 font-iRANSansBold text-base text-carbon-main inline-block"}>اسنپ‌‌{"\u200c"}فود در شهرهای ایران</h2>
             <div className={"box-border flex flex-wrap w-full m-[calc(-0.25rem)]"}>
                 {cities.map( (item, i) => (
                     <div key={i} className={"cities-mainPage max-h-[24.39px] max-w-[33.3333%] basis-1/3 p-[0.1875rem]"}>

@@ -20,8 +20,8 @@ export const Footer = () => {
                             <Image className={"min-w-[81.64px] min-h-[41.72px]"} src={"/icons/snappfood.svg"} width={81.64} height={41.72} alt={"snappfood"}/>
                         </Link>
                         <div className={"flex flex-col mr-6"}>
-                            <p className={"mb-1 font-SnapWebBold font-bold text-lg text-accent-main"}>اسنپ فود</p>
-                            <p className={"font-iranSans text-xs text-carbon-light inline-block"}>تجربه سفارش غذا، از زودفود تا اسنپ فود</p>
+                            <p className={"mb-1 font-SnapWebBold font-bold text-lg text-accent-main"}>اسنپ{"\u200c"}فود</p>
+                            <p className={"font-iranSans text-xs text-carbon-light inline-block"}>تجربه سفارش غذا، از زودفود تا اسنپ{"\u200c"}فود</p>
                         </div>
                     </div>
                     <SocialButton/>
