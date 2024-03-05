@@ -29,7 +29,7 @@ export const UserAccount = ({user}) => {
         <div onClick={handleOpenProfile} className={"p-4 cursor-pointer flex sp-laptop:ml-[0.5625rem]"}>
             <Image src={"/icons/user.svg"} width={14} height={16} alt={"icon"} className={"ml-2"}/>
         </div>
-            <div ref={profileRef} className={"relative sp-laptop:ml-[0.5625rem]"}>
+            <div ref={profileRef} className={"w-0 h-0 relative sp-laptop:ml-[0.5625rem]"}>
                 {open && <UserProfile user={user}/>}
             </div>
         </>
