@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mui/base": "^5.0.0-beta.37",
     "@reduxjs/toolkit": "^2.2.1",
     "autoprefixer": "10.4.17",
     "clsx": "^2.1.0",

@@ -75,7 +75,6 @@ html {
     direction: rtl;
     scroll-behavior: smooth;
     line-height: 1.15;
-    overflow: auto;
 }
 
 a {
@@ -189,6 +188,11 @@ a {
     transform: translateX(-0.125rem);
 }
 
+/* used in Address component*/
+.section > :last-child {
+    margin-bottom: 0;
+}
+
 .header-animation {
     animation-timing-function: ease;
     animation-delay: 0s;
@@ -222,6 +226,15 @@ a {
     animation-name: gilGRO;
 }
 
+@keyframes gilGRO {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: #40404066;
+    }
+}
+
 .address-modal-card-animation2 {
     animation-duration: 0.3s;
     animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
@@ -231,4 +244,13 @@ a {
     animation-fill-mode: forwards;
     animation-play-state: running;
     animation-name: cdxymQ
+}
+
+@keyframes cdxymQ {
+    from {
+        transform: translate3d(0px, -2rem, 0px);
+    }
+    to {
+        transform: translateZ(0px);
+    }
 }
