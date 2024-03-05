@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
       <div>
-          <main className={"mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
+          <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
               <CategorySection categories={categories}/>
               <RestaurantSections restaurants={restaurants}/>
               <DownloadSection userNumbers={userNumbers}/>
