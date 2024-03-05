@@ -72,11 +72,6 @@ module.exports = {
         "sp-high": "0px 1px 0px rgba(58, 61, 66, 0.06), 0px 8px 32px -16px rgba(0, 0, 0, 0.3)",
         "sp-modal": "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 8px 32px rgba(0, 0, 0, 0.16)",
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-            'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       transitionProperty : {
         "socialFooter" : "all 150ms ease-out 0s",
         "categoryHomePage" : "all 200ms ease-in-out 0s"
@@ -88,8 +83,6 @@ module.exports = {
         "sp-tablet" : "600px",
         "sp-laptop" : "960px",
         "sp=laptop-lg" : "1280px",
-        "947" : "947px",
-        "1288" : "1288px"
       }
     },
   },
