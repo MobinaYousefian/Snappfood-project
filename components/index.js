@@ -1,9 +1,10 @@
-// export * from "./Modals"
+export * from "./Modals"
 /* header */
 export * from "./header/Header"
 export * from "./header/AddressBox"
 export * from "./header/Address"
 export * from "./header/SearchBox"
+export * from "./header/Search"
 export * from "./header/UserAccount"
 export * from "./header/UserProfile"
 export * from "./header/UserCart"

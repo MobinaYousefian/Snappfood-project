@@ -1,7 +1,8 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit";
 import {persistReducer} from "redux-persist";
-import {addressReducer} from "@/redux/features/headerAddressSlice";
 import storage from "@/redux/customStorage";
+import {addressReducer} from "@/redux/features/headerAddressSlice";
+import {searchReducer} from "@/redux/features/headerSearchSlice";
 
 const persistConfig = {
     key : "address",
@@ -10,7 +11,8 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-    addressModal :persistReducer(persistConfig, addressReducer)
+    addressModal :persistReducer(persistConfig, addressReducer),
+    searchModal :persistReducer(persistConfig, searchReducer)
 });
 
 export const store = configureStore({

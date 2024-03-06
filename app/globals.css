@@ -140,8 +140,8 @@ a {
     transition: all 500ms ease-in-out 0s;
 }
 
-/*addressModal animations*/
-.address-modal-card-animation {
+/*Modal animations*/
+.modal-card-animation {
     animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
@@ -161,7 +161,7 @@ a {
     }
 }
 
-.address-modal-card-animation2 {
+.address-modal-card-animation {
     animation-duration: 0.3s;
     animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
     animation-delay: 0s;
@@ -178,6 +178,26 @@ a {
     }
     to {
         transform: translateZ(0px);
+    }
+}
+
+.search-modal-card-animation {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: bcuNYl
+}
+
+@keyframes bcuNYl {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 

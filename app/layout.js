@@ -10,7 +10,7 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-    const DynamicModals = dynamic(() => import("../components/header/Address"), {
+    const DynamicModals = dynamic(() => import("../components/Modals"), {
         ssr : false
     })
 
