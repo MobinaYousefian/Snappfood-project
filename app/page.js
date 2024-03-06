@@ -8,14 +8,14 @@ import {
 import {getData} from "@/lib/dataFeching";
 
 export default async function Home() {
-    const { restaurants, categories, userNumbers, cities } = await getData();
+    const { restaurants, categories, cities } = await getData();
 
   return (
       <div>
           <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
               <CategorySection categories={categories}/>
               <RestaurantSections restaurants={restaurants}/>
-              <DownloadSection userNumbers={userNumbers}/>
+              <DownloadSection/>
               <Seller/>
           </main>
           <Cities cities={cities}/>
