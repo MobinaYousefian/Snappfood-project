@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useRef} from "react";
+import {useRef} from "react";
 import {handleCloseModal} from "@/redux/features/headerSearchSlice";
 
 export const Search = () => {
@@ -9,24 +9,15 @@ export const Search = () => {
     const {isOpen} = useSelector((state => state.searchModal));
     const searchRef = useRef(null);
 
-    useEffect(() => {
-
-        const handleClickOutside = (e) => {
-            if (searchRef.current && !searchRef.current.contains(e.target)) {
-                dispatch(handleCloseModal());
-            }
-        };
-
-        document.addEventListener("click", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("click", handleClickOutside);
+    const handleCloseSearch = (e) => {
+        if (searchRef.current && !searchRef.current.contains(e.target)) {
+            dispatch(handleCloseModal());
         }
-    },[isOpen])
+    }
 
     if (!isOpen) return null;
     return (
-        <div className={"z-[10000] inset-0 fixed modal-card-animation flex justify-center items-center"}>
+        <div onClick={handleCloseSearch} className={"z-[10000] inset-0 fixed modal-card-animation flex justify-center items-center"}>
             <div ref={searchRef} className={"search-modal-card-animation overflow-hidden max-h-[90vh] py-3 m-auto min-w-[18.75rem] fixed top-0 flex justify-center w-[31vw]"}>
                 <div className={"flex-col flex w-[95%]"}>
                     <div className={"relative w-full"}>
