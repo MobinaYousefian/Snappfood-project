@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import {DeliveryType} from "@/components";
+import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 
 export const RestaurantCard = (
     {name, avatar, banner, category, star, rating, delivery,couponList,discountNumber}) => {
@@ -36,9 +37,9 @@ export const RestaurantCard = (
                                 <div className={"ml-2 flex items-center"}>
                                     <span className={"ml-2 flex items-center"}>
                                         <Image src={"/icons/star.svg"} width={12} height={12} alt={"icon"} className={"align-middle ml-1"}/>
-                                        <span className={"font-iRANSansBold text-xs text-carbon-main"}>{star}</span>
+                                        <span className={"font-iRANSansBold text-xs text-carbon-main"}>{toFarsiNumber(star)}</span>
                                     </span>
-                                    <p className={"font-iranSans text-xs text-inactive-dark"}>{`(${rating})`}</p>
+                                    <p className={"font-iranSans text-xs text-inactive-dark"}>{`(${toFarsiNumber(priceFormatting(rating))})`}</p>
                                 </div>
                             </div>
                             <h3 className={"mb-3 font-iranSans text-xs text-inactive-dark"}>{`${category[0]}، ${category[1]}، ${category[2]}`}</h3>

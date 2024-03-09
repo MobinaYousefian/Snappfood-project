@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {getWorkTime} from "@/components/homePage/getWorkTime";
+import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 
 export const DeliveryType = (delivery) => {
 
@@ -23,7 +24,9 @@ export const DeliveryType = (delivery) => {
                     <p className={"ml-2 font-iranSans text-xs text-carbon-main"}>{delivery.type}</p>
                     <div className={"ml-2 flex-col items-start inline-flex"}>
                         <span className={"font-iRANSansBold text-carbon-main text-xs"}>
-                            {delivery.price}
+                            {
+                                toFarsiNumber(priceFormatting(delivery.price))
+                            }
                             <span className={"font-iranSans"}> تومان</span>
                         </span>
                     </div>
