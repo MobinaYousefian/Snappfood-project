@@ -55,6 +55,10 @@ a {
         max-width: calc(-85px + 57vw);
     }
 
+    .header-orders-modal {
+        min-width: 18.75rem;
+    }
+
     .category-mainPage {
         max-width: 33.3333%;
         flex-basis: 33.3333%;
@@ -75,6 +79,10 @@ a {
     .header-address-span {
         min-width: 9.375rem;
         max-width: calc(-85px + 24vw);
+    }
+
+    .header-orders-modal {
+        min-width: 25rem;
     }
 
     .header-searchBox {
@@ -198,6 +206,26 @@ a {
     }
     to {
         opacity: 1;
+    }
+}
+
+.orders-modal-card-animation {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: hmqzdU
+}
+
+@keyframes hmqzdU {
+    from {
+        transform: translate3d(-2rem, 0px, 0px);
+    }
+    to {
+        transform: translateZ(0px);
     }
 }
 

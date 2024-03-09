@@ -6,15 +6,15 @@ export const cartSlice = createSlice({
         isOpen : false,
     },
     reducers : {
-        handleOpenCartModal : (state) => {
+        handleOpenOrdersModal : (state) => {
             state.isOpen = true
         },
 
-        handleCloseCartModal : (state) => {
+        handleCloseOrdersModal : (state) => {
             state.isOpen = false
         }
     }
 });
 
-export const {handleOpenCartModal, handleCloseCartModal} = cartSlice.actions;
+export const {handleOpenOrdersModal, handleCloseOrdersModal} = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;

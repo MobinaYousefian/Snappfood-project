@@ -1,4 +1,4 @@
-import {HeaderServices, SearchBox, UserAccount, UserCart} from "@/components";
+import {HeaderServices, SearchBox, UserAccount, UserOrders} from "@/components";
 import {AddressBox} from "@/components/header/AddressBox";
 import {getData} from "@/lib/dataFeching";
 
@@ -13,7 +13,7 @@ export const Header = async () => {
                 <SearchBox/>
                 <div className={"items-center flex z-[999]"}>
                     <UserAccount user={user}/>
-                    <UserCart user={user}/>
+                    <UserOrders user={user}/>
                 </div>
             </div>
             <HeaderServices storeCategories={storeCategories}/>
