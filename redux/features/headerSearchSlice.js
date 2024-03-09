@@ -7,8 +7,8 @@ export const HeaderSearchSlice = createSlice({
     },
     reducers : {
         handleOpenModal : (state) => {
-          state.isOpen = true;
-      },
+            state.isOpen = true;
+        },
 
         handleCloseModal : (state) => {
             state.isOpen = false;

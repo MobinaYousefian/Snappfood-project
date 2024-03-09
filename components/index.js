@@ -7,7 +7,8 @@ export * from "./header/SearchBox"
 export * from "./header/Search"
 export * from "./header/UserAccount"
 export * from "./header/UserProfile"
-export * from "./header/UserCart"
+export * from "./header/UserOrders"
+export * from "./header/Orders"
 export * from "./header/HeaderServices"
 
 /* Footer */
@@ -16,6 +17,7 @@ export * from "./footer/SocialButton"
 export * from "./footer/FirstPageListLinks"
 export * from "./footer/SecondPageListLinks"
 export * from "./footer/SupportButton"
+export * from "./footer/SupportModal"
 
 /* Home Page */
 export * from "./homePage/CategorySection"
