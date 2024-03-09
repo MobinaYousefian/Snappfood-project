@@ -17,6 +17,7 @@ export * from "./footer/SocialButton"
 export * from "./footer/FirstPageListLinks"
 export * from "./footer/SecondPageListLinks"
 export * from "./footer/SupportButton"
+export * from "./footer/SupportModal"
 
 /* Home Page */
 export * from "./homePage/CategorySection"

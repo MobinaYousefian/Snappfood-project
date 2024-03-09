@@ -229,6 +229,46 @@ a {
     }
 }
 
+.support-modal-card-animation {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: hpUaqz
+}
+
+@keyframes hpUaqz {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.support-modal-card-animation2 {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: hpUaqz2
+}
+
+@keyframes hpUaqz2 {
+    from{
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 14px;
