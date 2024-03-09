@@ -1,22 +1,30 @@
-import {HeaderServices, SearchBox, UserAccount, UserOrders} from "@/components";
-import {AddressBox} from "@/components/header/AddressBox";
-import {getData} from "@/lib/dataFeching";
+'use client'
+import {AddressBox, HeaderServices, SearchBox, UserAccount, UserOrders} from "@/components";
+import {usePathname} from "next/navigation";
+import clsx from "clsx";
 
-
-export const Header = async () => {
-    const { storeCategories, user } = await getData()
+export const Header = ({user, storeCategories}) => {
+    const pathname = usePathname();
+    const isHomePage = pathname === "/";
+    const isResCategory = pathname === "/restaurant";
 
     return (
-        <header className={"w-full z-50 bg-surface-light shadow-sp-small sticky top-0 right-0 left-0"}>
-            <div className={"justify-between items-center flex box-border p-4 h-[4.5rem] w-full bg-surface-light relative header-animation"}>
-                <AddressBox/>
-                <SearchBox/>
-                <div className={"items-center flex z-[999]"}>
-                    <UserAccount user={user}/>
-                    <UserOrders user={user}/>
-                </div>
+        <>
+            <div className={"sticky top-0 right-0 left-0 translate-y-0 w-full flex flex-col z-[999]"}>
+                <header className={clsx(isResCategory ? "shadow-sp-small" : isHomePage ? 'shadow-none' : '' ,"flex flex-col")}>
+                    <div className={"w-full bg-surface-light relative justify-between items-center flex box-border p-4 h-[4.5rem] w-full header-animation"}>
+                        <AddressBox/>
+                        <SearchBox/>
+                        <div className={"items-center flex z-[999]"}>
+                            <UserAccount user={user}/>
+                            <UserOrders user={user}/>
+                        </div>
+                    </div>
+                </header>
+                { isHomePage && <HeaderServices storeCategories={storeCategories}/>}
             </div>
-            <HeaderServices storeCategories={storeCategories}/>
-        </header>
+            {isResCategory && <HeaderServices storeCategories={storeCategories}/>}
+        </>
+
     )
 }

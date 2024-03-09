@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {ResSlider} from "@/components";
+import {RestaurantSlide} from "@/components";
 
 const slidersCategories = ["پیشنهاد کاربران", "تازه‌ها در اسنپ\u200c‌فود", "برترین‌ها", "جایزه خرید", "مزه‌های خاص", "دارای تخفیف", "یک تجربه جدید", "دارای کوپن", "فقط در اسنپ‌فود"];
 
@@ -19,7 +19,7 @@ export const RestaurantSections = ({restaurants}) => {
                             </div>
                         </Link>
                     </div>
-                    <ResSlider restaurants={restaurants}/>
+                    <RestaurantSlide restaurants={restaurants}/>
                 </section>
             </section>
         ))
