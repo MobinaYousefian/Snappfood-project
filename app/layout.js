@@ -1,5 +1,5 @@
 import './globals.css'
-import {Footer, Header} from "@/components";
+import {Footer, HeaderGetData} from "@/components";
 import dynamic from "next/dynamic";
 import ReduxProvider from "@/redux/ReduxProvider";
 
@@ -18,7 +18,7 @@ export default async function RootLayout({ children }) {
       <ReduxProvider>
           <html lang="en">
           <body>
-          <Header/>
+          <HeaderGetData/>
           {children}
           <Footer/>
           <DynamicModals/>

@@ -1,5 +1,6 @@
 export * from "./Modals"
 /* header */
+export * from "./header/HeaderGetData"
 export * from "./header/Header"
 export * from "./header/AddressBox"
 export * from "./header/Address"
