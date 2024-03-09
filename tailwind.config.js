@@ -63,7 +63,6 @@ module.exports = {
         "inactive-alphaLight": "#EDEFF0",
         "inactive-alphaMedium": "#EDEFF0",
         "inactive-alphaHigh": "#EDEFF0",
-        // "party-color" : "radial-gradient(100% 303.06% at 0% 0%, #f69 0%, #e02291 100%);"
       },
       boxShadow : {
         "sp-inset": "inset 0px 1px 6px rgba(0, 0, 0, 0.04)",

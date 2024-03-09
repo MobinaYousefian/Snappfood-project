@@ -148,6 +148,14 @@ a {
     transition: all 500ms ease-in-out 0s;
 }
 
+/* used in FoodParty component */
+.foodParty-gradiant {
+    background: radial-gradient(100% 303.06% at 0% 0%, #f69 0%, #e02291 100%);
+}
+.foodParty-radius {
+    border-radius: 0.25rem 0.25rem 7.5rem;
+}
+
 /*Modal animations*/
 .modal-card-animation {
     animation-duration: 0.3s;
