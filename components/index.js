@@ -32,3 +32,7 @@ export * from "./homePage/DownloadSection"
 export * from "./homePage/InputDownloadSection"
 export * from "./homePage/Seller"
 export * from "./homePage/Cities"
+
+/* Restaurants Page */
+export * from "./restaurantPage/PageSorting"
+export * from "./restaurantPage/SortingModal"

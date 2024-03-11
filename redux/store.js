@@ -5,6 +5,7 @@ import {addressReducer} from "@/redux/features/headerAddressSlice";
 import {searchReducer} from "@/redux/features/headerSearchSlice";
 import {cartReducer} from "@/redux/features/cartSlice";
 import {supportReducer} from "@/redux/features/supportSlice";
+import {sortingReducer} from "@/redux/features/sortingSlice";
 
 const persistConfig = {
     key : "persist",
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     searchModal :persistReducer(persistConfig, searchReducer),
     cart : persistReducer(persistConfig, cartReducer),
     supportModal : persistReducer(persistConfig, supportReducer),
+    sorting : persistReducer(persistConfig, sortingReducer)
 });
 
 export const store = configureStore({
