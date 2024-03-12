@@ -7,14 +7,16 @@ import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 import {usePathname} from "next/navigation";
 
 export const RestaurantCard = (
-    {name, avatar, banner, category, star, rating, delivery,couponList,discountNumber}) => {
+    {id, name, avatar, banner, category, star, rating, delivery,couponList,discountNumber}) => {
 
     const pathName = usePathname();
     const isResPage = pathName === "/restaurant";
 
+    const nameSegment = name.split(" ").join("_").replace("(", "").replace(")", "");
+
     return (
-        <Link href={"/"}>
-            <div className={clsx(isResPage && "mb-0 h-auto" ,"hover:shadow-sp-high text-carbon-main shadow-sp-small rounded-lg flex-col flex border-[1px] border-carbon-alphaLight border-solid bg-surface-light overflow-hidden pb-6 mb-8 box-border justify-between h-[21.3125rem]")}>
+        <Link href={`/restaurant/menu/${id}/${nameSegment}`}>
+            <div className={clsx(isResPage && "h-auto mb-0" ,"hover:shadow-sp-high text-carbon-main shadow-sp-small rounded-lg flex-col flex border-[1px] border-carbon-alphaLight border-solid bg-surface-light overflow-hidden pb-6 mb-8 box-border justify-between h-[21.3125rem]")}>
                 <div className={"relative shrink-0 grow flex justify-center items-end min-h-[9.6875rem] max-h-[9.6875rem] h-[9.6875rem]"}>
                     <Image src={banner} width={400} height={248} alt={name} className={"w-full h-full object-cover "}/>
                     <div className={"justify-center items-center flex shadow-sp-high rounded-xl bg-surface-light absolute right-0 left-0 m-auto translate-y-5 w-[5.5rem] h-[5.5rem]"}>
