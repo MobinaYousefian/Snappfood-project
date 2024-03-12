@@ -36,3 +36,7 @@ export * from "./homePage/Cities"
 /* Restaurants Page */
 export * from "./restaurantPage/PageSorting"
 export * from "./restaurantPage/SortingModal"
+export * from "./restaurantPage/aside menu/AsideMenu"
+export * from "./restaurantPage/aside menu/FoodFilter"
+export * from "./restaurantPage/aside menu/ResFilter"
+export * from "./restaurantPage/aside menu/PriceFilter"
