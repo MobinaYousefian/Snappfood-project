@@ -1,5 +1,5 @@
 import {getData} from "@/lib/dataFeching";
-import {AsideMenu, PageSorting} from "@/components";
+import {AsideMenu, PageSorting, RestaurantList} from "@/components";
 
 export default async function restaurant () {
         const { restaurants, resPageCategory, fastFoods, irani, kebab, } = await getData();
@@ -9,6 +9,7 @@ export default async function restaurant () {
             <PageSorting/>
             <div className={"flex-wrap w-[calc(100%+2rem)] m-[calc(-1rem)] flex"}>
                 <AsideMenu category={resPageCategory} fastFoods={fastFoods} irani={irani} kebab={kebab}/>
+                <RestaurantList restaurants={restaurants}/>
             </div>
         </main>
     )
