@@ -123,6 +123,38 @@
       "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_gilani_1.jpg"
     }
   ],
+  "resPageCategory" : [
+    {
+      "id" : 2,
+      "name" : "فست\u200Cفود",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg"
+    },
+    {
+      "id" : 1,
+      "name" : "ایرانی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg"
+    },
+    {
+      "id" : 3,
+      "name" : "کباب",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_kebab_1.jpg"
+    },
+    {
+      "id" : 9,
+      "name" : "سالاد",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_salad_1.jpg"
+    },
+    {
+      "id" : 10,
+      "name" : "دریایی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_seafood_1.jpg"
+    },
+    {
+      "id" : 11,
+      "name" : "بین\u200Cالملل",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg"
+    }
+  ],
   "fastFoods" : [
     {
       "id" : 1,
