@@ -1,7 +1,10 @@
 import {RestaurantCard} from "@/components";
 import Link from "next/link";
+import {getData} from "@/lib/dataFeching";
 
-export const RestaurantList = ({restaurants}) => {
+export const RestaurantList = async () => {
+    const {restaurants} = await getData();
+
     return (
         <div className={"ResList-resPage basis-full max-w-full p-[calc(1rem)]"}>
             <div className={"flex flex-wrap w-[calc(100%+1.5rem)] m-[calc(-0.75rem)]"}>
