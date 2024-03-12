@@ -69,6 +69,11 @@ a {
         flex-basis: 25%;
     }
 
+    .aside-resPage {
+        flex-basis: 41.6667%;
+        max-width: 41.6667%;
+    }
+
     .padding-size {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -117,6 +122,11 @@ a {
     .cities-mainPage {
         max-width: 8.33333%;
         flex-basis: 8.33333%;
+    }
+
+    .aside-resPage {
+        flex-basis: 25%;
+        max-width: 25%;
     }
 }
 
