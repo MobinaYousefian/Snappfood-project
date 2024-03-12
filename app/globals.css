@@ -69,6 +69,11 @@ a {
         flex-basis: 25%;
     }
 
+    .aside-resPage {
+        flex-basis: 41.6667%;
+        max-width: 41.6667%;
+    }
+
     .padding-size {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -118,6 +123,11 @@ a {
         max-width: 8.33333%;
         flex-basis: 8.33333%;
     }
+
+    .aside-resPage {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
 }
 
 /* used in SupportButton component */
@@ -154,6 +164,19 @@ a {
 }
 .foodParty-radius {
     border-radius: 0.25rem 0.25rem 7.5rem;
+}
+
+/* used in ResFilter component */
+.span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.2s ease 0s;
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 /*Modal animations*/
