@@ -166,6 +166,19 @@ a {
     border-radius: 0.25rem 0.25rem 7.5rem;
 }
 
+/* used in ResFilter component */
+.span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.2s ease 0s;
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
 /*Modal animations*/
 .modal-card-animation {
     animation-duration: 0.3s;
