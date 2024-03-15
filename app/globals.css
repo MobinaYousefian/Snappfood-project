@@ -127,6 +127,11 @@ a {
         max-width: 25%;
     }
 
+    .CatNavbar-RightAside {
+        height: calc(-332px + 100vh);
+        direction: ltr;
+    }
+
     .padding-size {
         margin-left: 2.5rem;
         margin-right: 2.5rem;

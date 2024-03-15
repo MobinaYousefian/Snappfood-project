@@ -45,3 +45,4 @@ export * from "./restaurantPage/RestaurantList"
 /* Restaurant */
 export * from "./restaurant/rightAside/RightAside"
 export * from "./restaurant/rightAside/RestaurantInfo"
+export * from "./restaurant/rightAside/CategoryNavbar"
