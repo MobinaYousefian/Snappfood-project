@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 
 export const RestaurantInfo = ({resInfo}) => {
 
@@ -15,11 +16,11 @@ export const RestaurantInfo = ({resInfo}) => {
                                 <span className={"flex items-center ml-2"}>
                                 <Image src={"/icons/star.svg"} width={12} height={12} alt={"icon"} className={"ml-1 align-middle"}/>
                                 <span className={"font-iRANSansBold text-xs text-carbon-main"}>
-                                    {resInfo.star}
+                                    {toFarsiNumber(resInfo.star)}
                                 </span>
                             </span>
                                 <p className={"font-iranSans text-xs text-inactive-dark"}>
-                                    {`(${resInfo.rating} امتیاز)`}
+                                    {`(${toFarsiNumber(priceFormatting(resInfo.rating))} امتیاز)`}
                                 </p>
                             </div>
                         </div>
