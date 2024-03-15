@@ -1,6 +1,15 @@
 import {RestaurantInfo} from "@/components";
 import {getData} from "@/lib/dataFeching";
 
+export async function generateMetadata ({ params }) {
+    const pageId = params.restaurantId[1];
+    const {restaurants} = await getData();
+    const resInfo = restaurants.filter(({id}) => id == pageId)[0]
+    return {
+        title : `${resInfo.name}-سفارش آنلاین غذا از ${resInfo.name} | اسنپ فود`
+    }
+}
+
 export default async function RestaurantId ({params}) {
     const {restaurants} = await getData();
     const pageId = params.restaurantId[1];
