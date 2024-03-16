@@ -84,6 +84,16 @@ a {
         max-width: 50%;
     }
 
+    .FoodMenu {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .FoodSection {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
     .padding-size {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -130,6 +140,11 @@ a {
     .CatNavbar-RightAside {
         height: calc(-332px + 100vh);
         direction: ltr;
+    }
+
+    .FoodSection {
+        flex-basis: 50%;
+        max-width: 50%;
     }
 
     .padding-size {
@@ -212,6 +227,12 @@ a {
     left: 1rem;
     width: 1.25rem;
     height: 1.25rem;
+}
+
+/* used in FoodSection component */
+.div:hover .button {
+    background-color: #FF00A6;
+    color: white;
 }
 
 /*Modal animations*/
