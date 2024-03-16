@@ -12,6 +12,7 @@ export const RestaurantSlide = ({restaurants}) => {
                         <SwiperSlide key={id}>
                             <div className={"box-border transition-transform relative h-full shrink-0 w-full"}>
                                 <RestaurantCard
+                                    id={id}
                                     name={name}
                                     avatar={avatar}
                                     banner={banner}

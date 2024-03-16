@@ -41,3 +41,11 @@ export * from "./restaurantPage/aside menu/FoodFilter"
 export * from "./restaurantPage/aside menu/ResFilter"
 export * from "./restaurantPage/aside menu/PriceFilter"
 export * from "./restaurantPage/RestaurantList"
+
+/* Restaurant */
+export * from "./restaurant/rightAside/RightAside"
+export * from "./restaurant/rightAside/RestaurantInfo"
+export * from "./restaurant/rightAside/CategoryNavbar"
+export * from "./restaurant/mainSection/FoodMenu"
+export * from "./restaurant/mainSection/MenuSection"
+export * from "./restaurant/mainSection/FoodSection"

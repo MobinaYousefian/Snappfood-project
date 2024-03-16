@@ -12,6 +12,7 @@ export const RestaurantList = async () => {
                     restaurants.map(({id, name, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => (
                         <div key={id} className={"RestaurantList-resPage basis-full max-w-full p-[calc(0.75rem)]"}>
                             <RestaurantCard
+                                id={id}
                                 name={name}
                                 avatar={avatar}
                                 banner={banner}
