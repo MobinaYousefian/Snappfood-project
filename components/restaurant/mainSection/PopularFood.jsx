@@ -2,7 +2,6 @@ import {FoodSection} from "@/components";
 
 export const PopularFood = ({resInfo}) => {
     const populars = resInfo.foods.filter(({isPopular}) => isPopular === true);
-    console.log(populars)
 
     if (!populars) return null;
     return (

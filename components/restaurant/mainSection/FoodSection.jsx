@@ -28,7 +28,7 @@ export const FoodSection = ({food, resName}) => {
                                         <p className={"font-iranSans text-xs text-carbon-main"}>
                                             {item.tag}
                                         </p>
-                                        <div className={"inline-flex flex-col items-center"}>
+                                        <div className={"inline-flex flex-col items-start"}>
                                             <span className={"font-iRANSansBold text-sm text-carbon-main"}>
                                                 {toFarsiNumber(priceFormatting(item.value))}
                                                 <span className={"font-iranSans text-xs text-carbon-light"}> تومان</span>
