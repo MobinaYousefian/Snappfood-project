@@ -1,6 +1,6 @@
-import {FoodSection} from "@/components";
+import {FoodCard} from "@/components";
 
-export const PopularFood = ({resInfo}) => {
+export const PopularSection = ({resInfo}) => {
     const populars = resInfo.foods.filter(({isPopular}) => isPopular === true);
 
     if (!populars) return null;
@@ -12,8 +12,13 @@ export const PopularFood = ({resInfo}) => {
             <div className={"flex-wrap flex m-[calc(0rem)] w-[calc(100%+0rem)] border-surface-dark border-t-[0.0625rem]"}>
                 {
                     populars.map((food ,i) => (
-                        <FoodSection key={i} food={food} resName={resInfo.name}/>
-                       ))
+                        <FoodCard
+                            key={i}
+                            food={food}
+                            resName={resInfo.name}
+                            discountNumber={resInfo.discountNumber}
+                        />
+                    ))
                 }
             </div>
         </section>

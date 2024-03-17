@@ -18,12 +18,19 @@ export const RestaurantInfo = ({resInfo}) => {
                                 <span className={"font-iRANSansBold text-xs text-carbon-main"}>
                                     {toFarsiNumber(resInfo.star)}
                                 </span>
-                            </span>
+                                </span>
                                 <p className={"font-iranSans text-xs text-inactive-dark"}>
                                     {`(${toFarsiNumber(priceFormatting(resInfo.rating))} امتیاز)`}
                                 </p>
                             </div>
                         </div>
+                        {
+                            resInfo.discount &&
+                            <span className={"text-accent-dark text-sm font-iranSans shadow-sp-medium rounded-[2.5rem] border-carbon-alphaLight shrink-0 py-1 px-3 bg-surface-light border-[1px]"}>
+                                <span className={"text-accent-dark text-xs font-iranSans"}>%</span>
+                                {toFarsiNumber(resInfo.discountNumber)}
+                            </span>
+                        }
                     </div>
                     <h1 className={"overflow-hidden text-ellipsis whitespace-nowrap font-iRANSansBold text-lg text-carbon-main mt-3.5"}>
                         {resInfo.name}
