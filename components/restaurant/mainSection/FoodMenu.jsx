@@ -7,7 +7,7 @@ export const FoodMenu = ({resInfo}) => {
             <section className={"border-surface-dark bg-surface-light rounded-lg border-[0.0625rem]"}>
                 <PopularSection resInfo={resInfo}/>
                 {
-                    resInfo.discount && <DiscountSection resInfo={resInfo}/>
+                    resInfo.discountNumber && <DiscountSection resInfo={resInfo}/>
                 }
                 {
                     resInfo.foodList.map((item, i) => (

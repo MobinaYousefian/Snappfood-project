@@ -270,7 +270,6 @@
         "سوپ نودل رایگان با خرید حداقل ۴۹۰ هزار تومان"
       ],
       "discountNumber" : 20,
-      "discount" : true,
       "foodList" : [
         "سوشی",
         "نودل",
@@ -567,7 +566,6 @@
         "۱۰٪ تخفیف با خرید از دسته\u200Cی برگر"
       ],
       "discountNumber" : 10,
-      "discount" : true,
       "foodList" : [
         "سوخاری",
         "پیتزا",
@@ -817,7 +815,6 @@
         "price" : 15000
       },
       "couponList" : [],
-      "discount" : false,
       "foodList" : [
         "سوخاری",
         "ساندویچ",
@@ -1123,7 +1120,6 @@
         "price" : 11200
       },
       "couponList" : [],
-      "discount" : false,
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1405,7 +1401,6 @@
         "price" : 12800
       },
       "couponList" : [],
-      "discount" : false,
       "foodList" : [
         "چلو کباب",
         "خوراک",
