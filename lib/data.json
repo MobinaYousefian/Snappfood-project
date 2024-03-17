@@ -269,7 +269,8 @@
         "ارسال رایگان سفارش با خرید حداقل ۱.۱ میلیون تومان",
         "سوپ نودل رایگان با خرید حداقل ۴۹۰ هزار تومان"
       ],
-      "discountNumber" : "۱۰",
+      "discountNumber" : 20,
+      "discount" : true,
       "foodList" : [
         "سوشی",
         "نودل",
@@ -283,6 +284,7 @@
           "name" : "دراگون رول",
           "category" : "سوشی",
           "isPopular" : true,
+          "isDiscount" : true,
           "ingredients" : "میگو تمپورا، آووکادو، سالمون، سس مخصوص",
           "star" : 4.2,
           "photos" : [
@@ -295,11 +297,13 @@
           "price" : [
             {
               "tag" : "هشت تکه",
-              "value" : 448000
+              "value" : 448000,
+              "isDiscount" : true
             },
             {
               "tag" : "چهار تکه",
-              "value" : 258000
+              "value" : 258000,
+              "isDiscount" : false
             }
           ],
           "extraService" : [
@@ -335,12 +339,14 @@
           "name" : "نودل الین با مرغ",
           "category" : "نودل",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "۱۳۰ گرم فیله مرغ، نودل، سس مخصوص، فلفل دلمه ای، هویج، کلم، قارچ، کدو، سیر، زنجبیل",
           "star" : 4.4,
           "photos" : ["https://cdn.snappfood.ir/641x641/cdn/67/17/1/vendor/603bf7a7c097e.jpeg"],
           "price" : [
             {
-              "value" : 259000
+              "value" : 259000,
+              "isDiscount" : false
             }
           ],
           "extraService" : {
@@ -354,12 +360,14 @@
           "name" : "سالاد مرغ آسیایی",
           "category" : "سالاد",
           "isPopular" : false,
+          "isDiscount" : true,
           "ingredients" : "کاهو، هویج، جوانه ماش، ۱۵۰ گرم سینه گریل شده، بادام زمینی، سس آسیایی",
           "star" : 4.7,
           "photos" : ["https://cdn.snappfood.ir/641x641/cdn/67/17/1/vendor/62de788f0f8f5.jpeg"],
           "price" : [
             {
-              "value" : 259000
+              "value" : 259000,
+              "isDiscount" : true
             }
           ]
         },
@@ -368,17 +376,20 @@
           "name" : "ترشی کیمچی",
           "category" : "پیش غذا",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "ترشی کیمچی کره ای",
           "star" : 4.2,
           "photos" : ["https://cdn.snappfood.ir/641x641/cdn/67/17/1/vendor/655b803756e06.jpeg"],
           "price" : [
             {
               "tag" : "کوچک (۱۰۰ گرم)",
-              "value" : 97000
+              "value" : 97000,
+              "isDiscount" : false
             },
             {
               "tag" : "بزرگ (۲۰۰ گرم)",
-              "value" : 189000
+              "value" : 189000,
+              "isDiscount" : false
             }
           ]
         },
@@ -387,12 +398,14 @@
           "name" : "موهیتو",
           "category" : "نوشیدنی سرد",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۴۰۰ میلی لیتر، نعنا، سودا، لیمو، شکر، یخ",
           "star" : 3.6,
           "photos" : ["https://cdn.snappfood.ir/641x641/cdn/67/17/1/product_image/zoodfood/64afa96dafe02.jpg"],
           "price" : [
             {
-              "value" : 90000
+              "value" : 90000,
+              "isDiscount" : false
             }
           ]
         }
@@ -553,7 +566,7 @@
       "couponList" : [
         "۱۰٪ تخفیف با خرید از دسته\u200Cی برگر"
       ],
-      "discountNumber" : "۱۰",
+      "discountNumber" : 10,
       "discount" : true,
       "foodList" : [
         "سوخاری",
@@ -567,6 +580,7 @@
           "name" : "فیله استریپس",
           "category" : "سوخاری",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "۳ تکه فیله مرغ سوخاری شده، سیب زمینی سرخ شده، سالاد کلم، نان بروتچن",
           "star" : 4.4,
           "photos" : [
@@ -576,23 +590,22 @@
           "price" : [
             {
               "tag" : "نرمال",
-              "value" : 230000
+              "value" : 230000,
+              "isDiscount" : false
             },
             {
               "tag" : "اسپایسی",
-              "value" : 230000
+              "value" : 230000,
+              "isDiscount" : false
             }
-          ],
-          "discount" : {
-            "value" : 10,
-            "price" : 207000
-          }
+          ]
         },
         {
           "id" : 2,
           "name" : "پیتزا پپرونی بیکن ایتالیایی",
           "category" : "پیتزا",
           "isPopular" : true,
+          "isDiscount" : true,
           "ingredients" : "خمیر پیتزا ایتالیایی، پپرونی ۸۰%، بیکن گوشت ۹۰%، فلفل دلمه ای رنگی، قارچ",
           "star" : 4.4,
           "photos" : [
@@ -601,7 +614,8 @@
           "price" : [
             {
               "tag" : "متوسط (۳۳ سانتی متری)",
-              "value" : 250000
+              "value" : 250000,
+              "isDiscount" : true
             }
           ]
         },
@@ -610,6 +624,7 @@
           "name" : "پیتزا وگان ایتالیایی",
           "category" : "پیتزا",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "خمیر پیتزا ایتالیایی، قارچ، فلفل دلمه ای رنگی، پیاز، بادمجان، کدو، سس گوجه فرنگی تازه",
           "star" : 3.0,
           "photos" : [
@@ -618,7 +633,8 @@
           "price" : [
             {
               "tag" : "متوسط (۳۳ سانتی متری)",
-              "value" : 180000
+              "value" : 180000,
+              "isDiscount" : false
             }
           ]
         },
@@ -627,6 +643,7 @@
           "name" : "پنه عربیتا با میگو",
           "category" : "پاستا",
           "isPopular" : false,
+          "isDiscount" : true,
           "ingredients" : "پاستا پنه، میگو تکه ای تفت داده شده، سس عربیتا تند",
           "star" : 4.1,
           "photos" : [
@@ -634,7 +651,8 @@
           ],
           "price" : [
             {
-              "value" : 340000
+              "value" : 340000,
+              "isDiscount" : true
             }
           ]
         },
@@ -643,6 +661,7 @@
           "name" : "سالاد سزار سوخاری",
           "category" : "سالاد",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
           "star" : 3.2,
           "photos" : [
@@ -650,7 +669,8 @@
           ],
           "price" : [
             {
-              "value" : 260000
+              "value" : 260000,
+              "isDiscount" : false
             }
           ]
         }
@@ -811,6 +831,7 @@
           "name" : "فیله استریپس سوخاری",
           "category" : "سوخاری",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "۴ تکه فیله استریپس سوخاری، ۲۰۰ گرم سیب زمینی سرخ کرده، نان بروچن، سالاد کلم، سس مخصوص",
           "star" : 4.3,
           "photos" : [
@@ -820,7 +841,8 @@
           ],
           "price" : [
             {
-              "value" : 258000
+              "value" : 258000,
+              "isDiscount" : false
             }
           ]
         },
@@ -829,6 +851,7 @@
           "name" : "ساندویچ چیکن دونر مخصوص",
           "category" : "ساندویچ",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۱۲۰ گرم دونر مرغ، کلم قرمز، سس سیر، پیاز، جعفری، کاهو، سس قارچ",
           "star" : 3.7,
           "photos" : [
@@ -837,7 +860,8 @@
           ],
           "price" : [
             {
-              "value" : 184000
+              "value" : 184000,
+              "isDiscount" : false
             }
           ]
         },
@@ -846,6 +870,7 @@
           "name" : "ساندویچ زینگر سوپریم اسپایسی",
           "category" : "ساندویچ",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "۱۵۰ گرم سینه مرغ سوخاری، ژامبون مرغ ۸۰ درصد ، کاهو، گوجه، خیار شور ، سس مخصوص (اسپایسی) و پنیر گودا",
           "star" : 4.1,
           "photos" : [
@@ -853,7 +878,8 @@
           ],
           "price" : [
             {
-              "value" : 194000
+              "value" : 194000,
+              "isDiscount" : false
             }
           ]
         },
@@ -862,6 +888,7 @@
           "name" : "استیک سینه مرغ",
           "category" : "گریل",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۳۰۰ گرم استیک سینه مرغ، سیب زمینی، کاهو، گوجه گیلاسی، سس قارچ و سیب زمینی سرخ کرده",
           "star" : 4.3,
           "photos" : [
@@ -871,7 +898,8 @@
           ],
           "price" : [
             {
-              "value" : 268000
+              "value" : 268000,
+              "isDiscount" : false
             }
           ]
         },
@@ -880,6 +908,7 @@
           "name" : "نان سیر ایتالیایی",
           "category" : "پیش غذا",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "خمیر پیتزا ۲۷ سانتی متری ، سس سیر مخصوص-پنیر موزارلا",
           "star" : 4.3,
           "photos" : [
@@ -887,7 +916,8 @@
           ],
           "price" : [
             {
-              "value" : 108000
+              "value" : 108000,
+              "isDiscount" : false
             }
           ]
         },
@@ -896,6 +926,7 @@
           "name" : "شات سس چیلی تای",
           "category" : "سرویس اضافه",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "دست ساز ، وزن ۴۰ گرم",
           "star" : 4.1,
           "photos" : [
@@ -903,7 +934,8 @@
           ],
           "price" : [
             {
-              "value" : 3500
+              "value" : 3500,
+              "isDiscount" : false
             }
           ]
         },
@@ -912,6 +944,7 @@
           "name" : "شات پنیر دیپ چدار",
           "category" : "سرویس اضافه",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "دست ساز ، وزن ۸۰ گرم",
           "star" : 3.9,
           "photos" : [
@@ -919,7 +952,8 @@
           ],
           "price" : [
             {
-              "value" : 10000
+              "value" : 10000,
+              "isDiscount" : false
             }
           ]
         },
@@ -928,6 +962,7 @@
           "name" : "نان بروچن",
           "category" : "سرویس اضافه",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "",
           "star" : 4.3,
           "photos" : [
@@ -935,7 +970,8 @@
           ],
           "price" : [
             {
-              "value" : 3200
+              "value" : 3200,
+              "isDiscount" : false
             }
           ]
         }
@@ -1087,6 +1123,7 @@
         "price" : 11200
       },
       "couponList" : [],
+      "discount" : false,
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1098,6 +1135,7 @@
           "name" : "خوراک لوبیا",
           "category" : "بقرا",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "۴۰۰گرم ،لوبیا،گوجه،قارچ،لیموترش،نان لواش",
           "star" : 4.9,
           "photos" : [
@@ -1105,7 +1143,8 @@
           ],
           "price" : [
             {
-              "value" : 60000
+              "value" : 60000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1114,6 +1153,7 @@
           "name" : "میرزاقاسمی",
           "category" : "بقرا",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۲۵۰گرم بادمجان کبابی،گوجه،تخم مرغ،سیر،نان سنگک",
           "star" : 4.3,
           "photos" : [
@@ -1121,7 +1161,8 @@
           ],
           "price" : [
             {
-              "value" : 70000
+              "value" : 70000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1130,6 +1171,7 @@
           "name" : "چلو خورشت قیمه سیب زمینی",
           "category" : "بقرا",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۲۰۰گرم خورشت قیمه،۴۰گرم گوشت گوساله،۲۵۰ گرم برنج ایرانی",
           "star" : 3.4,
           "photos" : [
@@ -1137,7 +1179,8 @@
           ],
           "price" : [
             {
-              "value" : 90000
+              "value" : 90000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1146,6 +1189,7 @@
           "name" : "زرشک پلو با مرغ",
           "category" : "بقرا",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۲۰۰گرم ران مرغ سس پز،۲۵۰ گرم برنج ایرانی",
           "star" : 3.1,
           "photos" : [
@@ -1153,7 +1197,8 @@
           ],
           "price" : [
             {
-              "value" : 110000
+              "value" : 110000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1162,6 +1207,7 @@
           "name" : "ماست بادمجان",
           "category" : "بقرا پیش غذا",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "شرکتی، یک نفره",
           "star" : 3.5,
           "photos" : [
@@ -1169,7 +1215,8 @@
           ],
           "price" : [
             {
-              "value" : 15000
+              "value" : 15000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1178,6 +1225,7 @@
           "name" : "نان اضافی",
           "category" : "بقرا اضافات",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "یک بسته نان لواش",
           "star" : 4.2,
           "photos" : [
@@ -1185,7 +1233,8 @@
           ],
           "price" : [
             {
-              "value" : 4000
+              "value" : 4000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1194,6 +1243,7 @@
           "name" : "پک قاشق وچنگال",
           "category" : "بقرا اضافات",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "قاشق،چنگال،دستمال کاغذی،نمک",
           "star" : 3.3,
           "photos" : [
@@ -1201,7 +1251,8 @@
           ],
           "price" : [
             {
-              "value" : 3000
+              "value" : 3000,
+              "isDiscount" : false
             }
           ]
         }
@@ -1354,6 +1405,7 @@
         "price" : 12800
       },
       "couponList" : [],
+      "discount" : false,
       "foodList" : [
         "چلو کباب",
         "خوراک",
@@ -1366,6 +1418,7 @@
           "name" : "چلو کباب وزیری مخصوص مدرن",
           "category" : "چلو کباب",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "یک سیخ جوجه کباب ۲۲۰ گرمی، یک سیخ کباب کوبیده مخلوط گوشت گوساله و گوسفندی ۱۲۵ گرمی، ۳۵۰ گرم برنج ایرانی، دورچین: گوجه، کره، پیاز،",
           "star" : 3.5,
           "photos" : [
@@ -1375,7 +1428,8 @@
           ],
           "price" : [
             {
-              "value" : 195000
+              "value" : 195000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1384,6 +1438,7 @@
           "name" : "خوراک کباب کوبیده سه سیخ",
           "category" : "خوراک",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "کباب کوبیده مخلوط گوشت گوساله و گوسفندی ۱۰۰ گرمی، دورچین: ۳ عدد گوجه کبابی، فلفل، پیاز، نان لواش",
           "star" : 3.9,
           "photos" : [
@@ -1391,7 +1446,8 @@
           ],
           "price" : [
             {
-              "value" : 200000
+              "value" : 200000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1400,6 +1456,7 @@
           "name" : "خوراک جوجه کباب مخصوص",
           "category" : "خوراک",
           "isPopular" : true,
+          "isDiscount" : false,
           "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
           "star" : 4.2,
           "photos" : [
@@ -1411,7 +1468,8 @@
           ],
           "price" : [
             {
-              "value" : 150000
+              "value" : 150000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1420,6 +1478,7 @@
           "name" : "چلو خورشت قورمه سبزی",
           "category" : "خورشت",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star" : 3.6,
           "photos" : [
@@ -1430,7 +1489,8 @@
           ],
           "price" : [
             {
-              "value" : 125000
+              "value" : 125000,
+              "isDiscount" : false
             }
           ]
         },
@@ -1439,6 +1499,7 @@
           "name" : "نوشابه خانواده کوکا کولا",
           "category" : "نوشیدنی",
           "isPopular" : false,
+          "isDiscount" : false,
           "ingredients" : "۱.۵ لیتر",
           "star" : 4.5,
           "photos" : [
@@ -1446,7 +1507,8 @@
           ],
           "price" : [
             {
-              "value" : 20000
+              "value" : 20000,
+              "isDiscount" : false
             }
           ]
         }

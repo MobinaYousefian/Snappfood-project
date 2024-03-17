@@ -89,7 +89,7 @@ a {
         max-width: 50%;
     }
 
-    .FoodSection {
+    .FoodCard {
         flex-basis: 100%;
         max-width: 100%;
     }
@@ -142,7 +142,7 @@ a {
         direction: ltr;
     }
 
-    .FoodSection {
+    .FoodCard {
         flex-basis: 50%;
         max-width: 50%;
     }
@@ -229,7 +229,7 @@ a {
     height: 1.25rem;
 }
 
-/* used in FoodSection component */
+/* used in FoodCard component */
 .div:hover .button {
     background-color: #FF00A6;
     color: white;

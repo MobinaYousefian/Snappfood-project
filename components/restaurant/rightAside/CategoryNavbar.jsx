@@ -5,6 +5,11 @@ export const CategoryNavbar = ({resInfo}) => {
                 پر‌طرفدارها
             </p>
             {
+                resInfo.discount && <p className={"mb-4 text-carbon-light text-sm font-iranSans cursor-pointer px-3 py-0.5"}>
+                    تخفیف‌دارها
+                </p>
+            }
+            {
                 resInfo.foodList.map((item, i) => (
                     <p className={"mb-4 text-carbon-light text-sm font-iranSans cursor-pointer px-3 py-0.5"} key={i}>
                         {item}
