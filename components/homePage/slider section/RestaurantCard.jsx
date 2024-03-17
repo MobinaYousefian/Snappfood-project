@@ -9,7 +9,6 @@ import {usePathname} from "next/navigation";
 export const RestaurantCard = (
     {id, name, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => {
 
-    console.log(discountNumber)
     const pathName = usePathname();
     const isResPage = pathName === "/restaurant";
 
@@ -23,14 +22,21 @@ export const RestaurantCard = (
                     <div className={"justify-center items-center flex shadow-sp-high rounded-xl bg-surface-light absolute right-0 left-0 m-auto translate-y-5 w-[5.5rem] h-[5.5rem]"}>
                         <Image src={avatar} width={150} height={150} alt={`${name} رستوران `} className={"h-[80px] w-[80px] rounded-xl border-carbon-alphaLight border-solid border-[1px]"}/>
                     </div>
-                    <div className={clsx( couponList ? "inline-block" : "hidden" ,"max-w-[calc(100% - 26px)] items-center flex rounded-bl-2xl rounded-tl-2xl bg-surface-light pl-3 pr-2 py-1 absolute top-5 right-0 left-auto")}>
-                        <span className={"w-4 h-4"}>
-                            <Image src={"/icons/coupon.svg"} width={16} height={16} alt={"icon"}/>
-                        </span>
-                        <span className={"h-auto w-auto inline-block text-accent2-dark text-xs font-iranSans text-ellipsis whitespace-nowrap font-medium overflow-hidden pt-0.5 mr-[0.28125rem]"}>
-                            {`${couponList} و پیشنهاد دیگر `}
-                        </span>
-                    </div>
+                    {
+                        couponList &&
+                        <div className={"max-w-[calc(100%-26px)] items-center flex rounded-bl-2xl rounded-tl-2xl bg-surface-light pl-3 pr-2 py-1 absolute top-5 right-0 left-auto"}>
+                            <span className={"w-4 h-4"}>
+                                <Image src={"/icons/coupon.svg"} width={16} height={16} alt={"icon"}/>
+                            </span>
+                            <span className={"h-auto w-auto inline-block text-accent2-dark text-xs font-iranSans text-ellipsis whitespace-nowrap font-medium overflow-hidden pt-0.5 mr-[0.28125rem]"}>
+                                {couponList[0]}
+                                {
+                                    couponList.length > 1 ? ` و ${toFarsiNumber(couponList.length - 1)} پیشنهاد دیگر` :
+                                        null
+                                }
+                            </span>
+                        </div>
+                    }
                     {
                         discountNumber &&
                         <div className={"absolute right-0 bottom-0 py-1 px-3 bg-surface-light rounded-tl-2xl"}>

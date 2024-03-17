@@ -814,7 +814,6 @@
         "express": false,
         "price" : 15000
       },
-      "couponList" : [],
       "foodList" : [
         "سوخاری",
         "ساندویچ",
@@ -1119,7 +1118,6 @@
         "express": true,
         "price" : 11200
       },
-      "couponList" : [],
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1400,7 +1398,6 @@
         "express": true,
         "price" : 12800
       },
-      "couponList" : [],
       "foodList" : [
         "چلو کباب",
         "خوراک",
