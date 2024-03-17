@@ -7,8 +7,9 @@ import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 import {usePathname} from "next/navigation";
 
 export const RestaurantCard = (
-    {id, name, avatar, banner, category, star, rating, delivery,couponList,discountNumber}) => {
+    {id, name, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => {
 
+    console.log(discountNumber)
     const pathName = usePathname();
     const isResPage = pathName === "/restaurant";
 
@@ -30,11 +31,14 @@ export const RestaurantCard = (
                             {`${couponList} و پیشنهاد دیگر `}
                         </span>
                     </div>
-                    <div className={clsx( !discountNumber ? "hidden" : "inline-block" ,"absolute right-0 bottom-0 py-1 px-3 bg-surface-light rounded-tl-2xl")}>
-                        <span className={"text-accent-dark leading-5 font-iRANSansBold text-[0.875rem]"}>
-                            {`${discountNumber} ٪`}
-                        </span>
-                    </div>
+                    {
+                        discountNumber &&
+                        <div className={"absolute right-0 bottom-0 py-1 px-3 bg-surface-light rounded-tl-2xl"}>
+                            <span className={"text-accent-dark leading-5 font-iRANSansBold text-[0.875rem]"}>
+                                {toFarsiNumber(discountNumber)} ٪
+                            </span>
+                        </div>
+                    }
                 </div>
                 <div className={"shrink-0 grow flex flex-col justify-between"}>
                     <div className={"mt-7 flex flex-col items-center"}>
