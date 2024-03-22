@@ -28,7 +28,7 @@ export const PageSorting = () => {
         document.addEventListener('click', handleClickOutside);
 
         return () => {
-            document.removeEventListener("click", handleClickOutside)
+            document.removeEventListener("click", handleClickOutside);
         };
     },[isOpen])
 
