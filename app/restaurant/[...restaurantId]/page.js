@@ -16,11 +16,13 @@ export default async function RestaurantId ({params}) {
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
 
     return (
-        <main className={"bg-surface-main mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
-            <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
-                <RightAside resInfo={resInfo}/>
-                <FoodMenu resInfo={resInfo}/>
-            </div>
-        </main>
+        <div className={"bg-surface-main"}>
+            <main className={"mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
+                <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
+                    <RightAside resInfo={resInfo}/>
+                    <FoodMenu resInfo={resInfo}/>
+                </div>
+            </main>
+        </div>
     )
 }
