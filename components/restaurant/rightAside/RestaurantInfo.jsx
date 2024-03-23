@@ -25,7 +25,7 @@ export const RestaurantInfo = ({resInfo}) => {
                             </div>
                         </div>
                         {
-                            resInfo.discount &&
+                            resInfo.discountNumber &&
                             <span className={"text-accent-dark text-sm font-iranSans shadow-sp-medium rounded-[2.5rem] border-carbon-alphaLight shrink-0 py-1 px-3 bg-surface-light border-[1px]"}>
                                 <span className={"text-accent-dark text-xs font-iranSans"}>%</span>
                                 {toFarsiNumber(resInfo.discountNumber)}

@@ -10,17 +10,14 @@ export async function generateMetadata ({ params }) {
     }
 }
 
-export default async function RestaurantId ({params}) {
-    const {restaurants} = await getData();
-    const pageId = params.restaurantId[0];
-    const resInfo = restaurants.filter(({id}) => id == pageId)[0]
+export default function RestaurantId ({params}) {
 
     return (
         <div className={"bg-surface-main"}>
             <main className={"mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
                 <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
-                    <RightAside resInfo={resInfo}/>
-                    <FoodMenu resInfo={resInfo}/>
+                    <RightAside params={params}/>
+                    <FoodMenu params={params}/>
                 </div>
             </main>
         </div>
