@@ -1,5 +1,6 @@
 import {getData} from "@/lib/dataFeching";
 import {AsideMenu, PageSorting, RestaurantList} from "@/components";
+import {Suspense} from "react";
 
 export default async function restaurant () {
         const {resPageCategory, fastFoods, irani, kebab, } = await getData();
@@ -9,7 +10,9 @@ export default async function restaurant () {
             <PageSorting/>
             <div className={"flex-wrap w-[calc(100%+2rem)] m-[calc(-1rem)] flex"}>
                 <AsideMenu category={resPageCategory} fastFoods={fastFoods} irani={irani} kebab={kebab}/>
-                <RestaurantList/>
+                <Suspense>
+                    <RestaurantList/>
+                </Suspense>
             </div>
         </main>
     )
