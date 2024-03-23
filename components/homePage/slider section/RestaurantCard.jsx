@@ -15,7 +15,7 @@ export const RestaurantCard = (
     const nameSegment = name.split(" ").join("_").replace("(", "").replace(")", "");
 
     return (
-        <Link href={`/restaurant/menu/${id}/${nameSegment}`}>
+        <Link href={`/restaurant/${id}/${nameSegment}`}>
             <div className={clsx(isResPage && "h-auto mb-0" ,"hover:shadow-sp-high text-carbon-main shadow-sp-small rounded-lg flex-col flex border-[1px] border-carbon-alphaLight border-solid bg-surface-light overflow-hidden pb-6 mb-8 box-border justify-between h-[21.3125rem]")}>
                 <div className={"relative shrink-0 grow flex justify-center items-end min-h-[9.6875rem] max-h-[9.6875rem] h-[9.6875rem]"}>
                     <Image src={banner} width={400} height={248} alt={name} className={"w-full h-full object-cover "}/>

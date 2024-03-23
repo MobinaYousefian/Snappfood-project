@@ -2,7 +2,7 @@ import {FoodMenu, RightAside} from "@/components";
 import {getData} from "@/lib/dataFeching";
 
 export async function generateMetadata ({ params }) {
-    const pageId = params.restaurantId[1];
+    const pageId = params.restaurantId[0];
     const {restaurants} = await getData();
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
     return {
@@ -12,7 +12,7 @@ export async function generateMetadata ({ params }) {
 
 export default async function RestaurantId ({params}) {
     const {restaurants} = await getData();
-    const pageId = params.restaurantId[1];
+    const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
 
     return (
