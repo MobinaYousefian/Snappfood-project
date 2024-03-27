@@ -5,7 +5,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {openAddressModal} from "@/redux/features/headerAddressSlice";
 
 export const AddressBox = () => {
-    const {address} = useSelector((state) => state.addressModal)
+    const {address} = useSelector((state) => state.addressModal);
+    const {title, direction} = address;
     const dispatch = useDispatch()
 
     const handleOpenModal = () => {
@@ -21,10 +22,10 @@ export const AddressBox = () => {
             <div onClick={handleOpenModal} className={"cursor-pointer h-10 p-1 inline-flex items-center"}>
                 <Image src={"/icons/location.svg"} width={12} height={14} alt={"location"} className={"ml-2.5"}/>
                 <div className={"ml-2.5 flex flex-col"}>
-                    <p> </p>
+                    <p className={"font-iRANSansBold text-sm text-carbon-main"}>{title}</p>
                      <div className={"flex justify-center"}>
                         <span className={"header-address-span overflow-hidden text-carbon-main leading-3 text-[0.625rem] font-iranSans text-ellipsis opacity-60 whitespace-nowrap pt-0.5 max-w-[29vw] min-w-[29vw]"}>
-                            {address}
+                            {direction}
                         </span>
                         <Image src={"/icons/arrow-down-pink.svg"} width={12} height={9} alt={"icon"} className={"w-[12px] mr-[0.6rem]"}/>
                     </div>
