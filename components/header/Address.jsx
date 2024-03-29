@@ -2,6 +2,7 @@
 import Image from "next/image";
 import {closeAddressModal} from "@/redux/features/headerAddressSlice";
 import {useDispatch, useSelector} from "react-redux";
+import {AddressPlaceholder} from "@/components";
 
 export const Address = () => {
 
@@ -31,31 +32,11 @@ export const Address = () => {
                     <section className={"section overflow-auto mb-4 max-h-[60vh]"}>
                         {
                             address.map((item, i) => (
-                                <div className={"last:mb-0 justify-between items-center flex border-[1px] border-carbon-alphaLight border-solid rounded-[0.375rem] pr-4 py-2.5 relative box-border w-full mb-4"} key={i}>
-                                    <label htmlFor={"address-0"} className={"inline-flex items-center flex-1"}>
-                                        <input id={"address-0"} type={"checkbox"} className={"hidden box-border"}/>
-                                        <Image src={"/icons/checkBox.svg"} width={22} height={22} alt={"icon"}
-                                               className={"cursor-pointer h-[1.375rem] w-[1.375rem] rounded-[50%]"}/>
-                                        <div className={"w-[calc(100%-50px)] flex-col flex pr-[10px] cursor-pointer mr-2"}>
-                                            <p className={"text-carbon-main text-sm font-iRANSansBold mb-[5px]"}>{item.title}</p>
-                                            <div>
-                                            <span className={"text-carbon-light font-iranSans text-sm"}>
-                                                {item.location}
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    <div className={"min-w-4 flex"}>
-                                        <button className={"px-[6px] py-[1px] justify-start h-14 flex items-center"}>
-                                            <Image src={"/icons/delete.svg"} width={20} height={20} alt={"icon"}
-                                                   className={"h-[20px] w-[20px] mr-[0.6rem]"}/>
-                                        </button>
-                                        <button className={"px-[6px] py-[1px] justify-start h-14 flex items-center"}>
-                                            <Image src={"/icons/changeValue.svg"} width={20} height={20} alt={"icon"}
-                                                   className={"h-[20px] w-[20px] mr-[0.6rem]"}/>
-                                        </button>
-                                    </div>
-                                </div>
+                                <AddressPlaceholder
+                                    key={i} item={item}
+                                    i={i}
+                                    handleCloseModal={handleCloseModal}
+                                />
                             ))
                         }
                     </section>
@@ -70,5 +51,3 @@ export const Address = () => {
         </div>
     )
 }
-
-// export default Address;
