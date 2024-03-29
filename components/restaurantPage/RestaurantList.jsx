@@ -1,15 +1,17 @@
+'use client'
 import {RestaurantCard} from "@/components";
 import Link from "next/link";
-import {getData} from "@/lib/dataFeching";
+import {useSelector} from "react-redux";
 
-export const RestaurantList = async () => {
-    const {restaurants} = await getData();
+export const RestaurantList = ({restaurants}) => {
+    const {selected} = useSelector(state => state.addressModal);
+    const cityRes = restaurants.filter(({city}) => city === selected.city);
 
     return (
         <div className={"ResList-resPage basis-full max-w-full p-[calc(1rem)]"}>
             <div className={"flex flex-wrap w-[calc(100%+1.5rem)] m-[calc(-0.75rem)]"}>
                 {
-                    restaurants.map(({id, name, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => (
+                    cityRes.map(({id, name, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => (
                         <div key={id} className={"RestaurantList-resPage basis-full max-w-full p-[calc(0.75rem)]"}>
                             <RestaurantCard
                                 id={id}

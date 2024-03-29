@@ -1,14 +1,17 @@
 'use client'
 import {ResSlider, RestaurantCard} from "@/components";
 import {SwiperSlide} from "swiper/react";
+import {useSelector} from "react-redux";
 
 export const RestaurantSlide = ({restaurants}) => {
+    const {selected} = useSelector(state => state.addressModal);
+    const cityRes = restaurants.filter(({city}) => city === selected.city);
 
     return (
         <div className={"relative"}>
             <ResSlider>
                 {
-                    restaurants.map(({name, id, avatar, banner, category, star, rating, delivery,couponList,discountNumber}) => (
+                    cityRes.map(({name, id, avatar, banner, category, star, rating, delivery, couponList, discountNumber}) => (
                         <SwiperSlide key={id}>
                             <div className={"box-border transition-transform relative h-full shrink-0 w-full"}>
                                 <RestaurantCard
