@@ -5,10 +5,10 @@ export const headerAddressSlice = createSlice({
     name : "addressModal",
     initialState : {
         isOpen : false,
-        address : {
-            title : "پیشفرض",
-            direction : "تهران، کشاورز - پارک لاله، ولی عصر، فلسطین، برادران فرزام قبل از مهدوی ۱"
-        }
+        address : [
+            {title : "", location : "تهران، کشاورز - پارک لاله، ولی عصر، فلسطین، برادران فرزام قبل از مهدوی ۱"},
+            {title : "آدرس دوم", location : "لاهیجان، انقلاب، امام خمینی شرقی قبل از میدان بصیرت ۱"}
+        ],
     },
     reducers : {
         openAddressModal : (state) => {
@@ -19,15 +19,15 @@ export const headerAddressSlice = createSlice({
             state.isOpen = false;
         },
 
-        setNewAddressName : (state, action) => {
-            return state.address.title = [...state, action.payload];
+        setNewAddressTitle : (state, action) => {
+
         },
 
         setNewAddress : (state, action) => {
-            return state.address.direction = [...state, action.payload];
+
         }
     }
 });
 
-export const { openAddressModal, closeAddressModal, setNewAddress, setNewAddressName } = headerAddressSlice.actions;
+export const { openAddressModal, closeAddressModal, setNewAddress, setNewAddressTitle } = headerAddressSlice.actions;
 export const addressReducer = headerAddressSlice.reducer;
