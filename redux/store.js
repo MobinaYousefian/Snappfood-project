@@ -10,7 +10,7 @@ import {sortingReducer} from "@/redux/features/sortingSlice";
 const persistConfig = {
     key : "persist",
     storage : storage,
-    whitelist : ["address"]
+    whitelist : [""]
 };
 
 const rootReducer = combineReducers({
