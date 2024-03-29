@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 
 export const UserProfile = ({user}) => {
     return (
@@ -15,13 +16,28 @@ export const UserProfile = ({user}) => {
             </Link>
             <button className={"rounded-md py-[1px] pl-[6px] grow w-full justify-start min-h-12 pr-4 h-14 items-center inline-flex transition-socialFooter box-border min-w-[6.6875rem]"}>
                 <div className={"w-full flex justify-between"}>
+                    <div className={"flex items-center"}>
+                        <Image src={"/icons/clubGray.svg"} width={20} height={20} alt={"icon"} className={"ml-3.5"}/>
+                        <p className={"text-carbon-main font-iranSans text-sm"}>اسنپ! کلاب</p>
+                    </div>
+                    <div className={"items-center flex pl-3 pr-1 py-0.5 mr-auto rounded-[2rem] border-[#ffce00] border bg-[#fd0]"}>
+                        <Image src={"/icons/club.svg"} width={12.94} height={16} alt={"icon"} className={"h-4 mx-1"}/>
+                        <div className={"flex items-baseline"}>
+                            <p className={"font-iRANSansBold text-sm text-carbon-main"}>{toFarsiNumber(priceFormatting(user.clubPoints))}</p>
+                            <p className={"mr-[0.2rem] text-carbon-main leading-3 font-iranSans text-[0.625rem]"}>امتیاز</p>
+                        </div>
+                    </div>
+                </div>
+            </button>
+            <button className={"rounded-md py-[1px] pl-[6px] grow w-full justify-start min-h-12 pr-4 h-14 items-center inline-flex transition-socialFooter box-border min-w-[6.6875rem]"}>
+                <div className={"w-full flex justify-between"}>
                     <div className={"flex "}>
                         <Image src={"/icons/wallet.svg"} width={17} height={16} alt={"icon"} className={"ml-4"}/>
                         <p className={"text-carbon-main font-iranSans text-sm"}>کیف پول</p>
                     </div>
                     <div className={"inline-flex flex-col"}>
                             <span className={"font-iRANSansBold text-sm text-carbon-main"}>
-                                {user.wallet}
+                                {toFarsiNumber(priceFormatting(user.wallet))}
                                 <span className={"font-iranSans text-xs text-carbon-light"}> تومان</span>
                             </span>
                     </div>

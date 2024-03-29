@@ -246,7 +246,7 @@
         "صبحانه"
       ],
       "address" : "میدان ولی عصر، خیابان ورشو، خیابان حافظ، پلاک ۵۱۹، طبقه همکف، الین سوشی",
-      "city" : "لاهیجان",
+      "city" : "تهران",
       "star" : 4.4,
       "rating" : 7888,
       "commentNumber" : 1231,
@@ -1786,6 +1786,7 @@
     "familyName" : "y",
     "email" : "mobina.ysf203@gmail.com",
     "prevOrders" : [],
-    "wallet" : 0
+    "wallet" : 0,
+    "clubPoints" : 3710
   }
 }
