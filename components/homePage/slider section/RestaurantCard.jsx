@@ -29,7 +29,7 @@ export const RestaurantCard = (
                                 <Image src={"/icons/coupon.svg"} width={16} height={16} alt={"icon"}/>
                             </span>
                             <span className={"h-auto w-auto inline-block text-accent2-dark text-xs font-iranSans text-ellipsis whitespace-nowrap font-medium overflow-hidden pt-0.5 mr-[0.28125rem]"}>
-                                {couponList[0]}
+                                {`${couponList[0].discount} ${couponList[0].title}`}
                                 {
                                     couponList.length > 1 ? ` و ${toFarsiNumber(couponList.length - 1)} پیشنهاد دیگر` :
                                         null
