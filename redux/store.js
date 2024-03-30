@@ -6,6 +6,7 @@ import {searchReducer} from "@/redux/features/headerSearchSlice";
 import {cartReducer} from "@/redux/features/cartSlice";
 import {supportReducer} from "@/redux/features/supportSlice";
 import {sortingReducer} from "@/redux/features/sortingSlice";
+import {activeCouponReducer} from "@/redux/features/activeCouponSlice";
 
 const persistConfig = {
     key : "persist",
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
     searchModal :persistReducer(persistConfig, searchReducer),
     cart : persistReducer(persistConfig, cartReducer),
     supportModal : persistReducer(persistConfig, supportReducer),
-    sorting : persistReducer(persistConfig, sortingReducer)
+    sorting : persistReducer(persistConfig, sortingReducer),
+    activeCoupon : persistReducer(persistConfig, activeCouponReducer)
 });
 
 export const store = configureStore({
