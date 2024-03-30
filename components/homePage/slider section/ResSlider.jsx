@@ -21,7 +21,7 @@ const responsive = {
     },
 };
 export const ResSlider = ({children}) => {
-    const [isFirst, setIsFirst] = useState(true)
+    const [isFirst, setIsFirst] = useState(true);
     const swiperRef = useRef(null);
 
     const handleNext = () => {
@@ -43,6 +43,7 @@ export const ResSlider = ({children}) => {
                 spaceBetween={16}
                 modules={[Navigation]}
                 ref={swiperRef}
+                onSlideChange={() => setIsFirst(!isFirst)}
             >
                 {children}
             </Swiper>
