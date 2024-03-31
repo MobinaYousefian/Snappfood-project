@@ -27,8 +27,8 @@ export const PartyFoodCard = ({food}) => {
                         <span>{toFarsiNumber(food.star)}</span>
                     </span>
                     <div className={"mt-1 flex items-baseline"}>
-                        <span className={clsx( food.partyRemain < 4 && "text-alert-light" ,"ml-0.5 font-iRANSansBold text-sm text-carbon-main")}>{toFarsiNumber(food.partyRemain)}</span>
-                        <span className={clsx( food.partyRemain < 4 && "text-alert-light" ,"mr-1 font-iranSans text-xs text-carbon-light")}> عدد باقی مانده</span>
+                        <span className={clsx( food.partyRemain < 4 ? "text-alert-light" : "text-carbon-main" ,"ml-0.5 font-iRANSansBold text-sm")}>{toFarsiNumber(food.partyRemain)}</span>
+                        <span className={clsx( food.partyRemain < 4 ? "text-alert-light" : "text-carbon-light" ,"mr-1 font-iranSans text-xs")}> عدد باقی مانده</span>
                     </div>
                 </div>
                 <div className={"flex justify-center items-end flex-col"}>
@@ -48,7 +48,7 @@ export const PartyFoodCard = ({food}) => {
                 </div>
             </div>
             <div className={"w-full rounded-[4px] bg-surface-dark h-[2px]"}>
-                <div className={clsx( food.partyRemain < 4 && "bg-alert-light" ,"duration-300 transition-all bg-inactive-dark w-full rounded-[4px] h-[2px]")}> </div>
+                <div className={clsx( food.partyRemain < 4 ? "bg-alert-light" : "bg-inactive-dark" ,"duration-300 transition-all w-full rounded-[4px] h-[2px]")}> </div>
             </div>
         </div>
     )
