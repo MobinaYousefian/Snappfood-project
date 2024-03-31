@@ -1,7 +1,7 @@
 import {getData} from "@/lib/dataFeching";
 import {AsideMenu, Footer, PageSorting, RestaurantList} from "@/components";
 import {Suspense} from "react";
-import {Loading} from "@/app/Loading";
+import Loading from "@/app/loading";
 
 export default async function restaurant () {
         const {resPageCategory, fastFoods, irani, kebab, restaurants} = await getData();

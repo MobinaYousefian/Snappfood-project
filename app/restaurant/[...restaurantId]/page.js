@@ -1,7 +1,7 @@
 import {FoodMenu, Footer, RightAside} from "@/components";
 import {getData} from "@/lib/dataFeching";
 import {Suspense} from "react";
-import {Loading} from "@/app/Loading";
+import Loading from "@/app/loading";
 
 export async function generateMetadata ({ params }) {
     const pageId = params.restaurantId[0];

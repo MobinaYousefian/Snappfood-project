@@ -8,7 +8,7 @@ import {
 } from "@/components";
 import {getData} from "@/lib/dataFeching";
 import {Suspense} from "react";
-import {Loading} from "@/app/Loading";
+import Loading from "@/app/loading";
 
 export default async function Home() {
     const { restaurants, categories, cities } = await getData();

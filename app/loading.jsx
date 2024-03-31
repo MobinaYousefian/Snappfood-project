@@ -1,4 +1,5 @@
-export const Loading = () => {
+export default function Loading ()  {
+
     return (
         <div className={"p-8"}>
             <div className={"m-auto h-full relative flex justify-center items-center w-[72px]"}>
