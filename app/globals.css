@@ -50,6 +50,13 @@ a {
     animation-name: none;
 }
 
+/* used in FoodMenu component */
+.active {
+    font-family: IRANSansBold, sans-serif;
+    border-right: 0.125rem solid #3A3D42;
+    color: #3A3D42;
+}
+
 @media (min-width: 600px) {
     .header-address-span {
         max-width: calc(-85px + 57vw);
@@ -150,6 +157,13 @@ a {
     .padding-size {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
+    }
+
+    .active {   /* used in FoodMenu component */
+        font-family: IRANSansBold, sans-serif;
+        border-right: none;
+        border-left: 0.125rem solid #3A3D42;
+        color: #3A3D42;
     }
 }
 

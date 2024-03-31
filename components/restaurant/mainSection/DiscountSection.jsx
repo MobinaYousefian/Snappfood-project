@@ -4,7 +4,7 @@ export const DiscountSection = ({resInfo}) => {
     const discounts = resInfo.foods.filter(({isDiscount}) => isDiscount === true);
 
     return (
-        <section id={"populars"} className={"scroll-mt-[4.375rem]"}>
+        <>
             <p className={"h-12 text-carbon-light flex justify-center items-center font-iRANSansBold text-xs"}>
                 تخفیف‌دارها
             </p>
@@ -20,6 +20,6 @@ export const DiscountSection = ({resInfo}) => {
                     ))
                 }
             </div>
-        </section>
+        </>
     )
 }
