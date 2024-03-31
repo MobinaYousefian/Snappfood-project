@@ -580,6 +580,7 @@
         }
       ],
       "discountNumber" : 10,
+      "hasParty" : true,
       "foodList" : [
         "سوخاری",
         "پیتزا",
@@ -674,6 +675,9 @@
           "category" : "سالاد",
           "isPopular" : false,
           "isDiscount" : false,
+          "isParty" : true,
+          "partyDiscount" : 20,
+          "partyRemain" : 9,
           "ingredients" : "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
           "star" : 3.2,
           "photos" : [
@@ -829,6 +833,7 @@
         "express": false,
         "price" : 15000
       },
+      "hasParty" : true,
       "foodList" : [
         "سوخاری",
         "ساندویچ",
@@ -882,6 +887,9 @@
           "category" : "ساندویچ",
           "isPopular" : true,
           "isDiscount" : false,
+          "isParty" : true,
+          "partyDiscount" : 15,
+          "partyRemain" : 7,
           "ingredients" : "۱۵۰ گرم سینه مرغ سوخاری، ژامبون مرغ ۸۰ درصد ، کاهو، گوجه، خیار شور ، سس مخصوص (اسپایسی) و پنیر گودا",
           "star" : 4.1,
           "photos" : [
@@ -1415,6 +1423,7 @@
         "express": true,
         "price" : 12800
       },
+      "hasParty" : true,
       "foodList" : [
         "چلو کباب",
         "خوراک",
@@ -1466,6 +1475,9 @@
           "category" : "خوراک",
           "isPopular" : true,
           "isDiscount" : false,
+          "isParty" : true,
+          "partyDiscount" : 20,
+          "partyRemain" : 10,
           "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
           "star" : 4.2,
           "photos" : [
@@ -1488,6 +1500,9 @@
           "category" : "خورشت",
           "isPopular" : false,
           "isDiscount" : false,
+          "isParty" : true,
+          "partyDiscount" : 20,
+          "partyRemain" : 6,
           "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star" : 3.6,
           "photos" : [
@@ -1630,6 +1645,123 @@
           "order" : [
             "خوراک جوجه کباب مخصوص"
           ]
+        }
+      ]
+    }
+  ],
+  "partyFoods" : [
+    {
+      "id" : 1,
+      "resName" : "فست فود دیژون",
+      "resDelivery" : {
+        "type" : "ارسال اکسپرس",
+        "express": true,
+        "price" : 14900
+      },
+      "name" : "سالاد سزار سوخاری",
+      "category" : "سالاد",
+      "isPopular" : false,
+      "isDiscount" : false,
+      "isParty" : true,
+      "partyDiscount" : 20,
+      "partyRemain" : 3,
+      "ingredients" : "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
+      "star" : 3.2,
+      "photos" : [
+        "https://cdn.snappfood.ir/641x641/cdn/25/79/29/vendor/62d90fc25caf5.jpeg"
+      ],
+      "price" : [
+        {
+          "value" : 260000,
+          "isDiscount" : false
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "resName" : "چیکن فامیلی (یوسف آباد)",
+      "resDelivery" : {
+        "type" : "پیک فروشنده",
+        "express": false,
+        "price" : 15000
+      },
+      "name" : "ساندویچ زینگر سوپریم اسپایسی",
+      "category" : "ساندویچ",
+      "isPopular" : true,
+      "isDiscount" : false,
+      "isParty" : true,
+      "partyDiscount" : 15,
+      "partyRemain" : 7,
+      "ingredients" : "۱۵۰ گرم سینه مرغ سوخاری، ژامبون مرغ ۸۰ درصد ، کاهو، گوجه، خیار شور ، سس مخصوص (اسپایسی) و پنیر گودا",
+      "star" : 4.1,
+      "photos" : [
+        "https://cdn.snappfood.ir/641x641/cdn/23/50/35/vendor/63d8166373cc5.jpeg"
+      ],
+      "price" : [
+        {
+          "value" : 194000,
+          "isDiscount" : false
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "resName" : "کترینگ مدرن",
+      "resDelivery" : {
+        "type" : "ارسال اکسپرس",
+        "express": true,
+        "price" : 12800
+      },
+      "name" : "خوراک جوجه کباب مخصوص",
+      "category" : "خوراک",
+      "isPopular" : true,
+      "isDiscount" : false,
+      "isParty" : true,
+      "partyDiscount" : 20,
+      "partyRemain" : 10,
+      "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
+      "star" : 4.2,
+      "photos" : [
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62ad87da8122a.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62ad87bf8040b.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62ad870e592e7.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62ad86f685172.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/623362ecc9d7e.jpeg"
+      ],
+      "price" : [
+        {
+          "value" : 150000,
+          "isDiscount" : false
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "resName" : "کترینگ مدرن",
+      "resDelivery" : {
+        "type" : "ارسال اکسپرس",
+        "express": true,
+        "price" : 12800
+      },
+      "name" : "چلو خورشت قورمه سبزی",
+      "category" : "خورشت",
+      "isPopular" : false,
+      "isDiscount" : false,
+      "isParty" : true,
+      "partyDiscount" : 20,
+      "partyRemain" : 6,
+      "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
+      "star" : 3.6,
+      "photos" : [
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62c15644e6524.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62c1526e0fbd6.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62c150156e886.jpeg",
+        "https://cdn.snappfood.ir/641x641/cdn/10/20/54/vendor/62263f561c33b.jpeg"
+      ],
+      "price" : [
+        {
+          "value" : 125000,
+          "isDiscount" : false
         }
       ]
     }

@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import {ResSlider} from "@/components";
+import {PartySlider} from "@/components/homePage/PartySlider";
+import {getData} from "@/lib/dataFeching";
 
-export const FoodParty = () => {
+export const FoodParty = async () => {
+    const {partyFoods} = await getData()
+    console.log(partyFoods)
+
+    if (partyFoods === undefined) return null;
+
     return (
         <section className={"mx-4 padding-size"}>
-            <div className={"max-[599px]:flex-col foodParty-radius foodParty-gradiant mb-20 flex px-10 pb-10 min-h-[23.125rem]"}>
+            <div className={"mb-20 max-[599px]:flex-col foodParty-radius foodParty-gradiant flex pl-10 py-[1.8125rem] min-h-[23.125rem]"}>
                 <div className={"w-[15%] max-[599px]:w-full py-[1.1875rem] flex flex-col justify-between items-center grow shrink-0 basis-[15%]"}>
                     <div className={"items-center justify-center flex-col flex p-[0.3125rem]"}>
                         <div className={"flex justify-center items-center"}>
@@ -39,11 +45,7 @@ export const FoodParty = () => {
                     </Link>
                 </div>
                 <div className={"relative max-[599px]:w-full w-[80%]"}>
-                    <ResSlider>
-                        <div className={"relative"}>
-
-                        </div>
-                    </ResSlider>
+                    <PartySlider partyFoods={partyFoods}/>
                 </div>
             </div>
         </section>
