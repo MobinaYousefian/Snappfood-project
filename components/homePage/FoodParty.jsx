@@ -1,12 +1,14 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import {PartySlider} from "@/components/homePage/PartySlider";
-import {getData} from "@/lib/dataFeching";
+import {PartyCountDown} from "@/components";
+import {useSelector} from "react-redux";
 
-export const FoodParty = async () => {
-    const {partyFoods} = await getData()
-    console.log(partyFoods)
+export const FoodParty = ({partyFoods}) => {
+    const {isShown} = useSelector(state => state.showParty);
 
+    if (isShown === false) return null;
     if (partyFoods === undefined) return null;
 
     return (
@@ -15,12 +17,8 @@ export const FoodParty = async () => {
                 <div className={"w-[15%] max-[599px]:w-full py-[1.1875rem] flex flex-col justify-between items-center grow shrink-0 basis-[15%]"}>
                     <div className={"items-center justify-center flex-col flex p-[0.3125rem]"}>
                         <div className={"flex justify-center items-center"}>
-                            <div
-                                className={"fill-surface-light drop-shadow-[0-1px-0-rgba(0,0,0,0.24)] justify-center flex pt-0.5 ml-1.5 min-w-[2.625rem]"}>
-                                <div>count down</div>
-                            </div>
-                            <Image src={"/icons/foodParty-countdown.svg"} width={18} height={18} alt={"icons"}
-                                   className={"drop-shadow-[0-1px-0-rgba(0,0,0,0.24)]"}/>
+                            <PartyCountDown/>
+                            <Image src={"/icons/foodParty-countdown.svg"} width={18} height={18} alt={"icons"} className={"drop-shadow-[0-1px-0-rgba(0,0,0,0.24)]"}/>
                         </div>
                     </div>
                     <div className={"p-[16px]"}>
