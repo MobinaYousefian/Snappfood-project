@@ -1,8 +1,6 @@
 import {CategoryNavbar, RestaurantInfo} from "@/components";
-import {getData} from "@/lib/dataFeching";
 
-export const RightAside = async ({params}) => {
-    const {restaurants} = await getData();
+export const RightAside = async ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
 

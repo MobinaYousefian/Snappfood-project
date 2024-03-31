@@ -20,8 +20,9 @@ export const CouponSection = ({resInfo}) => {
         swiperRef.current.swiper.slidePrev();
     }
 
+
     return (
-        <section className={"p-4 scroll-mt-[4.375rem]"}>
+        <>
             <p className={"h-12 text-carbon-main flex justify-center items-center font-iRANSansBold text-xs"}>
                 کوپن‌ها
             </p>
@@ -59,6 +60,6 @@ export const CouponSection = ({resInfo}) => {
                     </div>
                 </section>
             </div>
-        </section>
+        </>
     )
 }

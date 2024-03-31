@@ -5,7 +5,7 @@ export const PopularSection = ({resInfo}) => {
 
     if (!populars) return null;
     return (
-        <section id={"populars"} className={"scroll-mt-[4.375rem]"}>
+        <>
             <p className={"h-12 text-carbon-light flex justify-center items-center font-iRANSansBold text-xs"}>
                 پرطرفدارها
             </p>
@@ -21,6 +21,6 @@ export const PopularSection = ({resInfo}) => {
                     ))
                 }
             </div>
-        </section>
+        </>
     )
 }

@@ -7,6 +7,7 @@ import {cartReducer} from "@/redux/features/cartSlice";
 import {supportReducer} from "@/redux/features/supportSlice";
 import {sortingReducer} from "@/redux/features/sortingSlice";
 import {activeCouponReducer} from "@/redux/features/activeCouponSlice";
+import {elementOnScreenReducer} from "@/redux/features/elementOnScreenSlice";
 
 const persistConfig = {
     key : "persist",
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
     cart : persistReducer(persistConfig, cartReducer),
     supportModal : persistReducer(persistConfig, supportReducer),
     sorting : persistReducer(persistConfig, sortingReducer),
-    activeCoupon : persistReducer(persistConfig, activeCouponReducer)
+    activeCoupon : persistReducer(persistConfig, activeCouponReducer),
+    elementOnScreen : persistReducer(persistConfig, elementOnScreenReducer)
 });
 
 export const store = configureStore({

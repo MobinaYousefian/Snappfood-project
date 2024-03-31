@@ -50,6 +50,13 @@ a {
     animation-name: none;
 }
 
+/* used in FoodMenu component */
+.active {
+    font-family: IRANSansBold, sans-serif;
+    border-right: 0.125rem solid #3A3D42;
+    color: #3A3D42;
+}
+
 @media (min-width: 600px) {
     .header-address-span {
         max-width: calc(-85px + 57vw);
@@ -150,6 +157,13 @@ a {
     .padding-size {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
+    }
+
+    .active {   /* used in FoodMenu component */
+        font-family: IRANSansBold, sans-serif;
+        border-right: none;
+        border-left: 0.125rem solid #3A3D42;
+        color: #3A3D42;
     }
 }
 
@@ -353,6 +367,67 @@ a {
     }
     to {
         transform: rotate(0deg);
+    }
+}
+
+/* Loading animations */
+.loading23-animation {
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: BVSOq;
+}
+
+@keyframes BVSOq {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(24px, 0px);
+    }
+}
+
+.loading1-animation {
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: gGreRz;
+}
+
+@keyframes gGreRz {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.loading4-animation {
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: ceDJoN;
+}
+
+@keyframes ceDJoN {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
     }
 }
 

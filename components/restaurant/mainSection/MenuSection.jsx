@@ -4,7 +4,7 @@ export const MenuSection = ({item, resInfo}) => {
     const sectionFood = resInfo.foods.filter(({category}) => category === item);
 
     return (
-        <section className={"scroll-mt-[4.375rem]"}>
+        <>
             <p className={"h-12 mt-8 text-carbon-light flex justify-center items-center font-iRANSansBold text-xs"}>
                 {item}
             </p>
@@ -20,6 +20,6 @@ export const MenuSection = ({item, resInfo}) => {
                     ))
                 }
             </div>
-        </section>
+        </>
     )
 }
