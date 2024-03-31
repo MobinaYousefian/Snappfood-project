@@ -19,7 +19,7 @@ export const PartyCountDown = () => {
 
 
     let date = new Date();
-    date.setHours(3);
+    date.setHours(4);
 
     const startTime = () => {
         const now = new Date().getTime();
