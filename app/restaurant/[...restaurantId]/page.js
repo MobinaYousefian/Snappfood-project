@@ -1,4 +1,4 @@
-import {FoodMenu, RightAside} from "@/components";
+import {FoodMenu, Footer, RightAside} from "@/components";
 import {getData} from "@/lib/dataFeching";
 import {Suspense} from "react";
 import {Loading} from "@/app/Loading";
@@ -16,15 +16,18 @@ export default async function RestaurantId ({params}) {
     const {restaurants} = await getData();
 
     return (
-        <div className={"bg-surface-main"}>
-            <main className={"mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
-                <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
-                    <Suspense fallback={<Loading/>}>
-                        <RightAside params={params} restaurants={restaurants}/>
-                        <FoodMenu params={params} restaurants={restaurants}/>
-                    </Suspense>
-                </div>
-            </main>
-        </div>
+        <>
+            <div className={"bg-surface-main"}>
+                <Suspense fallback={<Loading/>}>
+                    <main className={"mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
+                        <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
+                            <RightAside params={params} restaurants={restaurants}/>
+                            <FoodMenu params={params} restaurants={restaurants}/>
+                        </div>
+                    </main>
+                </Suspense>
+            </div>
+            <Footer/>
+        </>
     )
 }

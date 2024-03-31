@@ -9,7 +9,7 @@ export const metadata = {
   description: 'سفارش غذا با تخفیف از رستوران ها و فست فود های ایران. ارسال اکسپرس در سریع ترین زمان ممکن. خرید غذا با امکان مقایسه رستوران ها.',
 }
 
-export default async function RootLayout({ children }) {
+export default function RootLayout({ children }) {
     const DynamicModals = dynamic(() => import("../components/Modals"), {
         ssr : false
     })
@@ -20,8 +20,8 @@ export default async function RootLayout({ children }) {
           <body>
           <HeaderGetData/>
           {children}
-          <Footer/>
           <DynamicModals/>
+          {/*<Footer/>*/}
           </body>
           </html>
       </ReduxProvider>
