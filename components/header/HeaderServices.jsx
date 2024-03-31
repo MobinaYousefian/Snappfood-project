@@ -8,7 +8,6 @@ export const HeaderServices = ({storeCategories}) => {
     const pathname = usePathname();
     const isHomePage = pathname === "/";
     const isResCategory = pathname === "/restaurant";
-    console.log(pathname)
 
     return (
         <nav className={clsx(isHomePage ? "shadow-sp-small" : isResCategory ? 'shadow-none' : '' ,"w-full bg-surface-light flex flex-nowrap pt-4 overflow-x-auto")}>

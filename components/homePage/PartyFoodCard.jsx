@@ -1,0 +1,55 @@
+import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
+import Image from "next/image";
+import clsx from "clsx";
+
+export const PartyFoodCard = ({food}) => {
+    const foodPrice = food.price[0].value
+    const discountNum = food.partyDiscount
+    const discountPrice = foodPrice * ((100-discountNum)/100);
+
+    return (
+        <div className={"rounded-lg flex-col justify-between flex drop-shadow-[0_1px_0_rgba(58,61,66,0.06)] cursor-pointer bg-surface-light overflow-hidden p-6 pt-3 mx-[0.1875rem] shadow-sp-high min-h-[23.125rem]"}>
+            <h3 className={"text-carbon-dark text-center leading-3 grow-0 grayscale-0 font-iranSans text-[0.625rem]"}>{food.resName}</h3>
+            <div className={"grow-0 grayscale-0 text-center rounded-[4.5rem]"}>
+                <div className={"grayscale-0 flex items-center justify-center"}>
+                    <p className={"ml-2 font-iranSans text-carbon-dark leading-3 text-[0.625rem]"}>{food.resDelivery.type}</p>
+                    <span className={"ml-2 font-iranSans text-carbon-dark leading-3 text-[0.625rem]"}>{toFarsiNumber(priceFormatting(food.resDelivery.price))}</span>
+                </div>
+            </div>
+            <div className={"items-end justify-center flex grow-0 grayscale-0 rounded-lg overflow-hidden mb-[1.9375rem] mt-5 mx-auto w-[7.125rem] h-[7.125rem]"}>
+                <Image src={food.photos[0]} width={200} height={200} alt={food.name} className={"w-full h-full grow-0 grayscale-0"}/>
+            </div>
+            <h2 className={"text-center min-h-12 grow-0 grayscale-0 font-iRANSansBold text-base text-carbon-main"}>{food.name}</h2>
+            <div className={"my-6 grow-0 grayscale-0 flex justify-between"}>
+                <div className={"flex flex-col items-start"}>
+                    <span className={"flex-row-reverse flex font-iRANSansBold text-xs text-carbon-main"}>
+                        <Image src={"/icons/star.svg"} width={12} height={12} alt={"icon"} className={"mr-1 align-middle"}/>
+                        <span>{toFarsiNumber(food.star)}</span>
+                    </span>
+                    <div className={"mt-1 flex items-baseline"}>
+                        <span className={clsx( food.partyRemain < 4 ? "text-alert-light" : "text-carbon-main" ,"ml-0.5 font-iRANSansBold text-sm")}>{toFarsiNumber(food.partyRemain)}</span>
+                        <span className={clsx( food.partyRemain < 4 ? "text-alert-light" : "text-carbon-light" ,"mr-1 font-iranSans text-xs")}> عدد باقی مانده</span>
+                    </div>
+                </div>
+                <div className={"flex justify-center items-end flex-col"}>
+                    <div className={"flex-row-reverse mb-1 flex justify-center items-center"}>
+                        <div className={"px-1 items-center justify-center flex bg-accent-main rounded-[0.25rem] h-4 mr-0.5"}>
+                            <span className={"text-surface-main text-xs font-iRANSansBold mt-0.5"}>
+                                {toFarsiNumber(food.partyDiscount)}
+                            </span>
+                            <Image src={"/icons/percentage-white.svg"} width={7} height={8} alt={"icon"} className={"mr-[0.1875rem]"}/>
+                        </div>
+                        <s className={"text-inactive-dark line-through text-xs font-iranSans ml-[0.1875rem]"}>{toFarsiNumber(priceFormatting(foodPrice))}</s>
+                    </div>
+                    <div className={"flex items-center justify-center"}>
+                        <p className={"font-iRANSansBold text-sm text-carbon-main"}>{toFarsiNumber(priceFormatting(discountPrice))}</p>
+                        <p className={"text-carbon-main text-xs font-iranSans mr-0.5"}> تومان</p>
+                    </div>
+                </div>
+            </div>
+            <div className={"w-full rounded-[4px] bg-surface-dark h-[2px]"}>
+                <div className={clsx( food.partyRemain < 4 ? "bg-alert-light" : "bg-inactive-dark" ,"duration-300 transition-all w-full rounded-[4px] h-[2px]")}> </div>
+            </div>
+        </div>
+    )
+}

@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import {ResSlider} from "@/components";
+import {PartySlider} from "@/components/homePage/PartySlider";
+import {getData} from "@/lib/dataFeching";
 
-export const FoodParty = () => {
+export const FoodParty = async () => {
+    const {partyFoods} = await getData()
+    console.log(partyFoods)
+
+    if (partyFoods === undefined) return null;
+
     return (
         <section className={"mx-4 padding-size"}>
-            <div className={"max-[599px]:flex-col foodParty-radius foodParty-gradiant mb-20 flex px-10 pb-10 min-h-[23.125rem]"}>
+            <div className={"mb-20 max-[599px]:flex-col foodParty-radius foodParty-gradiant flex pl-10 py-[1.8125rem] min-h-[23.125rem]"}>
                 <div className={"w-[15%] max-[599px]:w-full py-[1.1875rem] flex flex-col justify-between items-center grow shrink-0 basis-[15%]"}>
                     <div className={"items-center justify-center flex-col flex p-[0.3125rem]"}>
                         <div className={"flex justify-center items-center"}>
@@ -31,7 +37,7 @@ export const FoodParty = () => {
                     <p className={"text-surface-main text-xs font-light font-iranSans p-[0.3125rem] drop-shadow-[0-1px-0-rgba(0,0,0,0.24)]"}>
                         تخفیفات لحظه‌ای ویژه شما
                     </p>
-                    <Link href={"/"} className={"p-[0.3125rem]"}>
+                    <Link href={"/party"} className={"p-[0.3125rem]"}>
                         <div className={"items-center flex rounded-[3rem] bg-surface-light px-3 py-1.5"}>
                             <p className={"font-iranSans text-sm text-carbon-dark"}>مشاهده همه</p>
                             <Image src={"/icons/see-all-foodParty.svg"} width={9} height={16} alt={"icons"} className={"mr-4"}/>
@@ -39,11 +45,7 @@ export const FoodParty = () => {
                     </Link>
                 </div>
                 <div className={"relative max-[599px]:w-full w-[80%]"}>
-                    <ResSlider>
-                        <div className={"relative"}>
-
-                        </div>
-                    </ResSlider>
+                    <PartySlider partyFoods={partyFoods}/>
                 </div>
             </div>
         </section>
