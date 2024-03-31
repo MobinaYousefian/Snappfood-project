@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import {PartySlider} from "@/components/homePage/PartySlider";
+import {PartySlider} from "@/components/homePage/food party/PartySlider";
 import {PartyCountDown} from "@/components";
 import {useSelector} from "react-redux";
 
@@ -13,7 +13,7 @@ export const FoodParty = ({partyFoods}) => {
 
     return (
         <section className={"mx-4 padding-size"}>
-            <div className={"mb-20 max-[599px]:flex-col foodParty-radius foodParty-gradiant flex pl-10 py-[1.8125rem] min-h-[23.125rem]"}>
+            <div className={"sp-tablet:pr-2 max-[599px]:pr-10 mb-20 max-[599px]:flex-col foodParty-radius foodParty-gradiant flex pl-10 py-[1.8125rem] min-h-[23.125rem]"}>
                 <div className={"w-[15%] max-[599px]:w-full py-[1.1875rem] flex flex-col justify-between items-center grow shrink-0 basis-[15%]"}>
                     <div className={"items-center justify-center flex-col flex p-[0.3125rem]"}>
                         <div className={"flex justify-center items-center"}>
