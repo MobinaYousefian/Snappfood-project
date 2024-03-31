@@ -37,7 +37,7 @@ export const FoodParty = async () => {
                     <p className={"text-surface-main text-xs font-light font-iranSans p-[0.3125rem] drop-shadow-[0-1px-0-rgba(0,0,0,0.24)]"}>
                         تخفیفات لحظه‌ای ویژه شما
                     </p>
-                    <Link href={"/"} className={"p-[0.3125rem]"}>
+                    <Link href={"/party"} className={"p-[0.3125rem]"}>
                         <div className={"items-center flex rounded-[3rem] bg-surface-light px-3 py-1.5"}>
                             <p className={"font-iranSans text-sm text-carbon-dark"}>مشاهده همه</p>
                             <Image src={"/icons/see-all-foodParty.svg"} width={9} height={16} alt={"icons"} className={"mr-4"}/>

@@ -101,6 +101,11 @@ a {
         max-width: 100%;
     }
 
+    .party-mainPage {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
     .padding-size {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -154,6 +159,11 @@ a {
         max-width: 50%;
     }
 
+    .party-mainPage {
+        flex-basis: 33.3333%;
+        max-width: 33.3333%;
+    }
+
     .padding-size {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
@@ -191,6 +201,11 @@ a {
     .RestaurantList-resPage {
         flex-basis: 33.3333%;
         max-width: 33.3333%;
+    }
+
+    .party-mainPage {
+        flex-basis: 25%;
+        max-width: 25%;
     }
 }
 
