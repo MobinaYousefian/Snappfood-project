@@ -8,6 +8,7 @@ import {supportReducer} from "@/redux/features/supportSlice";
 import {sortingReducer} from "@/redux/features/sortingSlice";
 import {activeCouponReducer} from "@/redux/features/activeCouponSlice";
 import {elementOnScreenReducer} from "@/redux/features/elementOnScreenSlice";
+import {showPartyReducer} from "@/redux/features/showPartySlice";
 
 const persistConfig = {
     key : "persist",
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
     supportModal : persistReducer(persistConfig, supportReducer),
     sorting : persistReducer(persistConfig, sortingReducer),
     activeCoupon : persistReducer(persistConfig, activeCouponReducer),
-    elementOnScreen : persistReducer(persistConfig, elementOnScreenReducer)
+    elementOnScreen : persistReducer(persistConfig, elementOnScreenReducer),
+    showParty : persistReducer(persistConfig, showPartyReducer)
 });
 
 export const store = configureStore({

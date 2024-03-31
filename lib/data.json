@@ -1691,7 +1691,7 @@
       "isDiscount" : false,
       "isParty" : true,
       "partyDiscount" : 15,
-      "partyRemain" : 7,
+      "partyRemain" : 10,
       "ingredients" : "۱۵۰ گرم سینه مرغ سوخاری، ژامبون مرغ ۸۰ درصد ، کاهو، گوجه، خیار شور ، سس مخصوص (اسپایسی) و پنیر گودا",
       "star" : 4.1,
       "photos" : [
@@ -1718,7 +1718,7 @@
       "isDiscount" : false,
       "isParty" : true,
       "partyDiscount" : 20,
-      "partyRemain" : 10,
+      "partyRemain" : 0,
       "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
       "star" : 4.2,
       "photos" : [

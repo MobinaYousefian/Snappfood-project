@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {getData} from "@/lib/dataFeching";
-import {Footer, PartyFoodCard} from "@/components";
+import {Footer, PartyCountDown, PartyFoodCard} from "@/components";
 
 export default async function Party () {
     const {partyFoods} = await getData()
@@ -14,7 +14,9 @@ export default async function Party () {
                         <h1 className={"font-iRANSansBold text-lg text-[rgb(103,106,112)]"}>فود پارتی</h1>
                     </div>
                     <div className={"flex items-center justify-center"}>
-                        <div className={"min-w-[2.625rem] ml-1.5 pt-0.5"}>countdown</div>
+                        <div className={"min-w-[2.625rem] ml-1.5 pt-0.5"}>
+                            <PartyCountDown/>
+                        </div>
                         <Image src={"/icons/foodParty-countdown-pink.svg"} width={18} height={18} alt={"party count down"}/>
                     </div>
                 </div>

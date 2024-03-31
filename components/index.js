@@ -23,9 +23,10 @@ export * from "./footer/SupportModal"
 
 /* Home Page */
 export * from "./homePage/CategorySection"
-export * from "./homePage/FoodParty"
-export * from "./homePage/PartySlider"
-export * from "./homePage/PartyFoodCard"
+export * from "./homePage/food party/FoodParty"
+export * from "./homePage/food party/PartySlider"
+export * from "./homePage/food party/PartyFoodCard"
+export * from "./homePage/food party/PartyCountDown"
 export * from "./homePage/slider section/RestaurantSections"
 export * from "./homePage/slider section/ResSlider"
 export * from "./homePage/slider section/RestaurantSlide"
