@@ -2,10 +2,41 @@
 import {RestaurantCard} from "@/components";
 import Link from "next/link";
 import {useSelector} from "react-redux";
+import {useSearchParams} from "next/navigation";
 
 export const RestaurantList = ({restaurants}) => {
     const {selected} = useSelector(state => state.addressModal);
     const cityRes = restaurants.filter(({city}) => city === selected.city);
+
+    const searchParams = useSearchParams();
+    const sort = searchParams.get("sort")
+
+    if (sort) {
+        switch (sort) {
+            case "0":
+                cityRes.sort((a, b) => b.star - a.star)
+                break;
+
+            case "1" :
+                cityRes.sort((a, b) => a.mapDistance - b.mapDistance)
+                break;
+
+            case "2" :
+                cityRes.sort((a, b) => b.dateAdded - a.dateAdded)
+                break;
+
+            case "3" :
+                cityRes.sort((a, b) => a.minBuy - b.minBuy)
+                break;
+
+            case "4" :
+                cityRes.sort((a, b) => (b.rating + b.commentNumber) - (a.rating + a.commentNumber))
+                break;
+
+            case "5" :
+                cityRes.sort((a, b) => b.minBuy - a.minBuy)
+        }
+    }
 
     return (
         <div className={"ResList-resPage basis-full max-w-full p-[calc(1rem)]"}>
