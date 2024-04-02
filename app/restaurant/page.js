@@ -4,7 +4,7 @@ import {Suspense} from "react";
 import Loading from "@/app/loading";
 
 export default async function restaurant () {
-        const {resPageCategory, fastFoods, irani, kebab, restaurants} = await getData();
+        const {resPageCategory, restaurants} = await getData();
 
     return (
         <>
@@ -12,7 +12,7 @@ export default async function restaurant () {
                 <Suspense fallback={<Loading/>}>
                     <PageSorting/>
                     <div className={"flex-wrap w-[calc(100%+2rem)] m-[calc(-1rem)] flex"}>
-                        <AsideMenu category={resPageCategory} fastFoods={fastFoods} irani={irani} kebab={kebab}/>
+                        <AsideMenu category={resPageCategory}/>
                         <RestaurantList restaurants={restaurants}/>
                     </div>
                 </Suspense>

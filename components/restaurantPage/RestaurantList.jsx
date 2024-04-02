@@ -6,10 +6,15 @@ import {useSearchParams} from "next/navigation";
 
 export const RestaurantList = ({restaurants}) => {
     const {selected} = useSelector(state => state.addressModal);
-    const cityRes = restaurants.filter(({city}) => city === selected.city);
+    let cityRes = restaurants.filter(({city}) => city === selected.city);
 
     const searchParams = useSearchParams();
     const sort = searchParams.get("sort")
+    const categoryParam = searchParams.get("category");
+
+    if (categoryParam) {
+        cityRes = cityRes.filter(({categoryId}) => categoryId.includes(+categoryParam));
+    }
 
     if (sort) {
         switch (sort) {
@@ -37,6 +42,8 @@ export const RestaurantList = ({restaurants}) => {
                 cityRes.sort((a, b) => b.minBuy - a.minBuy)
         }
     }
+
+
 
     return (
         <div className={"ResList-resPage basis-full max-w-full p-[calc(1rem)]"}>
