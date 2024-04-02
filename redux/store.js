@@ -13,7 +13,7 @@ import {showPartyReducer} from "@/redux/features/showPartySlice";
 const persistConfig = {
     key : "persist",
     storage : storage,
-    whitelist : [""]
+    whitelist : ["sortValue"]
 };
 
 const rootReducer = combineReducers({

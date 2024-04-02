@@ -264,6 +264,15 @@ a {
     color: white;
 }
 
+/* used in FoodFilter component */
+.parentDiv:hover .childImg {
+    opacity: 0.8;
+}
+
+.parentDiv:hover .childP {
+    opacity: 0.85;
+}
+
 /*Modal animations*/
 .modal-card-animation {
     animation-duration: 0.3s;

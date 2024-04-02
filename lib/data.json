@@ -65,170 +65,202 @@
     {
       "id" : 1,
       "name" : "ایرانی",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg"
-    },
-    {
-      "id" : 2,
-      "name" : "فست\u200Cفود",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg"
-    },
-    {
-      "id" : 3,
-      "name" : "کباب",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_kebab_1.jpg"
-    },
-    {
-      "id" : 4,
-      "name" : "پیتزا",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_pizza_1.jpg"
-    },
-    {
-      "id" : 5,
-      "name" : "برگر",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_burger_1.jpg"
-    },
-    {
-      "id" : 6,
-      "name" : "ساندویچ",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_sandwich_1.jpg"
-    },
-    {
-      "id" : 7,
-      "name" : "سوخاری",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_sokhari_1.jpg"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg",
+      "parent" : "ایرانی",
+      "mainMenu" : true
     },
     {
       "id" : 8,
-      "name" : "پاستا",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_italy_1.jpg"
+      "name" : "فست\u200Cفود",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg",
+      "parent" : "فست\u200Cفود",
+      "mainMenu" : true
+    },
+    {
+      "id" : 2,
+      "name" : "کباب",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_kebab_1.jpg",
+      "parent" : "کباب",
+      "mainMenu" : true
     },
     {
       "id" : 9,
-      "name" : "سالاد",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_salad_1.jpg"
+      "name" : "پیتزا",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_pizza_1.jpg",
+      "parent" : 8
     },
     {
       "id" : 10,
-      "name" : "دریایی",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_seafood_1.jpg"
+      "name" : "برگر",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_burger_1.jpg",
+      "parent" : 8
     },
     {
       "id" : 11,
-      "name" : "بین\u200Cالملل",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg"
+      "name" : "ساندویچ",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_sandwich_1.jpg",
+      "parent" : 8
     },
     {
       "id" : 12,
+      "name" : "سوخاری",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_sokhari_1.jpg",
+      "parent" : 8
+    },
+    {
+      "id" : 13,
+      "name" : "پاستا",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_italy_1.jpg",
+      "parent" : 8
+    },
+    {
+      "id" : 17,
+      "name" : "سالاد",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_salad_1.jpg",
+      "mainMenu" : true
+    },
+    {
+      "id" : 18,
+      "name" : "دریایی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_seafood_1.jpg",
+      "mainMenu" : true
+    },
+    {
+      "id" : 19,
+      "name" : "بین\u200Cالملل",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg",
+      "mainMenu" : true
+    },
+    {
+      "id" : 7,
       "name" : "گیلانی",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_gilani_1.jpg"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_gilani_1.jpg",
+      "parent" : 1
     }
   ],
   "resPageCategory" : [
     {
-      "id" : 2,
+      "id" : 8,
       "name" : "فست\u200Cفود",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_fastfood_1.jpg",
+      "parent" : "فست\u200Cفود",
+      "mainMenu" : true
     },
     {
       "id" : 1,
       "name" : "ایرانی",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg",
+      "parent" : "ایرانی",
+      "mainMenu" : true
     },
     {
-      "id" : 3,
+      "id" : 2,
       "name" : "کباب",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_kebab_1.jpg"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_kebab_1.jpg",
+      "parent" : "کباب",
+      "mainMenu" : true
+    },
+    {
+      "id" : 17,
+      "name" : "سالاد",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_salad_1.jpg",
+      "mainMenu" : true
+    },
+    {
+      "id" : 18,
+      "name" : "دریایی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_seafood_1.jpg",
+      "mainMenu" : true
+    },
+    {
+      "id" : 19,
+      "name" : "بین\u200Cالملل",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg",
+      "mainMenu" : true
     },
     {
       "id" : 9,
-      "name" : "سالاد",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_salad_1.jpg"
-    },
-    {
-      "id" : 10,
-      "name" : "دریایی",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_seafood_1.jpg"
+      "name" : "پیتزا",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/pizza.png",
+      "parent" : 8
     },
     {
       "id" : 11,
-      "name" : "بین\u200Cالملل",
-      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/website_image_asian_1.jpg"
-    }
-  ],
-  "fastFoods" : [
-    {
-      "id" : 1,
-      "name" : "پیتزا",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/pizza.png"
-    },
-    {
-      "id" : 2,
       "name" : "ساندویچ",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/sandwich.png"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/sandwich.png",
+      "parent" : 8
     },
     {
-      "id" : 3,
+      "id" : 10,
       "name" : "برگر",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/burger.png"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/burger.png",
+      "parent" : 8
     },
     {
-      "id" : 4,
+      "id" : 12,
       "name" : "سوخاری",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/sokhari.png"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/sokhari.png",
+      "parent" : 8
     },
     {
-      "id" : 5,
+      "id" : 13,
       "name" : "پاستا",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/pasta.png"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/pasta.png",
+      "parent" : 8
     },
     {
-      "id" : 6,
+      "id" : 14,
       "name" : "استیک",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/stake.png"
-    }
-  ],
-  "irani" : [
-    {
-      "id" : 1,
-      "name" : "کباب",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/kebab.png"
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/stake.png",
+      "parent" : 8
     },
     {
       "id" : 2,
-      "name" : "سنتی",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/sonnati.png"
+      "name" : "کباب",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/kebab.png",
+      "parent" : 1
     },
     {
       "id" : 3,
-      "name" : "پلوی ایرانی",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/polo-irani.png"
+      "name" : "سنتی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/sonnati.png",
+      "parent" : 1
     },
     {
       "id" : 4,
-      "name" : "خورشت",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/khoresh.png"
+      "name" : "پلوی ایرانی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/polo-irani.png",
+      "parent" : 1
     },
     {
       "id" : 5,
-      "name" : "مرغ",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/morgh.png"
+      "name" : "خورشت",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/khoresh.png",
+      "parent" : 1
     },
     {
       "id" : 6,
-      "name" : "گیلانی",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/guilani.png"
-    }
-  ],
-  "kebab" : [
-    {
-      "id" : 1,
-      "name" : "کباب گوشت",
-      "avatar" : "https://cdn.snappfood.ir/uploads/images/tags/category/meat-kebab.png"
+      "name" : "مرغ",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/morgh.png",
+      "parent" : 1
     },
     {
-      "id" : 2,
+      "id" : 7,
+      "name" : "گیلانی",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/guilani.png",
+      "parent" : 1
+    },
+    {
+      "id" : 15,
+      "name" : "کباب گوشت",
+      "banner" : "https://cdn.snappfood.ir/uploads/images/tags/category/meat-kebab.png",
+      "parent" : 2
+    },
+    {
+      "id" : 16,
       "name" : "جوجه\u200Cکباب",
-      "avatar": "https://cdn.snappfood.ir/uploads/images/tags/category/joje-kebab.png"
+      "banner": "https://cdn.snappfood.ir/uploads/images/tags/category/joje-kebab.png",
+      "parent" : 2
     }
   ],
 
@@ -239,14 +271,17 @@
       "avatar" : "https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/6224f60a4e24b.png",
       "banner" : "https://cdn.snappfood.ir/media/cache/vendor_item_cover/uploads/images/vendors/covers/64971da230bc3.jpeg",
       "category" : [
-        "بین الملل",
+        "بین\u200Cالملل",
         "آسیایی",
         "سنتی",
         "ساندویچ",
         "صبحانه"
       ],
+      "categoryId" : [19, 18, 11, 17],
       "address" : "میدان ولی عصر، خیابان ورشو، خیابان حافظ، پلاک ۵۱۹، طبقه همکف، الین سوشی",
       "city" : "تهران",
+      "mapDistance" : 0.3,
+      "dateAdded" : "2022417",
       "star" : 4.4,
       "rating" : 7888,
       "commentNumber" : 1231,
@@ -547,17 +582,20 @@
       "avatar" : "https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/62dab78f514e5.jpg",
       "banner" : "https://cdn.snappfood.ir/uploads/images/vendor-cover-app-review/4/13.jpg",
       "category" : [
-        "فست فود",
+        "فست\u200Cفود",
         "پیتزا",
         "سوخاری",
-        "پیش غذا",
+        "پیش\u200Cغذا",
         "پاستا و اسپاگتی"
       ],
+      "categoryId" : [8, 9, 12, 13, 17],
       "address" : "کریم خان، بین خرد مند و سنایی، خیابان حسینی اعرابی ششم، پلاک ۲، طبقه همکف، فست فود دیژون",
       "city" : "تهران",
+      "mapDistance" : 0.9,
+      "dateAdded" : "20211220",
       "star" : 4.4,
-      "rating" : 2249,
-      "commentNumber" : 378,
+      "rating" : 2549,
+      "commentNumber" : 578,
       "minBuy" : 75000,
       "payMethod" : {
         "isOnline" : true,
@@ -813,8 +851,11 @@
         "برگر",
         "سالاد"
       ],
+      "categoryId" : [8, 11, 12, 10, 17, 14],
       "address" : "یوسف آباد، نبش فتحی شقاقی، چیکن فامیلی (یوسف آباد)",
       "city" : "تهران",
+      "mapDistance" : 1.0,
+      "dateAdded" : "202157",
       "star" : 4.4,
       "rating" : 16342,
       "commentNumber" : 2235,
@@ -1119,11 +1160,14 @@
       "category" : [
         "ایرانی",
         "سنتی",
-        "پیش غذا",
-        "چلو خورشت"
+        "پیش\u200Cغذا",
+        "چلو\u200Cخورشت"
       ],
+      "categoryId" : [1, 3, 5, 7, 6],
       "address" : "میدان فاطمی، میدان گلها، خیابان کاج جنوبی، پلاک ٬ ٬۵۹رستوران بقرا (فاطمی)",
       "city" : "تهران",
+      "mapDistance" : 0.5,
+      "dateAdded" : "2022810",
       "star" : 4.1,
       "rating" : 1885,
       "commentNumber" : 198,
@@ -1400,14 +1444,17 @@
       "category" : [
         "ایرانی",
         "کباب",
-        "چلو خورشت",
-        "پیش غذا"
+        "چلو\u200Cخورشت",
+        "پیش\u200Cغذا"
       ],
+      "categoryId" : [1, 2, 5, 15, 16],
       "address" : "خیابان کریمخان زند، خیابان حافظ، پلاک ۴۳۰، کترینگ مدرن",
       "city" : "تهران",
+      "mapDistance" : 0.8,
+      "dateAdded" : "2022625",
       "star" : 4.1,
-      "rating" : 1012,
-      "commentNumber" : 182,
+      "rating" : 1312,
+      "commentNumber" : 282,
       "minBuy" : 45000,
       "payMethod" : {
         "isOnline" : true,

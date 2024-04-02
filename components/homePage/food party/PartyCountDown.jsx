@@ -17,13 +17,18 @@ export const PartyCountDown = () => {
 
     const dispatch = useDispatch();
 
-
     let date = new Date();
-    date.setHours(3);
+    date.setHours(23);
+    date = date.getTime()
+    // console.log(`date: ${date}`)
 
     const startTime = () => {
-        const now = new Date().getTime();
-        const distance = date.getTime() - now;
+        let now = new Date()
+        now.setHours(20);
+        now.getTime()
+        // console.log(`now: ${now}`)
+        const distance =  date - now;
+        // console.log(`distance: ${distance}`)
 
         setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
         setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));

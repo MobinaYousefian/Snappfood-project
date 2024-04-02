@@ -12,7 +12,7 @@ export const RestaurantSections = ({restaurants}) => {
                 <section className={"flex flex-col slidersCategories-transition"}>
                     <div className={"mb-6 flex justify-between "}>
                         <p className={"text-2xl text-carbon-main font-iRANSansBold max-[400px]:text-[0.875rem]"}>{item}</p>
-                        <Link href={"/"}>
+                        <Link href={"/restaurant"}>
                             <div className={"flex"}>
                                 <p className={"text-lg text-accent2-main leading-7 font-iRANSansBold max-[400px]:text-[0.875rem]"}>مشاهده همه</p>
                                 <Image src={"/icons/arrow-left-green.svg"} width={9} height={16} alt={"icon"} className={"mr-4"}/>
