@@ -12,12 +12,25 @@ export const CategoryNavbar = ({resInfo}) => {
 
     const {elementId} = useSelector(state => state.elementOnScreen);
 
+    const isResParty = resInfo.hasParty;
+
     return (
         <nav className={"h-[30vh] CatNavbar-RightAside overflow-y-auto flex flex-col min-h-[9.375rem]"}>
             {
+                isResParty &&
+                <Link href={"#party"}>
+                    <p className={clsx(elementId === "party" && "active", "mt-2 mb-4 text-carbon-light text-sm font-iranSans px-3 py-0.5")}>
+                        <span className={"flex items-center"}>
+                            فود پارتی
+                            <Image src={"/icons/party-navbar.svg"} width={20} height={20} alt={"icons"} className={"ml-2"}/>
+                        </span>
+                    </p>
+                </Link>
+            }
+            {
                 resInfo.couponList &&
                 <Link href={"#coupon"}>
-                    <p className={clsx(elementId === "coupon" && "active", "mt-2 mb-4 text-carbon-light text-sm font-iranSans px-3 py-0.5")}>
+                    <p className={clsx(elementId === "coupon" && "active", !isResParty && "mt-2" , "mb-4 text-carbon-light text-sm font-iranSans px-3 py-0.5")}>
                     <span className={"relative flex items-center"}>
                         کوپن‌ها
                         <Image src={"/icons/gift.svg"} width={20} height={20} alt={"icons"} className={"ml-2"}/>

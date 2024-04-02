@@ -286,7 +286,7 @@ a {
     background-color: #00B862;
 }
 
-/* used in FoodCard component */
+/* used in FoodPrice component */
 .div:hover .button {
     background-color: #FF00A6;
     color: white;

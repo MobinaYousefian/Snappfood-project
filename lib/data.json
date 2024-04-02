@@ -1704,6 +1704,7 @@
   "partyFoods" : [
     {
       "id" : 1,
+      "resId" : 2,
       "resName" : "فست فود دیژون",
       "resDelivery" : {
         "type" : "ارسال اکسپرس",
@@ -1731,6 +1732,7 @@
     },
     {
       "id" : 2,
+      "resId" : 3,
       "resName" : "چیکن فامیلی (یوسف آباد)",
       "resDelivery" : {
         "type" : "پیک فروشنده",
@@ -1758,6 +1760,7 @@
     },
     {
       "id" : 3,
+      "resId" : 5,
       "resName" : "کترینگ مدرن",
       "resDelivery" : {
         "type" : "ارسال اکسپرس",
@@ -1789,6 +1792,7 @@
     },
     {
       "id" : 4,
+      "resId" : 5,
       "resName" : "کترینگ مدرن",
       "resDelivery" : {
         "type" : "ارسال اکسپرس",
@@ -1800,7 +1804,7 @@
       "isPopular" : false,
       "isDiscount" : false,
       "isParty" : true,
-      "partyDiscount" : 20,
+      "partyDiscount" : 10,
       "partyRemain" : 6,
       "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
       "star" : 3.6,

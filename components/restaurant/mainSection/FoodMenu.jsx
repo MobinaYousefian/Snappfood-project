@@ -1,10 +1,10 @@
 'use client'
-import {CouponSection, DiscountSection, MenuSection, PopularSection} from "@/components";
+import {CouponSection, DiscountSection, FoodPartyMenu, MenuSection, PopularSection} from "@/components";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {setElementId} from "@/redux/features/elementOnScreenSlice";
 
-export const FoodMenu = ({params, restaurants}) => {
+export const FoodMenu = ({params, restaurants, partyFoods}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
 
@@ -21,7 +21,7 @@ export const FoodMenu = ({params, restaurants}) => {
 
         const options = {
             rootMargin: '0px',
-            threshold: 0.95
+            threshold: 1
         }
 
         const observer = new IntersectionObserver(callBackFn, options);
@@ -41,6 +41,9 @@ export const FoodMenu = ({params, restaurants}) => {
 
     return (
         <section className={"FoodMenu basis-full max-w-full p-[calc(1rem)]"}>
+            <section id={"party"} className={"target scroll-mt-[4.375rem]"}>
+                <FoodPartyMenu partyFoods={partyFoods}/>
+            </section>
             <section className={"border-surface-dark bg-surface-light rounded-lg border-[0.0625rem]"}>
                 {
                     resInfo.couponList &&
