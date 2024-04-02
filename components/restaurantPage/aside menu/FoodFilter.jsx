@@ -2,6 +2,8 @@
 import Image from "next/image";
 import clsx from "clsx";
 import {useRouter, useSearchParams} from "next/navigation";
+import {useDispatch} from "react-redux";
+import {setSortValue} from "@/redux/features/sortingSlice";
 
 export const FoodFilter = ({category}) => {
     const router = useRouter();
@@ -10,6 +12,7 @@ export const FoodFilter = ({category}) => {
         router.push("/restaurant")
     }
 
+    const dispatch = useDispatch();
 
     const searchParams = useSearchParams();
     const categoryParam = searchParams.get("category");
@@ -19,10 +22,13 @@ export const FoodFilter = ({category}) => {
     const handleUrl = (categoryId, parentCategory, mainMenu) => {
         if (typeof parentCategory !== "undefined") {
             router.push(`/restaurant?category=${categoryId}&parent=${parentCategory}`)
+            dispatch(setSortValue("به ترتیب پیش‌فرض"));
         } else if (typeof mainMenu !== "undefined") {
             router.push(`/restaurant?category=${categoryId}&main=${mainMenu}`)
+            dispatch(setSortValue("به ترتیب پیش‌فرض"));
         }else {
             router.push("/restaurant")
+            dispatch(setSortValue("به ترتیب پیش‌فرض"));
         }
     }
 
