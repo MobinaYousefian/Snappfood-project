@@ -11,17 +11,17 @@ export const SortingModal = () => {
 
     const router = useRouter();
     const searchParams = useSearchParams();
-    const parentId = searchParams.get("parent");
-    const mainMenu = searchParams.get("main");
 
     const handleUrlAndSort = (item, i) => {
         dispatch(setSortValue(item));
-        if (parentId != null) {
-            router.push(`/restaurant?parent=${parentId}&sort=${i}`)
-        } else if (mainMenu != null) {
-            router.push(`/restaurant?main=${mainMenu}&sort=${i}`)
+        if (searchParams.has("sort")) {
+            const urlSearchParams = new URLSearchParams(searchParams);
+            urlSearchParams.set("sort" , `${i}`);
+            router.push(`/restaurant?${urlSearchParams}`);
         } else {
-            router.push(`/restaurant?sort=${i}`)
+            const urlSearchParams = new URLSearchParams(searchParams);
+            urlSearchParams.append("sort" , `${i}`);
+            router.push(`/restaurant?${urlSearchParams}`);
         }
     }
 

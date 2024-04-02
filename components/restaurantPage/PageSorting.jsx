@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {SortingModal} from "@/components";
 import {handleCloseSorting, handleOpenCloseSorting, setSortValue} from "@/redux/features/sortingSlice";
 import {useEffect, useRef} from "react";
-import {useRouter} from "next/navigation";
+import {useRouter, useSearchParams} from "next/navigation";
 
 export const PageSorting = () => {
     const sortRef = useRef(null);
@@ -12,6 +12,7 @@ export const PageSorting = () => {
     const dispatch = useDispatch();
 
     const router = useRouter();
+    const searchParams = useSearchParams();
 
     const handleOpenClose = () => {
         dispatch(handleOpenCloseSorting())
@@ -19,7 +20,9 @@ export const PageSorting = () => {
     const handleClearSort = () => {
         dispatch(setSortValue("به ترتیب پیش‌فرض"));
         dispatch(handleOpenCloseSorting());
-        router.push("/restaurant");
+        const urlSearchParams = new URLSearchParams(searchParams);
+        urlSearchParams.delete("sort");
+        router.push(`/restaurant?${urlSearchParams}`);
     };
 
     useEffect(() => {

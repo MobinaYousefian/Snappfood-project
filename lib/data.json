@@ -315,6 +315,7 @@
         }
       ],
       "discountNumber" : 20,
+      "foodPro" : false,
       "foodList" : [
         "سوشی",
         "نودل",
@@ -618,6 +619,7 @@
         }
       ],
       "discountNumber" : 10,
+      "foodPro" : true,
       "hasParty" : true,
       "foodList" : [
         "سوخاری",
@@ -874,6 +876,7 @@
         "express": false,
         "price" : 15000
       },
+      "foodPro" : false,
       "hasParty" : true,
       "foodList" : [
         "سوخاری",
@@ -1186,6 +1189,7 @@
         "express": true,
         "price" : 11200
       },
+      "foodPro" : true,
       "foodList" : [
         "بقرا",
         "بقرا پیش غذا",
@@ -1470,6 +1474,7 @@
         "express": true,
         "price" : 12800
       },
+      "foodPro" : false,
       "hasParty" : true,
       "foodList" : [
         "چلو کباب",

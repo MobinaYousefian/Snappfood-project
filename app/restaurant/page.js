@@ -4,7 +4,7 @@ import {Suspense} from "react";
 import Loading from "@/app/loading";
 
 export default async function restaurant () {
-        const {resPageCategory, restaurants} = await getData();
+    const {resPageCategory, restaurants} = await getData();
 
     return (
         <>
