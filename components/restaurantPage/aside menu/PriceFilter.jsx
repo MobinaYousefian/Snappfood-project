@@ -6,16 +6,28 @@ const priceValue = ["همه", "اقتصادی", "متوسط", "گران"]
 
 export const PriceFilter = () => {
     const router = useRouter();
-
-    const handlePriceFilter = (i) => {
-        if (i === 0) router.push(`/restaurant`)
-        if (i === 1) router.push(`/restaurant?priceVal=${i}`)
-        if (i === 2) router.push(`/restaurant?priceVal=${i}`)
-        if (i === 3) router.push(`/restaurant?priceVal=${i}`)
-    }
-
     const searchParams = useSearchParams();
     const priceVal = searchParams.get("priceVal");
+
+
+    const handlePriceFilterUrl = (i) => {
+        if (i !== 0) {
+            if (searchParams.has("priceVal")) {
+                const urlSearchParams = new URLSearchParams(searchParams);
+                urlSearchParams.set("priceVal", `${i}`);
+                router.push(`/restaurant?${urlSearchParams}`)
+            }else {
+                const urlSearchParams = new URLSearchParams(searchParams);
+                urlSearchParams.append("priceVal", `${i}`);
+                router.push(`/restaurant?${urlSearchParams}`)
+            }
+        }else {
+            const urlSearchParams = new URLSearchParams(searchParams);
+            urlSearchParams.delete("priceVal");
+            router.push(`/restaurant?${urlSearchParams}`)
+        }
+    }
+
 
     return (
         <div className={"max-[959px]:hidden flex-col flex shadow-sp-small rounded-xl mb-2 p-4 border-carbon-alphaLight border-[1px]"}>
@@ -26,7 +38,7 @@ export const PriceFilter = () => {
                 </div>
                 {
                     priceValue.map( (item, i) => (
-                        <div onClick={() => handlePriceFilter(i)} key={i} className={"items-center justify-center flex p-2.5 w-[7.3125rem] z-[2]"}>
+                        <div onClick={() => handlePriceFilterUrl(i)} key={i} className={"items-center justify-center flex p-2.5 w-[7.3125rem] z-[2]"}>
                             <p className={clsx( priceVal === `${i}` ? "text-accent2-main" : !priceVal && i === 0 ? "text-accent2-main" : "","font-iranSans text-sm")}>
                                 {item}
                             </p>
