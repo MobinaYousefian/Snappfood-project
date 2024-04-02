@@ -2,7 +2,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {setSortValue} from "@/redux/features/sortingSlice";
 import clsx from "clsx";
-import {useRouter, useSearchParams} from "next/navigation";
+import {useRouter} from "next/navigation";
 
 const sortVal = ["بالاترین امتیاز", "نزدیک‌ترین", "جدیدترین", "ارزان‌ترین", "عملکرد کلی", "گران‌ترین"]
 export const SortingModal = () => {
@@ -10,19 +10,10 @@ export const SortingModal = () => {
     const {sortValue} = useSelector( state => state.sorting);
 
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const parentId = searchParams.get("parent");
-    const mainMenu = searchParams.get("main");
 
     const handleUrlAndSort = (item, i) => {
         dispatch(setSortValue(item));
-        if (parentId != null) {
-            router.push(`/restaurant?parent=${parentId}&sort=${i}`)
-        } else if (mainMenu != null) {
-            router.push(`/restaurant?main=${mainMenu}&sort=${i}`)
-        } else {
-            router.push(`/restaurant?sort=${i}`)
-        }
+        router.push(`/restaurant?sort=${i}`)
     }
 
     return (
