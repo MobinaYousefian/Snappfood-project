@@ -12,6 +12,12 @@ export const RestaurantList = ({restaurants}) => {
     const sort = searchParams.get("sort")
     const categoryParam = searchParams.get("category");
     const priceValParam = searchParams.get("priceVal");
+    const expressParam = searchParams.get("express");
+    const couponParam = searchParams.get("coupon");
+    const discountParam = searchParams.get("discount");
+    const foodProParam = searchParams.get("foodPro");
+    const efficientParam = searchParams.get("efficient");
+    const economicParam = searchParams.get("economic");
 
     if (categoryParam) {
         cityRes = cityRes.filter(({categoryId}) => categoryId.includes(+categoryParam));
@@ -47,6 +53,13 @@ export const RestaurantList = ({restaurants}) => {
     if ( priceValParam && priceValParam === "1") cityRes = cityRes.filter(({minBuy}) => minBuy < 50000);
     if ( priceValParam && priceValParam === "2") cityRes = cityRes.filter(({minBuy}) => minBuy < 100000);
     if ( priceValParam && priceValParam === "3") cityRes = cityRes.filter(({minBuy}) => minBuy > 100000);
+
+    if (expressParam) cityRes = cityRes.filter(({delivery}) => delivery.express === true)
+    if (couponParam) cityRes = cityRes.filter((res) => res.couponList)
+    if (discountParam) cityRes = cityRes.filter((res) => res.discountNumber)
+    if (foodProParam) cityRes = cityRes.filter(({foodPro}) => foodPro === true)
+    if (efficientParam) cityRes = cityRes.filter(({minBuy}) => minBuy < 100000)
+    if (economicParam) cityRes = cityRes.filter(({minBuy}) => minBuy < 60000)
 
 
     return (
