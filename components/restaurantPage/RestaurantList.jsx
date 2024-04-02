@@ -11,6 +11,7 @@ export const RestaurantList = ({restaurants}) => {
     const searchParams = useSearchParams();
     const sort = searchParams.get("sort")
     const categoryParam = searchParams.get("category");
+    const priceValParam = searchParams.get("priceVal");
 
     if (categoryParam) {
         cityRes = cityRes.filter(({categoryId}) => categoryId.includes(+categoryParam));
@@ -43,6 +44,9 @@ export const RestaurantList = ({restaurants}) => {
         }
     }
 
+    if ( priceValParam && priceValParam === "1") cityRes = cityRes.filter(({minBuy}) => minBuy < 50000);
+    if ( priceValParam && priceValParam === "2") cityRes = cityRes.filter(({minBuy}) => minBuy < 100000);
+    if ( priceValParam && priceValParam === "3") cityRes = cityRes.filter(({minBuy}) => minBuy > 100000);
 
 
     return (
