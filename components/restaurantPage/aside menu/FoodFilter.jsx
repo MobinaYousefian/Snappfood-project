@@ -2,33 +2,47 @@
 import Image from "next/image";
 import clsx from "clsx";
 import {useRouter, useSearchParams} from "next/navigation";
-import {useDispatch} from "react-redux";
-import {setSortValue} from "@/redux/features/sortingSlice";
 
 export const FoodFilter = ({category}) => {
     const router = useRouter();
 
     const handleGoBack = () => {
-        router.push("/restaurant")
+        const urlSearchParams = new URLSearchParams(searchParams);
+        urlSearchParams.delete("category");
+        urlSearchParams.delete("parent");
+        urlSearchParams.delete("main");
+        router.push(`/restaurant?${urlSearchParams}`)
     }
-
-    const dispatch = useDispatch();
 
     const searchParams = useSearchParams();
     const categoryParam = searchParams.get("category");
     const parentParam = searchParams.get("parent");
 
-
     const handleUrl = (categoryId, parentCategory, mainMenu) => {
         if (typeof parentCategory !== "undefined") {
-            router.push(`/restaurant?category=${categoryId}&parent=${parentCategory}`)
-            dispatch(setSortValue("به ترتیب پیش‌فرض"));
+            if (searchParams.size > 0 || searchParams.has("category")) {
+                const urlSearchParams = new URLSearchParams(searchParams);
+                urlSearchParams.delete("category");
+                urlSearchParams.delete("parent");
+                urlSearchParams.append("category", `${categoryId}`);
+                urlSearchParams.append("parent", `${parentCategory}`);
+                router.push(`/restaurant?${urlSearchParams}`)
+            }else {
+                router.push(`/restaurant?category=${categoryId}&parent=${parentCategory}`)
+            }
         } else if (typeof mainMenu !== "undefined") {
-            router.push(`/restaurant?category=${categoryId}&main=${mainMenu}`)
-            dispatch(setSortValue("به ترتیب پیش‌فرض"));
+            if (searchParams.size > 0 || searchParams.has("category")) {
+                const urlSearchParams = new URLSearchParams(searchParams);
+                urlSearchParams.delete("category");
+                urlSearchParams.delete("main");
+                urlSearchParams.append("category", `${categoryId}`);
+                urlSearchParams.append("main", `${mainMenu}`);
+                router.push(`/restaurant?${urlSearchParams}`)
+            }else {
+                router.push(`/restaurant?category=${categoryId}&main=${mainMenu}`)
+            }
         }else {
-            router.push("/restaurant")
-            dispatch(setSortValue("به ترتیب پیش‌فرض"));
+            handleGoBack()
         }
     }
 

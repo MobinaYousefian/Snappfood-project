@@ -25,6 +25,10 @@ export const PageSorting = () => {
         router.push(`/restaurant?${urlSearchParams}`);
     };
 
+    if (!searchParams.size > 0) {
+        dispatch(setSortValue("به ترتیب پیش‌فرض"));
+    }
+
     useEffect(() => {
 
         const handleClickOutside = (e) => {

@@ -251,18 +251,6 @@ a {
 }
 
 /* used in ResFilter component */
-.noQuery {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    transition: all 0.2s ease 0s;
-    left: 1rem;
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
 .span::after {
     content: '';
     display: block;
@@ -273,22 +261,6 @@ a {
     left: 1rem;
     width: 1.25rem;
     height: 1.25rem;
-}
-
-.ResFilterInput:checked + .span::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    transition: all 0.2s ease 0s;
-    left: 0.125rem;
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
-.ResFilterInput:checked + .span {
-    background-color: #00B862;
 }
 
 /* used in FoodPrice component */

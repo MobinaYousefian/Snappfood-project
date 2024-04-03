@@ -14,7 +14,7 @@ const filterOption = [
 export const ResFilter = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const noQuery = router.toString() === "/restaurant"
+
 
     const handleResFilterUrl = (q) => {
         if (q) {
@@ -34,6 +34,7 @@ export const ResFilter = () => {
         }
     }
 
+
     return (
         <div className={"flex shadow-sp-small rounded-xl mb-2 p-4 border-carbon-alphaLight border-[1px]"}>
             <div className={"grow flex flex-col flex-wrap"}>
@@ -43,7 +44,7 @@ export const ResFilter = () => {
                             <span className={"font-iranSans text-sm text-carbon-main"}>{item.name}</span>
                             <label onClick={() => handleResFilterUrl(item.q)} className={"inline-flex items-center select-none ResFilterLabel"}>
                                 <input type={"checkbox"} className={"hidden ResFilterInput"}/>
-                                <span className={clsx(noQuery ? "noQuery" : "" ,"span ease-in-out duration-[0.4s] transition-all p-0.5 inline-block w-10 h-6 relative cursor-pointer select-none bg-carbon-alphaLight rounded-[1.5rem]")}/>
+                                <span className={clsx("span ease-in-out duration-[0.4s] transition-all p-0.5 inline-block w-10 h-6 relative cursor-pointer select-none rounded-[1.5rem]", searchParams.has(`${item.q}`) ? "bg-accent2-main after:left-0.5" : "bg-carbon-alphaLight after:left-4")}/>
                             </label>
                         </div>
                     ))
