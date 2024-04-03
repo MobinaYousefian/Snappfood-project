@@ -1,4 +1,4 @@
-import {FoodMenu, Footer, RightAside} from "@/components";
+import {FoodMenu, Footer, LeftAside, RightAside} from "@/components";
 import {getData} from "@/lib/dataFeching";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
@@ -13,7 +13,7 @@ export async function generateMetadata ({ params }) {
 }
 
 export default async function RestaurantId ({params}) {
-    const {restaurants} = await getData();
+    const {restaurants, partyFoods} = await getData();
 
     return (
         <>
@@ -22,7 +22,8 @@ export default async function RestaurantId ({params}) {
                     <main className={"mx-auto max-w-[85.375rem] w-full grow p-4 pt-[4.25rem]"}>
                         <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
                             <RightAside params={params} restaurants={restaurants}/>
-                            <FoodMenu params={params} restaurants={restaurants}/>
+                            <FoodMenu partyFoods={partyFoods} params={params} restaurants={restaurants}/>
+                            <LeftAside params={params} restaurants={restaurants}/>
                         </div>
                     </main>
                 </Suspense>

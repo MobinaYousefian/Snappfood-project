@@ -54,8 +54,8 @@ export const PartyFoodCard = ({food}) => {
                     </div>
                 </div>
             </div>
-            <div className={clsx( food.partyRemain === 0 ? "bg-inactive-dark grayscale" : "bg-surface-dark" ,"w-full rounded-[4px] h-[2px]")}>
-                <div className={clsx( food.partyRemain < 4 ? "bg-alert-light" : "bg-inactive-dark" ,"duration-300 transition-all w-full rounded-[4px] h-[2px]")}> </div>
+            <div className={"w-full rounded-[4px] h-[2px]"}>
+                <div className={clsx( food.partyRemain === 0 ?  "bg-surface-dark" : food.partyRemain < 4 ? "bg-alert-light" : "bg-inactive-dark" ,"duration-300 transition-all w-full rounded-[4px] h-[2px]")}> </div>
             </div>
         </div>
     )

@@ -149,6 +149,11 @@ a {
         max-width: 25%;
     }
 
+    .ResDelivery-Restaurant {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
     .CatNavbar-RightAside {
         height: calc(-332px + 100vh);
         direction: ltr;
@@ -286,7 +291,7 @@ a {
     background-color: #00B862;
 }
 
-/* used in FoodCard component */
+/* used in FoodPrice component */
 .div:hover .button {
     background-color: #FF00A6;
     color: white;
