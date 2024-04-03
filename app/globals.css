@@ -149,6 +149,11 @@ a {
         max-width: 25%;
     }
 
+    .ResDelivery-Restaurant {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
     .CatNavbar-RightAside {
         height: calc(-332px + 100vh);
         direction: ltr;

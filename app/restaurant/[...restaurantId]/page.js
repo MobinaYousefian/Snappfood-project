@@ -1,4 +1,4 @@
-import {FoodMenu, Footer, RightAside} from "@/components";
+import {FoodMenu, Footer, LeftAside, RightAside} from "@/components";
 import {getData} from "@/lib/dataFeching";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
@@ -23,6 +23,7 @@ export default async function RestaurantId ({params}) {
                         <div className={"m-[calc(-1rem)] flex-wrap flex w-[calc(100%+2rem)]"}>
                             <RightAside params={params} restaurants={restaurants}/>
                             <FoodMenu partyFoods={partyFoods} params={params} restaurants={restaurants}/>
+                            <LeftAside params={params} restaurants={restaurants}/>
                         </div>
                     </main>
                 </Suspense>

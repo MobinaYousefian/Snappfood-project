@@ -298,7 +298,8 @@
       "delivery": {
         "type" : "ارسال اکسپرس",
         "express": true,
-        "price" : 12800
+        "price" : 12800,
+        "fastestTime" : "امروز بین ۱۲:۴۵ تا ۱۳:۱۵"
       },
       "couponList" : [
         {
@@ -610,7 +611,8 @@
       "delivery": {
         "type" : "ارسال اکسپرس",
         "express": true,
-        "price" : 14900
+        "price" : 14900,
+        "fastestTime" : "امروز بین ۱۲:۴۵ تا ۱۳:۱۵"
       },
       "couponList" : [
         {
@@ -874,7 +876,8 @@
       "delivery": {
         "type" : "پیک فروشنده",
         "express": false,
-        "price" : 15000
+        "price" : 15000,
+        "fastestTime" : "امروز بین ۱۲:۱۵ تا ۱۲:۴۵"
       },
       "foodPro" : false,
       "hasParty" : true,
@@ -1187,7 +1190,8 @@
       "delivery": {
         "type" : "ارسال اکسپرس",
         "express": true,
-        "price" : 11200
+        "price" : 11200,
+        "fastestTime" : "امروز بین ۱۱:۴۵ تا ۱۲:۱۵"
       },
       "foodPro" : true,
       "foodList" : [
@@ -1472,7 +1476,8 @@
       "delivery": {
         "type" : "ارسال اکسپرس",
         "express": true,
-        "price" : 12800
+        "price" : 12800,
+        "fastestTime" : "امروز بین ۱۲:۱۵ تا ۱۲:۴۵"
       },
       "foodPro" : false,
       "hasParty" : true,
