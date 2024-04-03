@@ -2,10 +2,16 @@
 import {useSelector} from "react-redux";
 import Image from "next/image";
 import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
+import {useRouter} from "next/navigation";
 
 export const StateBadge = ({resInfo}) => {
     const {selected} = useSelector(state => state.addressModal);
     const isInCity = selected.city === resInfo.city
+    const router = useRouter();
+
+    const handleOpenResPage = () => {
+        router.push("/restaurant")
+    }
 
     return (
         <>
@@ -29,8 +35,8 @@ export const StateBadge = ({resInfo}) => {
                             </div>
                             <p className={"font-iranSans text-sm text-carbon-main"}>امکان سفارش از فروشگاه‌های دیگر در منطقه شما وجود دارد.</p>
                         </div>
-                        <button className={"bg-clip-padding bg-accent2-main text-surface-light rounded-md border-accent2-main border-[0.09375rem] h-10 min-w-[6.6875rem] transition-socialFooter inline-flex items-center justify-center w-full pt-[6px] pb-[6px]"}>
-                            <span className={"text-surface-light text-sm font-iRANSansBold drop-shadow[0_1px_0_#0000003d]"}>مشاهده ۴۰+ فروشگاه دیگر</span>
+                        <button onClick={handleOpenResPage} className={"hover:bg-accent2-light bg-clip-padding bg-accent2-main text-surface-light rounded-md border-accent2-main border-[0.09375rem] h-10 min-w-[6.6875rem] transition-socialFooter inline-flex items-center justify-center w-full pt-[6px] pb-[6px]"}>
+                            <span className={"text-surface-light text-sm font-iRANSansBold drop-shadow[0_1px_0_#0000003d]"}>مشاهده فروشگاه‌های دیگر</span>
                         </button>
                     </div>
             }
