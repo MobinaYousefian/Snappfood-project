@@ -8,7 +8,7 @@ export const FoodPrice = ({item, discountNumber, partyDiscount, partyRemain}) =>
     const partyPrice = item.value * ((100-partyDiscount)/100);
 
     return (
-        <div className={clsx(partyRemain > 0 ? "hover:bg-[rgba(235,237,240,0.25)]" : "", "div transition-socialFooter flex flex-col")}>
+        <div className={clsx(partyRemain < 1 ? "" : "hover:bg-[rgba(235,237,240,0.25)]", "div transition-socialFooter flex flex-col")}>
             <footer className={"mt-2 flex justify-between items-center"}>
                 <div className={"items-center justify-between flex ease-in-out duration-300 transition-all px-3 w-full min-h-[3.5625rem]"}>
                     <div className={"flex flex-col"}>
