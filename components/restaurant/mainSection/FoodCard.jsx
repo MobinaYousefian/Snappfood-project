@@ -25,6 +25,8 @@ export const FoodCard = ({food, resName, discountNumber}) => {
                             key={i}
                             item={item}
                             discountNumber={discountNumber}
+                            food={food}
+                            partyRemain={food.partyRemain}
                         />
                     ))
                 }

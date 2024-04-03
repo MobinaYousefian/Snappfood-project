@@ -263,10 +263,11 @@ a {
     height: 1.25rem;
 }
 
-/* used in FoodPrice component */
+/* used in BtnAddToCart and FoodPrice component */
 .div:hover .button {
     background-color: #FF00A6;
     color: white;
+    fill: white;
 }
 
 /* used in FoodFilter component */
@@ -276,6 +277,11 @@ a {
 
 .parentDiv:hover .childP {
     opacity: 0.85;
+}
+
+/* used in cartBasket*/
+.cartBasket {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 }
 
 /*Modal animations*/

@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {setElementId} from "@/redux/features/elementOnScreenSlice";
 
-export const FoodMenu = ({params, restaurants, partyFoods}) => {
+export const FoodMenu = ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id == pageId)[0]
 
@@ -42,7 +42,7 @@ export const FoodMenu = ({params, restaurants, partyFoods}) => {
     return (
         <section className={"FoodMenu basis-full max-w-full p-[calc(1rem)]"}>
             <section id={"party"} className={"target scroll-mt-[4.375rem]"}>
-                <FoodPartyMenu partyFoods={partyFoods}/>
+                <FoodPartyMenu resInfo={resInfo}/>
             </section>
             <section className={"border-surface-dark bg-surface-light rounded-lg border-[0.0625rem]"}>
                 {

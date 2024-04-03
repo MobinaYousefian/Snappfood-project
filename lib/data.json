@@ -324,6 +324,8 @@
         "نوشیدنی سرد",
         "پیش غذا"
       ],
+      "packagePrice" : 10000,
+      "tax" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -392,7 +394,8 @@
           "price" : [
             {
               "value" : 259000,
-              "isDiscount" : false
+              "isDiscount" : false,
+              "tag" : "نودل الین با مرغ"
             }
           ],
           "extraService" : {
@@ -413,7 +416,8 @@
           "price" : [
             {
               "value" : 259000,
-              "isDiscount" : true
+              "isDiscount" : true,
+              "tag" : "سالاد مرغ آسیایی"
             }
           ]
         },
@@ -451,7 +455,8 @@
           "price" : [
             {
               "value" : 90000,
-              "isDiscount" : false
+              "isDiscount" : false,
+              "tag" : "موهیتو"
             }
           ]
         }
@@ -629,6 +634,8 @@
         "پاستا",
         "سالاد"
       ],
+      "tax" : 0,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -687,7 +694,7 @@
           ],
           "price" : [
             {
-              "tag" : "متوسط (۳۳ سانتی متری)",
+              "tag" : "وگان متوسط (۳۳ سانتی متری)",
               "value" : 180000,
               "isDiscount" : false
             }
@@ -706,6 +713,7 @@
           ],
           "price" : [
             {
+              "tag" : "پنه عربیتا با میگو",
               "value" : 340000,
               "isDiscount" : true
             }
@@ -719,7 +727,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 9,
+          "partyRemain" : 2,
           "ingredients" : "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
           "star" : 3.2,
           "photos" : [
@@ -727,6 +735,7 @@
           ],
           "price" : [
             {
+              "tag" : "سالاد سزار سوخاری",
               "value" : 260000,
               "isDiscount" : false
             }
@@ -888,6 +897,8 @@
         "پیش غذا",
         "سرویس اضافه"
       ],
+      "tax" : 20000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -904,6 +915,7 @@
           ],
           "price" : [
             {
+              "tag" : "فیله استریپس سوخاری",
               "value" : 258000,
               "isDiscount" : false
             }
@@ -923,6 +935,7 @@
           ],
           "price" : [
             {
+              "tag" : "ساندویچ چیکن دونر مخصوص",
               "value" : 184000,
               "isDiscount" : false
             }
@@ -944,6 +957,7 @@
           ],
           "price" : [
             {
+              "tag" : "ساندویچ زینگر سوپریم اسپایسی",
               "value" : 194000,
               "isDiscount" : false
             }
@@ -964,6 +978,7 @@
           ],
           "price" : [
             {
+              "tag" : "استیک سینه مرغ",
               "value" : 268000,
               "isDiscount" : false
             }
@@ -982,6 +997,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان سیر ایتالیایی",
               "value" : 108000,
               "isDiscount" : false
             }
@@ -1000,6 +1016,7 @@
           ],
           "price" : [
             {
+              "tag" : "شات سس چیلی تای",
               "value" : 3500,
               "isDiscount" : false
             }
@@ -1018,6 +1035,7 @@
           ],
           "price" : [
             {
+              "tag" : "شات پنیر دیپ چدار",
               "value" : 10000,
               "isDiscount" : false
             }
@@ -1036,6 +1054,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان بروچن",
               "value" : 3200,
               "isDiscount" : false
             }
@@ -1199,6 +1218,8 @@
         "بقرا پیش غذا",
         "بقرا اضافات"
       ],
+      "tax" : 6000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -1213,6 +1234,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک لوبیا",
               "value" : 60000,
               "isDiscount" : false
             }
@@ -1231,6 +1253,7 @@
           ],
           "price" : [
             {
+              "tag" : "میرزاقاسمی",
               "value" : 70000,
               "isDiscount" : false
             }
@@ -1249,6 +1272,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو خورشت قیمه سیب زمینی",
               "value" : 90000,
               "isDiscount" : false
             }
@@ -1267,6 +1291,7 @@
           ],
           "price" : [
             {
+              "tag" : "زرشک پلو با مرغ",
               "value" : 110000,
               "isDiscount" : false
             }
@@ -1285,6 +1310,7 @@
           ],
           "price" : [
             {
+              "tag" : "ماست بادمجان",
               "value" : 15000,
               "isDiscount" : false
             }
@@ -1303,6 +1329,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان اضافی",
               "value" : 4000,
               "isDiscount" : false
             }
@@ -1321,6 +1348,7 @@
           ],
           "price" : [
             {
+              "tag" : "پک قاشق وچنگال",
               "value" : 3000,
               "isDiscount" : false
             }
@@ -1487,6 +1515,8 @@
         "خورشت",
         "نوشیدنی"
       ],
+      "tax" : 26000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -1503,6 +1533,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو کباب وزیری مخصوص مدرن",
               "value" : 195000,
               "isDiscount" : false
             }
@@ -1521,6 +1552,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک کباب کوبیده سه سیخ",
               "value" : 200000,
               "isDiscount" : false
             }
@@ -1534,7 +1566,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 10,
+          "partyRemain" : 0,
           "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
           "star" : 4.2,
           "photos" : [
@@ -1546,6 +1578,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک جوجه کباب مخصوص",
               "value" : 150000,
               "isDiscount" : false
             }
@@ -1559,7 +1592,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 6,
+          "partyRemain" : 7,
           "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star" : 3.6,
           "photos" : [
@@ -1570,6 +1603,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو خورشت قورمه سبزی",
               "value" : 125000,
               "isDiscount" : false
             }
@@ -1588,6 +1622,7 @@
           ],
           "price" : [
             {
+              "tag" : "نوشابه خانواده کوکا کولا",
               "value" : 20000,
               "isDiscount" : false
             }

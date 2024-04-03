@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import clsx from "clsx";
 
 export const CouponCard = ({coupon}) => {
-    const couponStr = `${coupon.discount} ${coupon.title}`
+    const couponStr = `${coupon.discount}/${coupon.title}`
     const {activeList} = useSelector(state => state.activeCoupon);
 
     return (
