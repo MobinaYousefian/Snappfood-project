@@ -2,7 +2,7 @@ import {DeliveryInfo, StateBadge, CartBasket} from "@/components";
 
 export const LeftAside = ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
-    const resInfo = restaurants.filter(({id}) => id == pageId)[0]
+    const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
 
     return (
         <aside className={"h-auto basis-full max-w-full p-[calc(1rem)] ResDelivery-Restaurant"}>

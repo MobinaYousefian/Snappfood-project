@@ -1,13 +1,23 @@
+'use client'
 import clsx from "clsx";
 import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
+import {useSelector} from "react-redux";
 
 export const CommentSection = ({resInfo}) => {
+    const {isOpenFoodModal, foodData} = useSelector(state => state.foodData);
+
+    let comments
+    if (isOpenFoodModal === true) {
+        comments = foodData.comments
+    }else {
+        comments = resInfo.comments
+    }
 
     return (
         <div className={"flex flex-col"}>
             {
-                resInfo.comments.map((item) => (
+                comments.map((item) => (
                     <div className={"flex shrink-0 p-4 border-b-[0.0625rem] border-b-[rgba(58,61,66,0.12)]"} key={item.id}>
                         <div className={"flex flex-col shrink-0 ml-4 w-[10rem]"}>
                             <p className={"text-carbon-main text-sm font-iRANSansBold whitespace-nowrap text-ellipsis overflow-hidden mt-1.5"}>{item.name}</p>
@@ -30,6 +40,19 @@ export const CommentSection = ({resInfo}) => {
                                     ))
                                 }
                             </div>
+                            {
+                                comments.resAnswer ?
+                                    <div className={"mt-4 p-2 rounded-lg flex flex-col justify-center border-[0.0625rem] border-[rgba(58,61,66,0.12)]"}>
+                                        <p className={"text-accent-main font-iRANSansBold text-xs mb-2"}>{"پاسخ مدیر رستوران"}</p>
+                                        <p className={"text-carbon-main font-iranSans text-xs"}>{comments.resAnswer}</p>
+                                    </div>
+                                    : comments.snappAnswer ?
+                                        <div className={"mt-4 p-2 rounded-lg flex flex-col justify-center border-[0.0625rem] border-[rgba(58,61,66,0.12)]"}>
+                                            <p className={"text-accent-main font-iRANSansBold text-xs mb-2"}>{"پاسخ اسنپ‌فود"}</p>
+                                            <p className={"text-carbon-main font-iranSans text-xs"}>{comments.snappAnswer}</p>
+                                        </div>
+                                    : null
+                            }
                         </div>
                     </div>
                 ))

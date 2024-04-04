@@ -1,12 +1,25 @@
+'use client'
 import Image from "next/image";
 import {FoodPrice} from "@/components";
+import {useDispatch} from "react-redux";
+import {handleOpenFoodModal, setFoodData, setImageUrl} from "@/redux/features/foodDataSlice";
 
 export const FoodCard = ({food, resName, discountNumber}) => {
+    const dispatch = useDispatch();
+
+    const openFoodModal = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        dispatch(handleOpenFoodModal());
+        dispatch(setFoodData(food))
+        dispatch(setImageUrl(`${food.photos[0]}`));
+        document.body.style.overflow = "hidden";
+    }
 
     return (
         <div className={"FoodCard p-[calc(0rem)] border-b-[0.0625rem] w-full border-surface-dark odd:border-l-[0.0625rem]"}>
             <section className={"h-full py-4 flex flex-col"}>
-                <div className={"cursor-pointer px-4 flex pb-1.5"}>
+                <div onClick={openFoodModal} className={"cursor-pointer px-4 flex pb-1.5"}>
                     <div className={"flex flex-col grow pt-4 pl-4"}>
                         <h2 className={"font-iRANSansBold text-base text-carbon-main"}>
                             {food.name}

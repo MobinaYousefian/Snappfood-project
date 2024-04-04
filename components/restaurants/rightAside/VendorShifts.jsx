@@ -10,9 +10,6 @@ export const VendorShifts = ({hours, isOffWeekend}) => {
     const startTime = hours.split(" ")[3]
     const endTime = hours.split(" ")[5]
 
-    console.log(startTime)
-    console.log(endTime)
-
     return (
         <div className={clsx(!isOpenVendorShift ? "px-2 mx-6 shadow-none border-none h-0 opacity-0" : "mx-6 my-4 p-2 opacity-100 border-[0.0625rem] shadow-sp-small h-auto" ,"items-baseline justify-center overflow-hidden flex bg-surface-light rounded-lg text-carbon-main transition-all duration-200 ease-linear border-[rgb(235,237,240)]")}>
             {
