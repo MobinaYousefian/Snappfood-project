@@ -1,19 +1,27 @@
-import {DiscountPrice, RegularPrice} from "@/components";
+'use client'
+import {BtnAddToCart, RegularPrice} from "@/components";
 import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 import Image from "next/image";
 import clsx from "clsx";
+import {useSelector} from "react-redux";
 
-export const FoodPrice = ({item, discountNumber, partyDiscount, partyRemain}) => {
+export const FoodPrice = ({food ,item, discountNumber, partyDiscount, partyRemain}) => {
     const discountPrice = item.value * ((100-discountNumber)/100);
     const partyPrice = item.value * ((100-partyDiscount)/100);
 
+    const {basket} = useSelector(state => state.cart);
+    let counterNumber
+    if (basket.filter(({priceTag}) => priceTag === item.tag).length > 0) {
+        counterNumber = basket.filter(({priceTag}) => priceTag === item.tag)[0].counter
+    }
+
     return (
-        <div className={clsx(partyRemain > 0 ? "hover:bg-[rgba(235,237,240,0.25)]" : "", "div transition-socialFooter flex flex-col")}>
+        <div className={clsx(partyRemain < 1 ? "" : "hover:bg-[rgba(235,237,240,0.25)]", "div transition-socialFooter flex flex-col")}>
             <footer className={"mt-2 flex justify-between items-center"}>
                 <div className={"items-center justify-between flex ease-in-out duration-300 transition-all px-3 w-full min-h-[3.5625rem]"}>
                     <div className={"flex flex-col"}>
                         <p className={"font-iranSans text-xs text-carbon-main"}>
-                            {item.tag}
+                            {item.tag !== food.name ? item.tag : ""}
                         </p>
                         {
                             partyDiscount || item.isDiscount === true ?
@@ -39,11 +47,7 @@ export const FoodPrice = ({item, discountNumber, partyDiscount, partyRemain}) =>
                                 : <RegularPrice item={item}/>
                         }
                     </div>
-                    <div className={"flex flex-col items-center"}>
-                        <button disabled={partyRemain === 0} className={clsx(partyRemain === 0 ? "text-inactive-dark" : "text-accent-main button", "shadow-sp-medium bg-clip-padding bg-surface-light rounded-[3rem] border-accent-alphaLight border-[0.09375rem] min-w-[6.6875rem] transition-socialFooter inline-flex items-center justify-center font-iranSans text-sm h-[2.3125rem]")}>
-                            افزودن
-                        </button>
-                    </div>
+                    <BtnAddToCart partyRemain={partyRemain} food={food} counter={counterNumber} foodTag={item.tag}/>
                 </div>
             </footer>
         </div>

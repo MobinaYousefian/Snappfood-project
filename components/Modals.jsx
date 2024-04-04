@@ -2,6 +2,7 @@ import {Address} from "@/components/header/Address";
 import {Search} from "@/components/header/Search";
 import {Orders} from "@/components/header/Orders";
 import {SupportModal} from "@/components/footer/SupportModal";
+import {DeleteCartModal} from "@/components/restaurant/leftAside/DeleteCartModal";
 
 function Modals () {
     return (
@@ -10,6 +11,7 @@ function Modals () {
             <Search/>
             <Orders/>
             <SupportModal/>
+            <DeleteCartModal/>
         </div>
     )
 }

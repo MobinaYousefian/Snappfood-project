@@ -287,13 +287,10 @@
       "commentNumber" : 1231,
       "minBuy" : 100000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [12, 19],
-      "openMinute" : [0],
-      "closeHour" : [17, 23],
-      "closeMinute": [0],
+      "workHour" : "امروز از ساعت ۱۶ تا ۲۳",
+      "workHourDay" : "امروز از ساعت ۱۶:۰۰ تا ۲۳:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -324,6 +321,8 @@
         "نوشیدنی سرد",
         "پیش غذا"
       ],
+      "packagePrice" : 10000,
+      "tax" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -392,7 +391,8 @@
           "price" : [
             {
               "value" : 259000,
-              "isDiscount" : false
+              "isDiscount" : false,
+              "tag" : "نودل الین با مرغ"
             }
           ],
           "extraService" : {
@@ -413,7 +413,8 @@
           "price" : [
             {
               "value" : 259000,
-              "isDiscount" : true
+              "isDiscount" : true,
+              "tag" : "سالاد مرغ آسیایی"
             }
           ]
         },
@@ -451,7 +452,8 @@
           "price" : [
             {
               "value" : 90000,
-              "isDiscount" : false
+              "isDiscount" : false,
+              "tag" : "موهیتو"
             }
           ]
         }
@@ -600,13 +602,10 @@
       "commentNumber" : 578,
       "minBuy" : 75000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [12, 19],
-      "openMinute" : [0],
-      "closeHour" : [16, 23],
-      "closeMinute": [0],
+      "workHour" : "امروز از ساعت ۱۲ تا ۱۶",
+      "workHourDay" : "امروز از ساعت ۱۲:۰۰ تا ۱۶:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -629,6 +628,8 @@
         "پاستا",
         "سالاد"
       ],
+      "tax" : 0,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -687,7 +688,7 @@
           ],
           "price" : [
             {
-              "tag" : "متوسط (۳۳ سانتی متری)",
+              "tag" : "وگان متوسط (۳۳ سانتی متری)",
               "value" : 180000,
               "isDiscount" : false
             }
@@ -706,6 +707,7 @@
           ],
           "price" : [
             {
+              "tag" : "پنه عربیتا با میگو",
               "value" : 340000,
               "isDiscount" : true
             }
@@ -719,7 +721,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 9,
+          "partyRemain" : 2,
           "ingredients" : "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
           "star" : 3.2,
           "photos" : [
@@ -727,6 +729,7 @@
           ],
           "price" : [
             {
+              "tag" : "سالاد سزار سوخاری",
               "value" : 260000,
               "isDiscount" : false
             }
@@ -865,13 +868,10 @@
       "commentNumber" : 2235,
       "minBuy" : 120000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [11],
-      "openMinute" : [30],
-      "closeHour" : [23],
-      "closeMinute": [30],
+      "workHour" : "امروز از ساعت ۱۱:۳۰ تا ۲۳:۳۰",
+      "workHourDay" : "امروز از ساعت ۱۱:۳۰ تا ۲۳:۳۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "پیک فروشنده",
@@ -888,6 +888,8 @@
         "پیش غذا",
         "سرویس اضافه"
       ],
+      "tax" : 20000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -904,6 +906,7 @@
           ],
           "price" : [
             {
+              "tag" : "فیله استریپس سوخاری",
               "value" : 258000,
               "isDiscount" : false
             }
@@ -923,6 +926,7 @@
           ],
           "price" : [
             {
+              "tag" : "ساندویچ چیکن دونر مخصوص",
               "value" : 184000,
               "isDiscount" : false
             }
@@ -944,6 +948,7 @@
           ],
           "price" : [
             {
+              "tag" : "ساندویچ زینگر سوپریم اسپایسی",
               "value" : 194000,
               "isDiscount" : false
             }
@@ -964,6 +969,7 @@
           ],
           "price" : [
             {
+              "tag" : "استیک سینه مرغ",
               "value" : 268000,
               "isDiscount" : false
             }
@@ -982,6 +988,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان سیر ایتالیایی",
               "value" : 108000,
               "isDiscount" : false
             }
@@ -1000,6 +1007,7 @@
           ],
           "price" : [
             {
+              "tag" : "شات سس چیلی تای",
               "value" : 3500,
               "isDiscount" : false
             }
@@ -1018,6 +1026,7 @@
           ],
           "price" : [
             {
+              "tag" : "شات پنیر دیپ چدار",
               "value" : 10000,
               "isDiscount" : false
             }
@@ -1036,6 +1045,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان بروچن",
               "value" : 3200,
               "isDiscount" : false
             }
@@ -1179,13 +1189,10 @@
       "commentNumber" : 198,
       "minBuy" : 60000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : false
+        "isOnline" : true
       },
-      "openHour" : [11],
-      "openMinute" : [0],
-      "closeHour" : [23],
-      "closeMinute": [45],
+      "workHour" : "امروز از ساعت ۱۱ تا ۲۳",
+      "workHourDay" : "امروز از ساعت ۱۱:۰۰ تا ۲۳:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -1199,6 +1206,8 @@
         "بقرا پیش غذا",
         "بقرا اضافات"
       ],
+      "tax" : 6000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -1213,6 +1222,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک لوبیا",
               "value" : 60000,
               "isDiscount" : false
             }
@@ -1231,6 +1241,7 @@
           ],
           "price" : [
             {
+              "tag" : "میرزاقاسمی",
               "value" : 70000,
               "isDiscount" : false
             }
@@ -1249,6 +1260,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو خورشت قیمه سیب زمینی",
               "value" : 90000,
               "isDiscount" : false
             }
@@ -1267,6 +1279,7 @@
           ],
           "price" : [
             {
+              "tag" : "زرشک پلو با مرغ",
               "value" : 110000,
               "isDiscount" : false
             }
@@ -1285,6 +1298,7 @@
           ],
           "price" : [
             {
+              "tag" : "ماست بادمجان",
               "value" : 15000,
               "isDiscount" : false
             }
@@ -1303,6 +1317,7 @@
           ],
           "price" : [
             {
+              "tag" : "نان اضافی",
               "value" : 4000,
               "isDiscount" : false
             }
@@ -1321,6 +1336,7 @@
           ],
           "price" : [
             {
+              "tag" : "پک قاشق وچنگال",
               "value" : 3000,
               "isDiscount" : false
             }
@@ -1375,7 +1391,7 @@
           "id" : 5,
           "name" : "فرشاد",
           "date" : "۲۲ آذر ۱۴۰۲",
-          "star" : 2,
+          "star" : 1,
           "text" : "برنج بد خورشت بدمزه سیبزمینی سفت",
           "order" : [
             "چلو خورشت قیمه سیب زمینی",
@@ -1465,13 +1481,10 @@
       "commentNumber" : 282,
       "minBuy" : 45000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [11],
-      "openMinute" : [30],
-      "closeHour" : [21],
-      "closeMinute": [45],
+      "workHour" : "امروز از ساعت ۱۱:۳۰ تا ۲۱:۴۵",
+      "workHourDay" : "امروز از ساعت ۱۱:۳۰ تا ۲۱:۴۵",
       "isOffWeekend" : true,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -1487,6 +1500,8 @@
         "خورشت",
         "نوشیدنی"
       ],
+      "tax" : 26000,
+      "packagePrice" : 0,
       "foods" : [
         {
           "id" : 1,
@@ -1503,6 +1518,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو کباب وزیری مخصوص مدرن",
               "value" : 195000,
               "isDiscount" : false
             }
@@ -1521,6 +1537,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک کباب کوبیده سه سیخ",
               "value" : 200000,
               "isDiscount" : false
             }
@@ -1534,7 +1551,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 10,
+          "partyRemain" : 0,
           "ingredients" : "یک سیخ جوجە کباب سینە مرغ ۲۵۰ گرمی، دورچین: گوجە کبابی، کرە، لیمو فلفل، ھمراە با لواش",
           "star" : 4.2,
           "photos" : [
@@ -1546,6 +1563,7 @@
           ],
           "price" : [
             {
+              "tag" : "خوراک جوجه کباب مخصوص",
               "value" : 150000,
               "isDiscount" : false
             }
@@ -1559,7 +1577,7 @@
           "isDiscount" : false,
           "isParty" : true,
           "partyDiscount" : 20,
-          "partyRemain" : 6,
+          "partyRemain" : 7,
           "ingredients" : "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star" : 3.6,
           "photos" : [
@@ -1570,6 +1588,7 @@
           ],
           "price" : [
             {
+              "tag" : "چلو خورشت قورمه سبزی",
               "value" : 125000,
               "isDiscount" : false
             }
@@ -1588,6 +1607,7 @@
           ],
           "price" : [
             {
+              "tag" : "نوشابه خانواده کوکا کولا",
               "value" : 20000,
               "isDiscount" : false
             }

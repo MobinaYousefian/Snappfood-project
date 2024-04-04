@@ -251,18 +251,6 @@ a {
 }
 
 /* used in ResFilter component */
-.noQuery {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    transition: all 0.2s ease 0s;
-    left: 1rem;
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
 .span::after {
     content: '';
     display: block;
@@ -275,26 +263,11 @@ a {
     height: 1.25rem;
 }
 
-.ResFilterInput:checked + .span::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    transition: all 0.2s ease 0s;
-    left: 0.125rem;
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
-.ResFilterInput:checked + .span {
-    background-color: #00B862;
-}
-
-/* used in FoodPrice component */
+/* used in BtnAddToCart and FoodPrice component */
 .div:hover .button {
     background-color: #FF00A6;
     color: white;
+    fill: white;
 }
 
 /* used in FoodFilter component */
@@ -304,6 +277,11 @@ a {
 
 .parentDiv:hover .childP {
     opacity: 0.85;
+}
+
+/* used in cartBasket*/
+.cartBasket {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 }
 
 /*Modal animations*/
@@ -485,6 +463,26 @@ a {
     }
     to {
         transform: scale(0);
+    }
+}
+
+.resInfoModal-animation {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: hPIMuN;
+}
+
+@keyframes hPIMuN {
+    from {
+        transform: translate3d(0px, 2rem, 0px);
+    }
+    to {
+        transform: translateZ(0px);
     }
 }
 

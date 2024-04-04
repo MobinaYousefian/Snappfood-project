@@ -1,14 +1,10 @@
-'use client'
 import Image from "next/image";
 import {FoodPrice, PartyCountDown} from "@/components";
-import {usePathname} from "next/navigation";
 import {toFarsiNumber} from "@/utils/numberConverter";
 import clsx from "clsx";
 
-export const FoodPartyMenu = ({partyFoods}) => {
-    const pathName = usePathname();
-    const resPageId = pathName.split("/")[2]
-    const partyFood = partyFoods.filter(({resId}) => resId === (+resPageId))
+export const FoodPartyMenu = ({resInfo}) => {
+    const partyFood = resInfo.foods.filter(({isParty}) => isParty === true);
 
     if (partyFood.length < 1) return null
     return (
@@ -60,6 +56,7 @@ export const FoodPartyMenu = ({partyFoods}) => {
                                                 item={item}
                                                 partyDiscount={food.partyDiscount}
                                                 partyRemain={food.partyRemain}
+                                                food={food}
                                             />
                                         ))
                                     }

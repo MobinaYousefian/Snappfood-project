@@ -20,7 +20,7 @@ export default async function Home() {
               <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
                   <Suspense fallback={<Loading/>}>
                       <CategorySection categories={categories}/>
-                      <FoodParty partyFoods={partyFoods}/>
+                      <FoodParty partyFoods={partyFoods} restaurants={restaurants}/>
                       <RestaurantSections restaurants={restaurants}/>
                       <DownloadSection/>
                       <Seller/>

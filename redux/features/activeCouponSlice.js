@@ -4,8 +4,8 @@ export const activeCouponSlice = createSlice({
     name : "activeCoupon",
     initialState : {
         activeList : [
-            "۲۰٪ تخفیف مخصوص سفارش اول",
-            "۱۰٪ تخفیف با خرید از دسته\u200Cی برگر"
+            "۲۰٪ تخفیف/مخصوص سفارش اول",
+            "۱۰٪ تخفیف/با خرید از دسته\u200Cی برگر"
         ],
     },
     reducers : {
