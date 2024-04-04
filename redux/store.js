@@ -11,6 +11,7 @@ import {elementOnScreenReducer} from "@/redux/features/elementOnScreenSlice";
 import {showPartyReducer} from "@/redux/features/showPartySlice";
 import {deliveryModalReducer} from "@/redux/features/deliveryModalSlice";
 import {resInfoModalReducer} from "@/redux/features/resInfoModalSlice";
+import {foodDataReducer} from "@/redux/features/foodDataSlice";
 
 const persistConfig = {
     key : "persist",
@@ -28,7 +29,8 @@ const rootReducer = combineReducers({
     elementOnScreen : persistReducer(persistConfig, elementOnScreenReducer),
     showParty : persistReducer(persistConfig, showPartyReducer),
     deliveryModal : persistReducer(persistConfig, deliveryModalReducer),
-    resInfoModal : persistReducer(persistConfig, resInfoModalReducer)
+    resInfoModal : persistReducer(persistConfig, resInfoModalReducer),
+    foodData : persistReducer(persistConfig, foodDataReducer)
 });
 
 export const store = configureStore({

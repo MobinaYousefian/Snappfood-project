@@ -2,7 +2,7 @@ import {CategoryNavbar, ResInfoModal, RestaurantInfo} from "@/components";
 
 export const RightAside = async ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
-    const resInfo = restaurants.filter(({id}) => id == pageId)[0]
+    const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
 
     return (
         <>

@@ -3,7 +3,7 @@ import {AddressBox, HeaderServices, SearchBox, UserAccount, UserOrders} from "@/
 import {usePathname} from "next/navigation";
 import clsx from "clsx";
 
-export const Header = ({user, storeCategories}) => {
+export const Header = ({user, storeCategories, restaurants}) => {
     const pathname = usePathname();
     const isHomePage = pathname === "/";
     const isResCategory = pathname === "/restaurant";
@@ -14,7 +14,7 @@ export const Header = ({user, storeCategories}) => {
                 <header className={clsx(isHomePage ? "shadow-none" : 'shadow-sp-small' ,"flex flex-col")}>
                     <div className={"w-full bg-surface-light relative justify-between items-center flex box-border p-4 h-[4.5rem] w-full header-animation"}>
                         <AddressBox/>
-                        <SearchBox/>
+                        <SearchBox restaurants={restaurants}/>
                         <div className={"items-center flex z-[999]"}>
                             <UserAccount user={user}/>
                             <UserOrders user={user}/>

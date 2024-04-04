@@ -34,7 +34,7 @@ export const PartyFoodCard = ({food}) => {
                             </div>
                             :
                             <div className={"mt-1 flex items-baseline"}>
-                                <span className={clsx(food.partyRemain === 0 ? "text-inactive-dark" : "text-carbon-light" ,"mr-1 font-iranSans text-xs")}>اتمام موجودی</span>
+                                <span className={"text-inactive-dark mr-1 font-iranSans text-xs"}>اتمام موجودی</span>
                             </div>
                     }
                 </div>

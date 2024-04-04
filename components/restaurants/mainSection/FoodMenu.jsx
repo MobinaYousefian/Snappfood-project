@@ -6,7 +6,7 @@ import {setElementId} from "@/redux/features/elementOnScreenSlice";
 
 export const FoodMenu = ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
-    const resInfo = restaurants.filter(({id}) => id == pageId)[0]
+    const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
 
     const dispatch = useDispatch();
 

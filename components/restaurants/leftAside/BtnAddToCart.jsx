@@ -7,14 +7,15 @@ import {toFarsiNumber} from "@/utils/numberConverter";
 export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const dispatch = useDispatch();
 
-    // const handlePlusCart = (e) => {
-    //     e.preventDefault()
-    //     if (counter < partyRemain) {
-    //         dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
-    //     }else {
-    //         alert("موجودی کافی نیست!")
-    //     }
-    // }
+    const handlePlusCart = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        if (counter === partyRemain) {
+            alert("موجودی کافی نیست!")
+        }else {
+            dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
+        }
+    }
 
     const handleAddCart = (e) => {
         e.preventDefault()
@@ -46,7 +47,7 @@ export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
                                     </button>
                             }
                         <span className={"text-center w-12 font-iRANSansBold text-sm text-carbon-main"}>{toFarsiNumber(counter)}</span>
-                        <button onClick={handleAddCart} disabled={counter === partyRemain} className={"button fill-accent-main py-[1px] px-[6px] shadow-sp-medium bg-surface-light text-accent-main border-accent-alphaLight border-[0.09375rem] min-w-8 bg-clip-padding rounded-full w-8 h-8 transition-socialFooter inline-flex items-center justify-center font-iRANSansBold text-sm"}>
+                        <button onClick={handlePlusCart} className={"button fill-accent-main py-[1px] px-[6px] shadow-sp-medium bg-surface-light text-accent-main border-accent-alphaLight border-[0.09375rem] min-w-8 bg-clip-padding rounded-full w-8 h-8 transition-socialFooter inline-flex items-center justify-center font-iRANSansBold text-sm"}>
                             <svg width={10} height={10} viewBox={"0 0 12 12"} className={""}>
                                 <path d={"M7 5H11C11.5523 5 12 5.44772 12 6C12 6.55228 11.5523 7 11 7H7V11C7 11.5523 6.55228 12 6 12C5.44772 12 5 11.5523 5 11V7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H5V1C5 0.447715 5.44772 0 6 0C6.55228 0 7 0.447715 7 1V5Z"}/>
                             </svg>
