@@ -1,7 +1,16 @@
+'use client'
 import Image from "next/image";
 import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
+import {useDispatch} from "react-redux";
+import {handleOpenResInfo} from "@/redux/features/resInfoModalSlice";
 
 export const RestaurantInfo = ({resInfo}) => {
+    const dispatch = useDispatch();
+
+    const openResInfoModal = () => {
+        dispatch(handleOpenResInfo());
+        document.body.style.overflow = "hidden"
+    }
 
     return (
         <section>
@@ -38,7 +47,7 @@ export const RestaurantInfo = ({resInfo}) => {
                 </div>
             </header>
             <div className={"flex-wrap flex items-center mb-6"}>
-                <button className={"max-[1201px]:mt-2.5 shadow-sp-medium bg-clip-padding bg-surface-light rounded-[3rem] border-accent2-alphaLight border-[0.09375rem] h-10 w-full justify-center items-center inline-flex transition-socialFooter min-w-[6.6875rem]"}>
+                <button onClick={openResInfoModal} className={"max-[1201px]:mt-2.5 shadow-sp-medium bg-clip-padding bg-surface-light rounded-[3rem] border-accent2-alphaLight border-[0.09375rem] h-10 w-full justify-center items-center inline-flex transition-socialFooter min-w-[6.6875rem]"}>
                     <Image src={"/icons/info-green.svg"} width={17} height={17} alt={"icon"} className={"w-[1.0625rem] h-[1.0625rem]"}/>
                     <p className={"mr-2 font-iranSans text-sm text-accent2-main"}>
                         اطلاعات و نظرات

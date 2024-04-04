@@ -287,13 +287,10 @@
       "commentNumber" : 1231,
       "minBuy" : 100000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [12, 19],
-      "openMinute" : [0],
-      "closeHour" : [17, 23],
-      "closeMinute": [0],
+      "workHour" : "امروز از ساعت ۱۶ تا ۲۳",
+      "workHourDay" : "امروز از ساعت ۱۶:۰۰ تا ۲۳:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -605,13 +602,10 @@
       "commentNumber" : 578,
       "minBuy" : 75000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [12, 19],
-      "openMinute" : [0],
-      "closeHour" : [16, 23],
-      "closeMinute": [0],
+      "workHour" : "امروز از ساعت ۱۲ تا ۱۶",
+      "workHourDay" : "امروز از ساعت ۱۲:۰۰ تا ۱۶:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -874,13 +868,10 @@
       "commentNumber" : 2235,
       "minBuy" : 120000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [11],
-      "openMinute" : [30],
-      "closeHour" : [23],
-      "closeMinute": [30],
+      "workHour" : "امروز از ساعت ۱۱:۳۰ تا ۲۳:۳۰",
+      "workHourDay" : "امروز از ساعت ۱۱:۳۰ تا ۲۳:۳۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "پیک فروشنده",
@@ -1198,13 +1189,10 @@
       "commentNumber" : 198,
       "minBuy" : 60000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : false
+        "isOnline" : true
       },
-      "openHour" : [11],
-      "openMinute" : [0],
-      "closeHour" : [23],
-      "closeMinute": [45],
+      "workHour" : "امروز از ساعت ۱۱ تا ۲۳",
+      "workHourDay" : "امروز از ساعت ۱۱:۰۰ تا ۲۳:۰۰",
       "isOffWeekend" : false,
       "delivery": {
         "type" : "ارسال اکسپرس",
@@ -1403,7 +1391,7 @@
           "id" : 5,
           "name" : "فرشاد",
           "date" : "۲۲ آذر ۱۴۰۲",
-          "star" : 2,
+          "star" : 1,
           "text" : "برنج بد خورشت بدمزه سیبزمینی سفت",
           "order" : [
             "چلو خورشت قیمه سیب زمینی",
@@ -1493,13 +1481,10 @@
       "commentNumber" : 282,
       "minBuy" : 45000,
       "payMethod" : {
-        "isOnline" : true,
-        "isCredit" : true
+        "isBoth" : true
       },
-      "openHour" : [11],
-      "openMinute" : [30],
-      "closeHour" : [21],
-      "closeMinute": [45],
+      "workHour" : "امروز از ساعت ۱۱:۳۰ تا ۲۱:۴۵",
+      "workHourDay" : "امروز از ساعت ۱۱:۳۰ تا ۲۱:۴۵",
       "isOffWeekend" : true,
       "delivery": {
         "type" : "ارسال اکسپرس",

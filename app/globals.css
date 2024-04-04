@@ -466,6 +466,26 @@ a {
     }
 }
 
+.resInfoModal-animation {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: hPIMuN;
+}
+
+@keyframes hPIMuN {
+    from {
+        transform: translate3d(0px, 2rem, 0px);
+    }
+    to {
+        transform: translateZ(0px);
+    }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 14px;
