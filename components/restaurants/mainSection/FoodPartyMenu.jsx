@@ -1,6 +1,5 @@
 import Image from "next/image";
-import {FoodPrice, PartyCountDown} from "@/components";
-import {toFarsiNumber} from "@/utils/numberConverter";
+import {FoodPrice, PartyCountDown, RemainingFoodNumber} from "@/components";
 import clsx from "clsx";
 
 export const FoodPartyMenu = ({resInfo}) => {
@@ -38,17 +37,7 @@ export const FoodPartyMenu = ({resInfo}) => {
                                     </div>
                                 </div>
                                 <div className={"flex flex-col"}>
-                                    <div className={"px-4"}>
-                                        <div className={"mt-4"}>
-                                            <div className={clsx(food.partyRemain === 0 ? "text-inactive-dark" : food.partyRemain < 4 ? "text-alert-light" : "text-carbon-main", "flex items-center justify-start")}>
-                                                <p className={"mb-2 font-iRANSansBold text-sm"}>{toFarsiNumber(food.partyRemain)}</p>
-                                                <p className={"mb-2 font-iranSans text-sm mr-1"}>عدد باقی مانده</p>
-                                            </div>
-                                            <div className={"w-full bg-[rgb(235, 237, 240)] mb-2 h-[0.125rem]"}>
-                                                <div className={clsx( food.partyRemain === 0 ?  "bg-surface-dark" : food.partyRemain < 4 ? "bg-alert-light" : "bg-inactive-dark" , "w-full h-full")}/>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <RemainingFoodNumber partyRemain={food.partyRemain}/>
                                     {
                                         food.price.map((item, i) => (
                                             <FoodPrice
