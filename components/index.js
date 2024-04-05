@@ -1,4 +1,5 @@
 export * from "./Modals"
+export * from "./BreadCrumbs"
 
 /* header */
 export * from "./header/HeaderGetData"

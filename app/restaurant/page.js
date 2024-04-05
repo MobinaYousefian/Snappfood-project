@@ -1,5 +1,5 @@
 import {getData} from "@/lib/dataFeching";
-import {AsideMenu, Footer, PageSorting, RestaurantList} from "@/components";
+import {AsideMenu, BreadCrumbs, Footer, PageSorting, RestaurantList} from "@/components";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
 
@@ -8,6 +8,7 @@ export default async function restaurant () {
 
     return (
         <>
+            <BreadCrumbs category={resPageCategory} restaurants={restaurants}/>
             <main className={"p-6 grow w-full max-w-[85.375rem] mx-auto"}>
                 <Suspense fallback={<Loading/>}>
                     <PageSorting/>

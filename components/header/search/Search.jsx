@@ -54,7 +54,6 @@ export const Search = ({resPageCategory, restaurants}) => {
     let searchFoodInRes
     if (whichResPage) {
         const resFood = restaurants[whichResPage - 1].foods
-        console.log(resFood)
         searchFoodInRes = resFood.filter((item) => item.name.includes(searchTerm));
     }
 
@@ -77,8 +76,6 @@ export const Search = ({resPageCategory, restaurants}) => {
         e.preventDefault();
         dispatch(setSearchTerm(e.target.value));
     }
-
-    console.log(searchFoodInRes)
 
     if (!isOpen) return null;
     return (
