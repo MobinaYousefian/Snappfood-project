@@ -25,6 +25,7 @@ export const SearchInput = ({inputRef, whichResPage, searchFoodInRes, handleOnCh
 
 
     const handleSearchKeyUp = (e) => {
+        e.preventDefault()
         if (e.key === "Enter") {
             dispatch(setSearchHistory(searchTerm));
             dispatch(handleCloseModal());

@@ -2,6 +2,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useRef} from "react";
 import {
+    clearSearchTerm,
     handleCloseModal,
     setResPageSearchResult,
     setSearchHistory,
@@ -28,6 +29,7 @@ export const Search = ({resPageCategory, restaurants}) => {
 
     const handleClose = () => {
         dispatch(handleCloseModal());
+        dispatch(clearSearchTerm())
     }
 
     useEffect(() => {
