@@ -13,7 +13,7 @@ import {setElementId} from "@/redux/features/elementOnScreenSlice";
 import {SearchNotFound} from "@/components/restaurants/mainSection/SearchNotFound";
 import {useSearchParams} from "next/navigation";
 
-export const FoodMenu = ({params, restaurants}) => {
+export const FoodMenu = ({params, restaurants, partyFoods}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
     const {resPageSearchResult} = useSelector((state => state.searchModal));
@@ -64,7 +64,7 @@ export const FoodMenu = ({params, restaurants}) => {
     return (
         <section className={"FoodMenu basis-full max-w-full p-[calc(1rem)]"}>
             <section id={"party"} className={"target scroll-mt-[4.375rem]"}>
-                <FoodPartyMenu resInfo={resInfo}/>
+                <FoodPartyMenu partyFoods={partyFoods}/>
             </section>
             <section className={"border-surface-dark bg-surface-light rounded-lg border-[0.0625rem]"}>
                 {

@@ -13,7 +13,8 @@ export const PartyFoodCard = ({food}) => {
     const dispatch = useDispatch();
 
 
-    const openFoodModal = () => {
+    const openFoodModal = (e) => {
+        e.preventDefault()
         dispatch(handleOpenFoodModal());
         dispatch(setFoodData(food));
         dispatch(setImageUrl(`${food.photos[0]}`));
