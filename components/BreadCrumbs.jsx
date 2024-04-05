@@ -58,7 +58,7 @@ export const BreadCrumbs = ({category, restaurants}) => {
                     <p>{currentCity}</p>
                 </p>
                 {
-                    categoryParam || resPageId &&
+                    (categoryParam || resPageId) &&
                     <Image src={"/icons/arrow-breadCrumbs.svg"} width={5} height={14} alt={"icons"} className={"h-4"}/>
                 }
             </Link>
