@@ -1,12 +1,25 @@
 'use client'
-import {CouponSection, DiscountSection, FoodPartyMenu, MenuSection, PopularSection} from "@/components";
+import {
+    CouponSection,
+    DiscountSection,
+    FoodPartyMenu,
+    MenuSection,
+    PopularSection,
+    SearchFoodResults
+} from "@/components";
 import {useEffect} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setElementId} from "@/redux/features/elementOnScreenSlice";
+import {SearchNotFound} from "@/components/restaurants/mainSection/SearchNotFound";
+import {useSearchParams} from "next/navigation";
 
 export const FoodMenu = ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
+    const {resPageSearchResult} = useSelector((state => state.searchModal));
+    const searchParams = useSearchParams();
+
+    const queryParam = searchParams.get("query")
 
     const dispatch = useDispatch();
 
@@ -38,6 +51,15 @@ export const FoodMenu = ({params, restaurants}) => {
             });
         }
     }, [])
+
+
+    if (queryParam && resPageSearchResult.length > 0) {
+        return <SearchFoodResults resInfo={resInfo}/>
+    }
+
+    if (queryParam && resPageSearchResult.length < 1) {
+        return <SearchNotFound/>
+    }
 
     return (
         <section className={"FoodMenu basis-full max-w-full p-[calc(1rem)]"}>
