@@ -3,11 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import {usePathname} from "next/navigation";
+import {useDispatch} from "react-redux";
+import {handleEmptyCart} from "@/redux/features/cartSlice";
 
 export const HeaderServices = ({storeCategories}) => {
     const pathname = usePathname();
     const isHomePage = pathname === "/";
     const isResCategory = pathname === "/restaurant";
+
+    const dispatch = useDispatch();
+    dispatch(handleEmptyCart());
 
     return (
         <nav className={clsx(isHomePage ? "shadow-sp-small" : isResCategory ? 'shadow-none' : '' ,"w-full bg-surface-light flex flex-nowrap pt-4 overflow-x-auto")}>

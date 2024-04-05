@@ -14,6 +14,7 @@ export const CartBasket = ({resInfo}) => {
     const {selected} = useSelector(state => state.addressModal)
     const leftPrice = useRef(null);
 
+
     /* to calculate "مجموع" */
     const totalPrice = basket.reduce((prev, cur) => {
         const foodPrice = cur.food.price.filter((item) => item.tag === cur.priceTag)[0];

@@ -1,8 +1,9 @@
 'use client'
 import {RestaurantCard} from "@/components";
 import Link from "next/link";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useSearchParams} from "next/navigation";
+import {handleEmptyCart} from "@/redux/features/cartSlice";
 
 export const RestaurantList = ({restaurants}) => {
     const {selected} = useSelector(state => state.addressModal);
@@ -62,6 +63,8 @@ export const RestaurantList = ({restaurants}) => {
     if (economicParam) cityRes = cityRes.filter(({minBuy}) => minBuy < 60000)
 
 
+    const dispatch = useDispatch();
+    dispatch(handleEmptyCart());
     return (
         <div className={"ResList-resPage basis-full max-w-full p-[calc(1rem)]"}>
             <div className={"flex flex-wrap w-[calc(100%+1.5rem)] m-[calc(-0.75rem)]"}>

@@ -2831,7 +2831,7 @@
           "isDiscount": false,
           "isParty": true,
           "partyDiscount": 20,
-          "partyRemain": 3,
+          "partyRemain": 4,
           "ingredients": "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star": 3.6,
           "photos": [
@@ -3114,8 +3114,8 @@
       "isPopular": false,
       "isDiscount": false,
       "isParty": true,
-      "partyDiscount": 20,
-      "partyRemain": 3,
+      "partyDiscount": 2,
+      "partyRemain": 2,
       "ingredients": "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
       "star": 3.2,
       "photos": [
@@ -3180,7 +3180,7 @@
       "isDiscount": false,
       "isParty": true,
       "partyDiscount": 15,
-      "partyRemain": 10,
+      "partyRemain": 7,
       "ingredients": "۱۵۰ گرم سینه مرغ سوخاری، ژامبون مرغ ۸۰ درصد ، کاهو، گوجه، خیار شور ، سس مخصوص (اسپایسی) و پنیر گودا",
       "star": 4.1,
       "photos": [
@@ -3312,7 +3312,7 @@
       "isDiscount": false,
       "isParty": true,
       "partyDiscount": 10,
-      "partyRemain": 3,
+      "partyRemain": 4,
       "ingredients": "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
       "star": 3.6,
       "photos": [

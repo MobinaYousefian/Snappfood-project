@@ -18,10 +18,9 @@ export const FoodMenu = ({params, restaurants, partyFoods}) => {
     const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
     const {resPageSearchResult} = useSelector((state => state.searchModal));
     const searchParams = useSearchParams();
+    const dispatch = useDispatch();
 
     const queryParam = searchParams.get("query")
-
-    const dispatch = useDispatch();
 
     useEffect(() => {
         const callBackFn = (entries) => {
