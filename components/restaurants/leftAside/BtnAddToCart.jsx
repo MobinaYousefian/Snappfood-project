@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import {handleAddFood, handleDeleteFood} from "@/redux/features/cartSlice";
 import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
+import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
 
 export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const dispatch = useDispatch();
@@ -20,7 +21,11 @@ export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const handleAddCart = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
+        if (food.isParty === true) {
+            dispatch(handleCloseFoodModal())
+        }else {
+            dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
+        }
     }
 
     const handleDeleteCart = (e) => {
