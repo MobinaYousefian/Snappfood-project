@@ -27,6 +27,7 @@ export const HeaderSearchSlice = createSlice({
         },
 
         setSearchHistory : (state, action) => {
+            if (!state.searchHistory.includes(action.payload) && action.payload.toString().trim())
             state.searchHistory.push(action.payload)
             if (state.searchHistory.length > 4) {
                 state.searchHistory.shift()
