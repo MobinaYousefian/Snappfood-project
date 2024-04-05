@@ -4,10 +4,12 @@ import {useDispatch, useSelector} from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
 import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
+import {useParams} from "next/navigation";
 
 export const FoodInfo = ({resInfo}) => {
     const {foodData} = useSelector(state => state.foodData);
     const dispatch = useDispatch();
+    const params = useParams();
 
 
     return (
@@ -33,7 +35,7 @@ export const FoodInfo = ({resInfo}) => {
                     ))
                 }
                 {
-                    foodData.isParty === true &&
+                    (foodData.isParty === true && !params.restaurantId) &&
                     <div className={"flex justify-between py-[1.9375rem]"}>
                         <div className={"px-3.5 rounded-[4.5rem]"}>
                             <p className={"ml-2 font-iranSans text-sm text-carbon-main"}>{foodData.resDelivery.type}</p>
