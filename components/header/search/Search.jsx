@@ -60,11 +60,13 @@ export const Search = ({resPageCategory, restaurants}) => {
     const handleCloseSearch = (e) => {
         if (searchRef.current && !searchRef.current.contains(e.target)) {
             dispatch(handleCloseModal());
+            if (!whichResPage) {
+                dispatch(setSearchHistory(searchTerm));
+            }
         }
     }
 
     const handleSearch = () => {
-        dispatch(setSearchHistory(searchTerm));
         dispatch(handleCloseModal());
         if (whichResPage) {
             dispatch(setResPageSearchResult(searchFoodInRes))
@@ -84,10 +86,7 @@ export const Search = ({resPageCategory, restaurants}) => {
                 <div className={"flex-col flex w-[95%]"}>
                     <SearchInput inputRef={inputRef} whichResPage={whichResPage} searchFoodInRes={searchFoodInRes} handleOnChange={handleOnChange} nameParam={nameParam} idParam={idParam}/>
                     <div className={"mt-1 overflow-y-auto bg-surface-light rounded-md flex flex-col"}>
-                        {
-                            !whichResPage &&
-                            <SearchHistory searchHistory={searchHistory}/>
-                        }
+                        <SearchHistory searchHistory={searchHistory}/>
                         {
                             !searchFoodInRes &&
                             <>
