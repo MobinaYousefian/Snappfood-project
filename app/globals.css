@@ -119,7 +119,7 @@ a {
     }
 
     .header-orders-modal {
-        min-width: 25rem;
+        width: 25rem;
     }
 
     .header-searchBox {

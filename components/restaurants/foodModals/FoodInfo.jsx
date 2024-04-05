@@ -1,8 +1,13 @@
+'use client'
 import {Description, FoodPrice, ImageSlider, RemainingFoodNumber} from "@/components";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import Link from "next/link";
+import Image from "next/image";
+import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
 
 export const FoodInfo = ({resInfo}) => {
     const {foodData} = useSelector(state => state.foodData);
+    const dispatch = useDispatch();
 
 
     return (
@@ -26,6 +31,20 @@ export const FoodInfo = ({resInfo}) => {
                             partyDiscount={foodData.partyDiscount}
                         />
                     ))
+                }
+                {
+                    foodData.isParty === true &&
+                    <div className={"flex justify-between py-[1.9375rem]"}>
+                        <div className={"px-3.5 rounded-[4.5rem]"}>
+                            <p className={"ml-2 font-iranSans text-sm text-carbon-main"}>{foodData.resDelivery.type}</p>
+                        </div>
+                        <Link onClick={() => dispatch(handleCloseFoodModal())} href={`/restaurant/${foodData.resId}/${foodData.resName.split(" ").join("_").replace("(", "").replace(")", "")}`}>
+                            <div className={"flex items-center"}>
+                                <p className={"font-iRANSansBold text-sm text-accent2-main"}>{foodData.resName}</p>
+                                <Image src={"/icons/arrow-left-green.svg"} width={9} height={16} alt={"icon"} className={"mr-4"}/>
+                            </div>
+                        </Link>
+                    </div>
                 }
             </div>
         </div>

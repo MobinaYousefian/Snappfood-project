@@ -11,7 +11,7 @@ import {Suspense} from "react";
 import Loading from "@/app/loading";
 
 export default async function Home() {
-    const { restaurants, categories, cities, partyFoods } = await getData();
+    const { restaurants, categories, cities, partyFoods} = await getData();
 
   return (
       <>
@@ -20,7 +20,7 @@ export default async function Home() {
               <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
                   <Suspense fallback={<Loading/>}>
                       <CategorySection categories={categories}/>
-                      <FoodParty partyFoods={partyFoods} restaurants={restaurants}/>
+                      <FoodParty restaurants={restaurants} partyFoods={partyFoods}/>
                       <RestaurantSections restaurants={restaurants}/>
                       <DownloadSection/>
                       <Seller/>

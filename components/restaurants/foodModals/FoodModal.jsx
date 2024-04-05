@@ -7,15 +7,18 @@ import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
 import clsx from "clsx";
 
 export const FoodModal = ({restaurants}) => {
-    const params = useParams();
-    let pageId
-    if (params.restaurantId) {
-        pageId = params.restaurantId[0];
-    }
-    const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
-
     const {isOpenFoodModal, foodData} = useSelector(state => state.foodData);
     const dispatch = useDispatch();
+    const params = useParams();
+    let pageId
+    let resInfo
+    if (params.restaurantId) {
+        pageId = params.restaurantId[0];
+        resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
+    }else {
+        resInfo = restaurants.filter(({name}) => name === foodData.resName)[0]
+    }
+
 
     const closeFoodModal = (e) => {
         e.preventDefault();
@@ -39,7 +42,7 @@ export const FoodModal = ({restaurants}) => {
                     </button>
                     <p className={"font-iRANSansBold text-sm text-carbon-main"}> </p>
                 </div>
-                <div className={clsx(foodData.isParty === true ? "max-h-[calc(-8rem+90vh)]" : "max-h-[calc(-4rem+90vh)]" ,"flex flex-col overflow-scroll min-w-[20rem] max-w-[45rem] sp-laptop:w-[90vw] w-[35vw]")}>
+                <div className={clsx(foodData.isParty === true ? "max-h-[calc(-8rem+90vh)]" : "max-h-[calc(-4rem+90vh)]" ,"flex flex-col overflow-auto min-w-[20rem] max-w-[45rem] sp-laptop:w-[90vw] w-[35vw]")}>
                     <FoodInfo resInfo={resInfo}/>
                     <div className={"p-4 flex justify-between"}>
                         <p className={"font-iRANSansBold text-base text-carbon-light"}>نظرات کاربران</p>

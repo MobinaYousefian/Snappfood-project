@@ -1,18 +1,8 @@
-'use client'
 import clsx from "clsx";
 import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
-import {useSelector} from "react-redux";
 
-export const CommentSection = ({resInfo}) => {
-    const {isOpenFoodModal, foodData} = useSelector(state => state.foodData);
-
-    let comments
-    if (isOpenFoodModal === true) {
-        comments = foodData.comments
-    }else {
-        comments = resInfo.comments
-    }
+export const CommentSection = ({comments}) => {
 
     return (
         <div className={"flex flex-col"}>

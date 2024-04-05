@@ -1,4 +1,5 @@
 export * from "./Modals"
+export * from "./BreadCrumbs"
 
 /* header */
 export * from "./header/HeaderGetData"
@@ -10,8 +11,8 @@ export * from "./header/search/SearchBox"
 export * from "./header/search/Search"
 export * from "./header/UserAccount"
 export * from "./header/UserProfile"
-export * from "./header/UserOrders"
-export * from "./header/Orders"
+export * from "./header/orders/UserOrders"
+export * from "./header/orders/Orders"
 export * from "./header/HeaderServices"
 export * from "./header/search/searchInput"
 export * from "./header/search/SearchHistory"

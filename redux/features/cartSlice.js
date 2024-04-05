@@ -4,10 +4,29 @@ export const cartSlice = createSlice({
     name : "cart",
     initialState : {
         isOpen : false,
+        notifications : 1,
+        isOpenBill : false,
+        billId : '',
         basket : [],
         warningIsOpen : false,
     },
     reducers : {
+        handleDeleteNotifications : (state) => {
+          state.notifications = 0
+        },
+
+        handleOpenBill : (state) => {
+            state.isOpenBill = true
+        },
+
+        handleCloseBill : (state) => {
+            state.isOpenBill = false
+        },
+
+        setBillId : (state, action) => {
+            state.billId = action.payload
+        },
+
         handleOpenOrdersModal : (state) => {
             state.isOpen = true
         },
@@ -46,5 +65,5 @@ export const cartSlice = createSlice({
     }
 });
 
-export const {handleOpenOrdersModal, handleCloseOrdersModal, handleAddFood, handleDeleteFood, handleEmptyCart, handleCloseWarning, handleOpenWarning} = cartSlice.actions;
+export const {setBillId ,handleOpenOrdersModal, handleCloseOrdersModal, handleAddFood, handleDeleteFood, handleEmptyCart, handleCloseWarning, handleOpenWarning, handleDeleteNotifications, handleCloseBill, handleOpenBill} = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;

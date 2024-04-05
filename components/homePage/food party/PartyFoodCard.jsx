@@ -1,14 +1,27 @@
+'use client'
 import {priceFormatting, toFarsiNumber} from "@/utils/numberConverter";
 import Image from "next/image";
 import clsx from "clsx";
+import {useDispatch} from "react-redux";
+import {handleOpenFoodModal, setFoodData, setImageUrl} from "@/redux/features/foodDataSlice";
 
 export const PartyFoodCard = ({food}) => {
     const foodPrice = food.price[0].value
     const discountNum = food.partyDiscount
     const discountPrice = foodPrice * ((100-discountNum)/100);
 
+    const dispatch = useDispatch();
+
+
+    const openFoodModal = () => {
+        dispatch(handleOpenFoodModal());
+        dispatch(setFoodData(food));
+        dispatch(setImageUrl(`${food.photos[0]}`));
+        document.body.style.overflow = "hidden";
+    }
+
     return (
-        <div className={"rounded-lg flex-col justify-between flex drop-shadow-[0_1px_0_rgba(58,61,66,0.06)] cursor-pointer bg-surface-light overflow-hidden p-6 pt-3 mx-[0.1875rem] shadow-sp-high min-h-[23.125rem]"}>
+        <div onClick={openFoodModal} className={"rounded-lg flex-col justify-between flex drop-shadow-[0_1px_0_rgba(58,61,66,0.06)] cursor-pointer bg-surface-light overflow-hidden p-6 pt-3 mx-[0.1875rem] shadow-sp-high min-h-[23.125rem]"}>
             <h3 className={clsx(food.partyRemain === 0 ? "text-inactive-dark" : "text-carbon-dark", "text-center leading-3 grow-0 font-iranSans text-[0.625rem]")}>{food.resName}</h3>
             <div className={clsx( food.partyRemain === 0 ? "grayscale" : "grayscale-0" ,"grow-0 text-center rounded-[4.5rem]")}>
                 <div className={clsx(food.partyRemain === 0 ? "text-inactive-dark" : "text-carbon-dark", "flex items-center justify-center")}>
