@@ -4,9 +4,11 @@ import {FoodPrice, PartyHeader, RemainingFoodNumber} from "@/components";
 import clsx from "clsx";
 import {useDispatch} from "react-redux";
 import {handleOpenFoodModal, setFoodData, setImageUrl} from "@/redux/features/foodDataSlice";
+import {useParams} from "next/navigation";
 
-export const FoodPartyMenu = ({resInfo}) => {
-    const partyFood = resInfo.foods.filter(({isParty}) => isParty === true);
+export const FoodPartyMenu = ({partyFoods}) => {
+    const params = useParams();
+    const partyFood = partyFoods.filter(({resId}) => resId === (+params.restaurantId[0]))
 
     const dispatch = useDispatch();
 

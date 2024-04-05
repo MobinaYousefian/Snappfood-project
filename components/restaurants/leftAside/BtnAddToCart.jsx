@@ -1,12 +1,16 @@
+"use client"
 import clsx from "clsx";
 import {useDispatch} from "react-redux";
 import {handleAddFood, handleDeleteFood} from "@/redux/features/cartSlice";
 import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
 import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
+import {useParams} from "next/navigation";
 
 export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const dispatch = useDispatch();
+    const params = useParams();
+
 
     const handlePlusCart = (e) => {
         e.preventDefault()
@@ -21,7 +25,7 @@ export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const handleAddCart = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        if (food.isParty === true) {
+        if (food.isParty === true && !params.restaurantId) {
             dispatch(handleCloseFoodModal())
         }else {
             dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
