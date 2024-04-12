@@ -29,17 +29,34 @@ export const CartBasket = ({resInfo}) => {
        return prev + cur.counter
     }, 0)
 
+
+    // /* the discount price */
+    // const totalDiscount = basket.reduce((prev, cur) => {
+    //     let foodPrice = cur.food.price.filter((item) => item.tag === cur.priceTag)[0];
+    //     let disCount
+    //     if (foodPrice.isDiscount) {
+    //         disCount = foodPrice.value * ((100-(resInfo.discountNumber))/100);
+    //         return prev + disCount
+    //     } else if (cur.food.isParty) {
+    //         disCount = foodPrice.value * ((100-(cur.food.partyDiscount))/100);
+    //         return prev + disCount
+    //     } else {
+    //         return prev
+    //     }
+    // }, 0)
+
+
     /* to calculate "سود شما از این خرید"*/
-    const totalDiscount = basket.reduce((prev, cur) => {
+    let profit;
+    const yourProfit = basket.reduce((prev, cur) => {
         let foodPrice = cur.food.price.filter((item) => item.tag === cur.priceTag)[0];
-        let disCount
         if (foodPrice.isDiscount) {
-            disCount = foodPrice.value * ((100-(resInfo.discountNumber))/100);
-            return prev + disCount
-        } else if (cur.food.isParty) {
-            disCount = foodPrice.value * ((100-(cur.food.partyDiscount))/100);
-            return prev + disCount
-        } else {
+            profit = (foodPrice.value - foodPrice.value * ((100-(resInfo.discountNumber))/100)) * cur.counter
+            return prev + profit
+        }else if (cur.food.isParty) {
+            profit = (foodPrice.value - foodPrice.value * ((100-(cur.food.partyDiscount))/100)) * cur.counter
+            return prev + profit
+        }else {
             return prev
         }
     }, 0)
@@ -57,8 +74,8 @@ export const CartBasket = ({resInfo}) => {
     }
 
     useEffect(() => {
-        if (document.getElementById("leftPrice")) {
-            document.getElementById("leftPrice").style.width = `${minBuyLeftOver}%`;
+        if (document.getElementById("priceLeft")) {
+            document.getElementById("priceLeft").style.width = `${minBuyLeftOver}%`;
         }
     }, [minBuyLeftOver])
 
@@ -84,9 +101,10 @@ export const CartBasket = ({resInfo}) => {
                     <Suspense fallback={<Loading/>}>
                         <CartBill
                             basket={basket}
-                            totalDiscount={totalDiscount}
                             resInfo={resInfo}
                             totalPrice={totalPrice}
+                            yourProfit={yourProfit}
+                            totalCounter={totalCounter}
                         />
                     </Suspense>
                     <textarea placeholder={"توضیحات سفارش..."} className={"font-iranSans overflow-auto resize-y border-carbon-alphaMedium border-[0.09375rem] rounded-md text-carbon-main p-3 mb-[calc(1.75rem)] mt-4 w-full min-h-[calc(6rem)]"}/>
@@ -108,7 +126,7 @@ export const CartBasket = ({resInfo}) => {
                                         </p>
                                     </div>
                                     <div className={"bg-[rgb(235,237,240)] w-full h-[8px] rounded-[4px]"}>
-                                        <div id={"leftPrice"} ref={leftPrice} className={`bg-accent-main h-full text-right cartBasket rounded-[4px]`}/>
+                                        <div id={"priceLeft"} ref={leftPrice} className={`bg-accent-main h-full text-right cartBasket rounded-[4px]`}/>
                                     </div>
                                 </div>
                                 :

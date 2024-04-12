@@ -24,7 +24,7 @@ export const FoodPrice = ({food ,item, discountNumber, partyDiscount, partyRemai
                             {item.tag !== food.name ? item.tag : ""}
                         </p>
                         {
-                            partyDiscount || item.isDiscount === true ?
+                            (food.isParty || item.isDiscount) ?
                                 <div className={"inline-flex flex-col"}>
                                     <div className={"inline-flex"}>
                                         <span className={clsx( partyRemain === 0 ? "grayscale text-carbon-main bg-carbon-alphaLight" : "text-accent-main bg-accent-alphaLight", "font-iRANSansBold text-sm m-1 rounded px-1 flex justify-center items-center grow py-0.5")}>

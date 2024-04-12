@@ -40,6 +40,7 @@ export const FoodCard = ({food, resName, discountNumber}) => {
                             discountNumber={discountNumber}
                             food={food}
                             partyRemain={food.partyRemain}
+                            partyDiscount={food.partyDiscount}
                         />
                     ))
                 }
