@@ -1,8 +1,17 @@
+'use client'
 import {CategoryNavbar, ResInfoModal, RestaurantInfo} from "@/components";
+import {ResInfoModalMobile} from "@/components/restaurants/rightAside/mobileResInfoModal/ResInfoModalMobile";
+import {useEffect, useRef} from "react";
 
 export const RightAside = async ({params, restaurants}) => {
     const pageId = params.restaurantId[0];
     const resInfo = restaurants.filter(({id}) => id === (+pageId))[0]
+    const deviceWidth = useRef(window.innerWidth);
+
+    useEffect( () => {
+        deviceWidth.current = window.innerWidth
+    }, [])
+
 
     return (
         <>
@@ -12,7 +21,12 @@ export const RightAside = async ({params, restaurants}) => {
                     <CategoryNavbar resInfo={resInfo}/>
                 </div>
             </aside>
-            <ResInfoModal resInfo={resInfo}/>
+            {
+                deviceWidth.current > 720 ?
+                    <ResInfoModal resInfo={resInfo}/>
+                    :
+                    <ResInfoModalMobile resInfo={resInfo}/>
+            }
         </>
     )
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
 import {useSelector} from "react-redux";
 
-export const CommentSection = ({resInfo}) => {
+export const CommentSectionMobile = ({resInfo}) => {
     const {isOpenFoodModal, foodData} = useSelector(state => state.foodData);
 
     let comments
@@ -19,7 +19,7 @@ export const CommentSection = ({resInfo}) => {
             {
                 comments.map((item) => (
                     <div className={"flex shrink-0 p-4 border-b-[0.0625rem] border-b-[rgba(58,61,66,0.12)]"} key={item.id}>
-                        <div className={"flex flex-col shrink-0 ml-4 w-[10rem]"}>
+                        <div className={"flex flex-col shrink-0 ml-4 w-[5.5rem]"}>
                             <p className={"text-carbon-main text-sm font-iRANSansBold whitespace-nowrap text-ellipsis overflow-hidden mt-1.5"}>{item.name}</p>
                             <p className={"font-iranSans text-carbon-main text-sm mt-1.5"}>{item.date}</p>
                             <p className={clsx(item.star === 1 ? "invisible" : "visible","items-center flex text-sm text-carbon-main font-iranSans mt-1.5 rounded border-[0.0625rem] border-[rgb(235,237,240)] text-center w-8 px-1 py-0.5")}>
@@ -51,7 +51,7 @@ export const CommentSection = ({resInfo}) => {
                                             <p className={"text-accent-main font-iRANSansBold text-xs mb-2"}>{"پاسخ اسنپ‌فود"}</p>
                                             <p className={"text-carbon-main font-iranSans text-xs"}>{comments.snappAnswer}</p>
                                         </div>
-                                    : null
+                                        : null
                             }
                         </div>
                     </div>

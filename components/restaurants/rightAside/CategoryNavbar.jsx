@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export const CategoryNavbar = ({resInfo}) => {
     const {activeList} = useSelector(state => state.activeCoupon);
-    const couponStr = resInfo.couponList?.map(coupon => `${coupon.discount} ${coupon.title}`)
+    const couponStr = resInfo.couponList?.map(coupon => `${coupon.discount}/${coupon.title}`)
     const activeCoupon = activeList.filter(item => couponStr?.includes(item));
 
     const {elementId} = useSelector(state => state.elementOnScreen);
