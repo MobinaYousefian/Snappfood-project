@@ -12,6 +12,7 @@ import {showPartyReducer} from "@/redux/features/showPartySlice";
 import {deliveryModalReducer} from "@/redux/features/deliveryModalSlice";
 import {resInfoModalReducer} from "@/redux/features/resInfoModalSlice";
 import {foodDataReducer} from "@/redux/features/foodDataSlice";
+import {extraServiceReducer} from "@/redux/features/ExtraServiceSlice";
 
 const persistConfig = {
     key : "persist",
@@ -30,7 +31,8 @@ const rootReducer = combineReducers({
     showParty : persistReducer(persistConfig, showPartyReducer),
     deliveryModal : persistReducer(persistConfig, deliveryModalReducer),
     resInfoModal : persistReducer(persistConfig, resInfoModalReducer),
-    foodData : persistReducer(persistConfig, foodDataReducer)
+    foodData : persistReducer(persistConfig, foodDataReducer),
+    extraService : persistReducer(persistConfig, extraServiceReducer)
 });
 
 export const store = configureStore({

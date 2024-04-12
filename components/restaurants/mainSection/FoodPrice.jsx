@@ -26,11 +26,11 @@ export const FoodPrice = ({food ,item, discountNumber, partyDiscount, partyRemai
                         {
                             (food.isParty || item.isDiscount) ?
                                 <div className={"inline-flex flex-col"}>
-                                    <div className={"inline-flex"}>
-                                        <span className={clsx( partyRemain === 0 ? "grayscale text-carbon-main bg-carbon-alphaLight" : "text-accent-main bg-accent-alphaLight", "font-iRANSansBold text-sm m-1 rounded px-1 flex justify-center items-center grow py-0.5")}>
+                                    <div className={"inline-flex items-center"}>
+                                        <span className={clsx( partyRemain === 0 ? "grayscale text-carbon-main bg-carbon-alphaLight" : "text-accent-main bg-accent-alphaLight", "h-8 font-iRANSansBold text-sm ml-1 rounded px-1 flex justify-center items-center grow py-0.5")}>
                                             {partyDiscount ? toFarsiNumber(partyDiscount) : toFarsiNumber(discountNumber)}
                                             <span className={"mr-1"}>
-                                                <Image src={"/icons/percentage.svg"} width={8} height={10} alt={"icon"}/>
+                                                <Image src={"/icons/percentage.svg"} width={8} height={10} alt={"icon"} className={"min-w-[8px] min-h-[10px]"}/>
                                             </span>
                                         </span>
                                         <div className={"inline-flex flex-col items-start"}>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import {toFarsiNumber} from "@/utils/numberConverter";
 import {handleCloseFoodModal} from "@/redux/features/foodDataSlice";
 import {useParams} from "next/navigation";
+import {handleOpenExtraService, setFoodWithExtra} from "@/redux/features/ExtraServiceSlice";
 
 export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
     const dispatch = useDispatch();
@@ -28,7 +29,13 @@ export const BtnAddToCart = ({partyRemain, food, counter, foodTag}) => {
         if (food.isParty === true && !params.restaurantId) {
             dispatch(handleCloseFoodModal())
         }else {
-            dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1}))
+            if (food.extraService) {
+                dispatch(handleOpenExtraService())
+                document.body.style.overflow = "hidden"
+                dispatch(setFoodWithExtra({foodE : food, priceTagE : foodTag}))
+            } else {
+                dispatch(handleAddFood({food : food, priceTag : foodTag, counter : 1, extraPrice : 0}))
+            }
         }
     }
 
