@@ -941,7 +941,7 @@
       "couponList": [
         {
           "discount": "۱۰٪ تخفیف",
-          "title": "با خرید از دسته\u200Cی برگر"
+          "title": "با خرید از دسته\u200Cی پیتزا"
         }
       ],
       "discountNumber": 10,
@@ -1035,7 +1035,7 @@
           "resName": "فست فود دیژون",
           "category": "پیتزا",
           "isPopular": true,
-          "isDiscount": true,
+          "isDiscount": false,
           "ingredients": "خمیر پیتزا ایتالیایی، پپرونی ۸۰%، بیکن گوشت ۹۰%، فلفل دلمه ای رنگی، قارچ",
           "star": 4.4,
           "photos": [
@@ -1045,7 +1045,7 @@
             {
               "tag": "متوسط (۳۳ سانتی متری)",
               "value": 250000,
-              "isDiscount": true
+              "isDiscount": false
             }
           ],
           "comments": [
@@ -2052,7 +2052,7 @@
         "بقرا اضافات"
       ],
       "tax": 6000,
-      "packagePrice": 0,
+      "packagePrice": 10000,
       "foods": [
         {
           "id": 1,
@@ -2830,7 +2830,7 @@
           "isPopular": false,
           "isDiscount": false,
           "isParty": true,
-          "partyDiscount": 20,
+          "partyDiscount": 10,
           "partyRemain": 4,
           "ingredients": "۳۰۰ گرم خورشت، ۵۵ گرم گوشت گوسالە، ۳۵۰ گرم برنج ایرانی، دورچین: لیمو، پیاز، فلفل",
           "star": 3.6,
@@ -3114,7 +3114,7 @@
       "isPopular": false,
       "isDiscount": false,
       "isParty": true,
-      "partyDiscount": 2,
+      "partyDiscount": 20,
       "partyRemain": 2,
       "ingredients": "۱۵۰ گرم فیله مرغ سوخاری شده، کاهو رومن، نان کروتن، پنیر پارمژان",
       "star": 3.2,

@@ -5,7 +5,7 @@ import Image from "next/image";
 import {useRef} from "react";
 import {useSelector} from "react-redux";
 
-export const CartBill = ({totalPrice, resInfo, basket, totalDiscount}) => {
+export const CartBill = ({totalPrice, resInfo, basket, yourProfit, totalCounter}) => {
     const {activeList} = useSelector(state => state.activeCoupon);
     const activeCouponRef = useRef(null);
 
@@ -14,20 +14,22 @@ export const CartBill = ({totalPrice, resInfo, basket, totalDiscount}) => {
 
     /* to check if there`s any active coupon on the cart*/
     const couponStr = resInfo.couponList?.map((item) => `${item.discount}/${item.title}`)
-    let isaActiveCoupon = couponStr?.filter((coupon) => activeList.find((item) => item === coupon))[0];
+    const isActiveCoupon = couponStr?.filter((coupon) => activeList.find((item) => item === coupon))[0];
 
 
-    const asidePrice = resInfo.tax + resInfo.packagePrice + resInfo.delivery.price;
+    /* مجموع مالیات سبد خرید */
+    const totalTax = basket.reduce((prev, cur) => {
+       return prev + (resInfo.tax * cur.counter)
+    },0)
+
+    /* مجموع هزینه بسته بندی سبد خرید */
+    const totalPackagePrice = basket.reduce((prev, cur) => {
+        return prev + (resInfo.packagePrice * cur.counter)
+    },0)
+
     /* to calculate "قابل پرداخت"*/
-    const finalPrice = basket.reduce((prev, cur) => {
-        const foodPrice = cur.food.price.filter((item) => item.tag === cur.priceTag)[0];
-        if (totalDiscount > 0){
-            return prev + asidePrice + (totalDiscount * cur.counter)
-        } else {
-            return prev + asidePrice + (foodPrice.value * cur.counter)
-        }
+    const finalPrice = (totalPrice - yourProfit) + totalTax + totalPackagePrice + resInfo.delivery.price
 
-    }, 0)
 
     const handleRemoveCoupon = (e) => {
         e.preventDefault()
@@ -48,12 +50,21 @@ export const CartBill = ({totalPrice, resInfo, basket, totalDiscount}) => {
                         <span className={"text-xs text-carbon-light mr-[4px]"}> تومان</span>
                     </div>
                 </div>
-                <div className={clsx( !resInfo.tax && !resInfo.packagePrice ? "hidden" : "h-8 flex justify-between items-center")}>
+                <div className={clsx( resInfo.tax === 0 ? "hidden" : "h-8 flex justify-between items-center")}>
                     <div className={"flex items-center"}>
-                        <span className={"text-carbon-light text-sm font-iranSans"}>{resInfo.tax > 0 ? "مالیات" : resInfo.packagePrice > 0 ? "هزینه بسته بندی" : ""}</span>
+                        <span className={"text-carbon-light text-sm font-iranSans"}>مالیات</span>
                     </div>
                     <div className={"font-iranSans text-sm text-carbon-main flex items-center"}>
-                        {resInfo.tax > 0 ? toFarsiNumber(priceFormatting(resInfo.tax)) : resInfo.packagePrice > 0 ? toFarsiNumber(priceFormatting(resInfo.packagePrice)) : ""}
+                        {toFarsiNumber(priceFormatting(resInfo.tax * totalCounter))}
+                        <span className={"text-xs text-carbon-light mr-[4px]"}> تومان</span>
+                    </div>
+                </div>
+                <div className={clsx( resInfo.packagePrice === 0 ? "hidden" : "h-8 flex justify-between items-center")}>
+                    <div className={"flex items-center"}>
+                        <span className={"text-carbon-light text-sm font-iranSans"}>هزینه بسته بندی</span>
+                    </div>
+                    <div className={"font-iranSans text-sm text-carbon-main flex items-center"}>
+                        {toFarsiNumber(priceFormatting(resInfo.packagePrice * totalCounter))}
                         <span className={"text-xs text-carbon-light mr-[4px]"}> تومان</span>
                     </div>
                 </div>
@@ -66,16 +77,28 @@ export const CartBill = ({totalPrice, resInfo, basket, totalDiscount}) => {
                         <span className={"text-xs text-carbon-light mr-[4px]"}> تومان</span>
                     </div>
                 </div>
+                {
+                    yourProfit > 0 &&
+                    <div className={"h-8 flex justify-between items-center"}>
+                        <div className={"flex items-center"}>
+                            <span className={"text-carbon-light text-sm font-iranSans"}>سود شما از این خرید</span>
+                        </div>
+                        <div className={"font-iranSans text-sm text-carbon-main flex items-center"}>
+                            {toFarsiNumber(priceFormatting(yourProfit))}
+                            <span className={"text-xs text-carbon-light mr-[4px]"}> تومان</span>
+                        </div>
+                    </div>
+                }
             </div>
             {
-                isaActiveCoupon &&
+                isActiveCoupon &&
                 <div ref={activeCouponRef} className={"border-b border-b-carbon-alphaLight flex justify-between items-center"}>
                     <div className={"my-4 flex-[1_0_auto] max-w-[calc(100%-2rem)]"}>
                         <div className={"mb-1 font-iRANSansBold text-xs text-accent2-main"}>
-                            {isaActiveCoupon.split("/")[0]}
+                            {isActiveCoupon.split("/")[0]}
                         </div>
                         <div className={"font-iranSans text-xs text-carbon-main"}>
-                            {isaActiveCoupon.split("/")[1]}
+                            {isActiveCoupon.split("/")[1]}
                         </div>
                     </div>
                     <button onClick={handleRemoveCoupon} className={"flex-[0_0_2rem] hover:bg-inactive-main py-[1px] px-[6px] min-w-8 bg-clip-padding rounded-full w-auto h-8 transition-socialFooter inline-flex items-center justify-center"}>
