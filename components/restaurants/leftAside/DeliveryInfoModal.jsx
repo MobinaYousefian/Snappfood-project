@@ -3,7 +3,7 @@ import Image from "next/image";
 import {useDispatch, useSelector} from "react-redux";
 import {closeDeliveryModal} from "@/redux/features/deliveryModalSlice";
 
-export const DeliveryInfoModal = ({resInfo}) => {
+export const DeliveryInfoModal = () => {
     const {isOpen} = useSelector(state => state.deliveryModal)
     const dispatch = useDispatch();
 
@@ -34,7 +34,7 @@ export const DeliveryInfoModal = ({resInfo}) => {
             <div className={"cursor-pointer py-[14px] px-[16px] flex items-center justify-between grow w-[calc(100%-32px)]"}>
                 <label className={"cursor-pointer inline-flex items-center select-none"}>
                     <input className={"hidden"}/>
-                    <Image src={"/icons/checkBox-empty.svg"} width={22} height={22} alt={"icon"} className={"rounded-full"}/>
+                    <Image src={"/icons/checkBox-empty-circle.svg"} width={22} height={22} alt={"icon"} className={"rounded-full"}/>
                     <div className={"flex flex-col cursor-pointer mr-[16.83px]"}>
                         <p className={"font-iranSans text-xs text-carbon-main"}>زمان دیگر</p>
                     </div>

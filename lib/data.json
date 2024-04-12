@@ -349,12 +349,40 @@
             {
               "tag": "هشت تکه",
               "value": 448000,
-              "isDiscount": true
+              "isDiscount": true,
+              "discountNumber": 20
             },
             {
               "tag": "چهار تکه",
               "value": 258000,
               "isDiscount": false
+            }
+          ],
+          "extraService": [
+            {
+              "id": 1,
+              "name": "چاپ استیک",
+              "price": 10000
+            },
+            {
+              "id": 2,
+              "name": "واسابی",
+              "price": 10000
+            },
+            {
+              "id": 3,
+              "name": "جینجر سوشی",
+              "price": 10000
+            },
+            {
+              "id": 4,
+              "name": "سس سویا",
+              "price": 10000
+            },
+            {
+              "id": 5,
+              "name": "سس تند و شیرین",
+              "price": 10000
             }
           ],
           "comments": [
@@ -434,33 +462,6 @@
               ],
               "resAnswer": "درود بر شما"
             }
-          ],
-          "extraService": [
-            {
-              "id": 1,
-              "name": "چاپ استیک",
-              "price": 10000
-            },
-            {
-              "id": 2,
-              "name": "واسابی",
-              "price": 10000
-            },
-            {
-              "id": 3,
-              "name": "جینجر سوشی",
-              "price": 10000
-            },
-            {
-              "id": 4,
-              "name": "سس سویا",
-              "price": 10000
-            },
-            {
-              "id": 5,
-              "name": "سس تند و شیرین",
-              "price": 10000
-            }
           ]
         },
         {
@@ -481,6 +482,13 @@
               "value": 259000,
               "isDiscount": false,
               "tag": "نودل الین با مرغ"
+            }
+          ],
+          "extraService": [
+            {
+            "id": 5,
+            "name": "سس تند و شیرین",
+            "price": 10000
             }
           ],
           "comments": [
@@ -580,12 +588,7 @@
                 "ترشی کیمچی بزرگ (۲۰۰ گرم)"
               ]
             }
-          ],
-          "extraService": {
-            "id": 5,
-            "name": "سس تند و شیرین",
-            "price": 10000
-          }
+          ]
         },
         {
           "id": 3,
@@ -595,6 +598,7 @@
           "category": "سالاد",
           "isPopular": false,
           "isDiscount": true,
+          "discountNumber": 20,
           "ingredients": "کاهو، هویج، جوانه ماش، ۱۵۰ گرم سینه گریل شده، بادام زمینی، سس آسیایی",
           "star": 4.7,
           "photos": [
@@ -604,7 +608,8 @@
             {
               "value": 259000,
               "isDiscount": true,
-              "tag": "سالاد مرغ آسیایی"
+              "tag": "سالاد مرغ آسیایی",
+              "discountNumber": 20
             }
           ],
           "comments": [
@@ -1171,7 +1176,8 @@
             {
               "tag": "پنه عربیتا با میگو",
               "value": 340000,
-              "isDiscount": true
+              "isDiscount": true,
+              "discountNumber": 10
             }
           ],
           "comments": [
@@ -2052,7 +2058,7 @@
         "بقرا اضافات"
       ],
       "tax": 6000,
-      "packagePrice": 10000,
+      "packagePrice": 5000,
       "foods": [
         {
           "id": 1,

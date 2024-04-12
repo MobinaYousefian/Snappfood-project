@@ -26,7 +26,7 @@ export const Address = () => {
                                className={"h-3.5 w-3.5"}/>
                     </button>
                     <p className={"text-carbon-main text-sm font-iRANSansBold"}>انتخاب آدرس</p>
-                    <div></div>
+                    <div> </div>
                 </div>
                 <div className={"p-4 pt-0"}>
                     <section className={"section overflow-auto mb-4 max-h-[60vh]"}>
@@ -46,7 +46,7 @@ export const Address = () => {
                         ساخت آدرس جدید
                     </button>
                 </div>
-                <form></form>
+                <form> </form>
             </div>
         </div>
     )

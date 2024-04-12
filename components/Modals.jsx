@@ -5,6 +5,7 @@ import {SupportModal} from "@/components/footer/SupportModal";
 import {DeleteCartModal} from "@/components/restaurants/leftAside/DeleteCartModal";
 import {getData} from "@/lib/dataFeching";
 import {FoodModal} from "@/components/restaurants/foodModals/FoodModal";
+import {ExtraServiceOnFood} from "@/components/restaurants/leftAside/extraService/ExtraServiceOnFood";
 
 export default async function Modals () {
     const {user, restaurants, resPageCategory} = await getData()
@@ -17,6 +18,7 @@ export default async function Modals () {
             <SupportModal/>
             <DeleteCartModal/>
             <FoodModal restaurants={restaurants}/>
+            <ExtraServiceOnFood/>
         </div>
     )
 }
