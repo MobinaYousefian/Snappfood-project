@@ -29,7 +29,7 @@ export const Orders = ({user}) => {
         <>
             <div onClick={handleCloseOrders} className={"flex justify-center items-center fixed inset-0 z-[10000] modal-card-animation"}>
                 <div ref={orderRef} className={"header-orders-modal absolute left-0 w-[21vw] min-h-[100vh] px-4 bg-surface-light shadow-sp-modal max-h-[90vh] orders-modal-card-animation min-w-[17.8125rem]"}>
-                    <div className={"mt-4 flex flex-col"}>
+                    <div className={"mt-4 flex flex-col pt-3"}>
                         <p className={"font-iRANSansBold text-xs text-carbon-light"}>سفارش‌های پیشین</p>
                         <div className={"mt-3 rounded-t-xl border-t-[0.0625rem] border-r-[0.0625rem] border-l-[0.0625rem] border-[rgba(58,61,66,0.12)]"}>
                             {
