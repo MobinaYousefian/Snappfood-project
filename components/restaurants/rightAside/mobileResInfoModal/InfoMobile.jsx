@@ -49,7 +49,7 @@ export const InfoMobile = ({resInfo}) => {
                     </div>
                 </div>
             </div>
-            <div className={"flex flex-col items-center mt-4"}>
+            <div className={"flex flex-col items-center my-4"}>
                 <Image src={"/icons/work-hours.svg"} width={18} height={18} alt={"icons"} className={"w-[1.125rem] h-[1.125rem]"}/>
                 <p className={"text-carbon-main text-xs font-iranSans mb-1 mt-2.5"}>ساعت کاری</p>
                 <p className={"items-baseline flex text-carbon-main text-xs font-iRANSansBold"}>

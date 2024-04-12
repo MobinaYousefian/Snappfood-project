@@ -20,10 +20,10 @@ export function AddressPlaceholder ({item, i, handleCloseModal}) {
                 {
                     item.location === selected.location ?
                         <Image src={"/icons/checkBox.svg"} width={22} height={22} alt={"icon"}
-                               className={"cursor-pointer h-[1.375rem] w-[1.375rem] rounded-[50%]"}/>
+                               className={"cursor-pointer h-[1.5rem] w-[1.5rem] rounded-full"}/>
                         :
-                        <Image src={"/icons/checkBox-empty.svg"} width={22} height={22} alt={"icon"}
-                               className={"cursor-pointer h-[1.375rem] w-[1.375rem] rounded-[50%]"}/>
+                        <Image src={"/icons/checkBox-empty-circle.svg"} width={22} height={22} alt={"icon"}
+                               className={"cursor-pointer h-[1.5rem] w-[1.5rem] rounded-full"}/>
                 }
                 <div className={"w-[calc(100%-50px)] flex-col flex pr-[10px] cursor-pointer mr-2"}>
                     <p className={"text-carbon-main text-sm font-iRANSansBold mb-[5px]"}>{item.title}</p>
