@@ -15,11 +15,11 @@ export const OrderItem = ({order, index}) => {
         dispatch(handleOpenBill());
     }
 
-    console.log(order.resId)
     const handleOpenRestaurant = (e) => {
         e.preventDefault();
         e.stopPropagation();
         dispatch(handleCloseOrdersModal());
+        document.body.style.overflow = "auto";
         router.push(`/restaurant/${order.resId}/${order.resName.split(" ").join("_").replace("(", "").replace(")", "")}`);
     }
 
