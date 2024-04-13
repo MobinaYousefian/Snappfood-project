@@ -5,7 +5,7 @@ import {handleOpenWarning} from "@/redux/features/cartSlice";
 import {Suspense, useEffect} from "react";
 import Loading from "@/app/loading";
 import {toFarsiNumber} from "@/utils/numberConverter";
-import {CartBasketButton, CartBill, CartFoodItem} from "@/components";
+import {CartBasketButton, CartBill, CartFoodItem, EmptyCartBasket} from "@/components";
 
 export const CartBasket = ({resInfo}) => {
     const dispatch = useDispatch();
@@ -61,7 +61,9 @@ export const CartBasket = ({resInfo}) => {
     return (
         <>
             {
-                basket.length > 0 ?
+                basket.length < 1 ?
+                    <EmptyCartBasket/>
+                    :
                 <form className={"rounded-lg border-carbon-alphaLight mt-2 p-4 pb-3 bg-surface-light border-[0.0625rem]"}>
                     <div className={"h-6 mb-2 flex justify-between items-center"}>
                         <div className={"flex text-sm text-carbon-light"}>
@@ -100,11 +102,6 @@ export const CartBasket = ({resInfo}) => {
                         totalPrice={totalPrice}
                     />
                 </form>
-                    :
-                    <div className={"flex flex-col items-center mt-2 pt-12"}>
-                        <Image src={"/icons/cart-basket.svg"} width={18} height={20} alt={"icon"}/>
-                        <p className={"font-iranSans text-sm text-inactive-dark mt-6"}>سبد خرید شما خالی است!</p>
-                    </div>
             }
         </>
     )

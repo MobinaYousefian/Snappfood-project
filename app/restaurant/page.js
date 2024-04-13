@@ -8,16 +8,16 @@ export default async function restaurant () {
 
     return (
         <>
-            <BreadCrumbs category={resPageCategory} restaurants={restaurants}/>
-            <main className={"p-6 grow w-full max-w-[85.375rem] mx-auto"}>
-                <Suspense fallback={<Loading/>}>
+            <Suspense fallback={<Loading/>}>
+                <BreadCrumbs category={resPageCategory} restaurants={restaurants}/>
+                <main className={"p-6 grow w-full max-w-[85.375rem] mx-auto"}>
                     <PageSorting/>
                     <div className={"flex-wrap w-[calc(100%+2rem)] m-[calc(-1rem)] flex"}>
                         <AsideMenu category={resPageCategory}/>
                         <RestaurantList restaurants={restaurants}/>
                     </div>
-                </Suspense>
-            </main>
+                </main>
+            </Suspense>
             <Footer/>
         </>
     )
