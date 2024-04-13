@@ -37,7 +37,7 @@ export const SupportModal = () => {
     if (!isOpen) return null;
     return (
         <div onClick={handleClose} className={"flex justify-center items-center fixed inset-0 z-[10000] modal-card-animation"}>
-            <div ref={supportRef} className={"fixed right-[16px] bottom-[70px] w-[285px] max-w-[375px] sp-laptop:w-[375px] h-[85vh] bg-surface-light shadow-sp-modal rounded-xl max-h-[90vh] overflow-hidden search-modal-card-animation"}>
+            <div ref={supportRef} className={"fixed right-[16px] bottom-[70px] w-[285px] max-w-[375px] sp-laptop:w-[375px] h-[80vh] bg-surface-light shadow-sp-modal rounded-xl max-h-[90vh] overflow-hidden search-modal-card-animation"}>
                 <div className={"mt-[10px] px-[15px]"}>
                     <div className={"mt-[15px] mb-[10px] flex justify-between items-center flex-row-reverse"}>
                         <div className={"min-w-[30px]"}> </div>
