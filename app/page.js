@@ -17,15 +17,15 @@ export default async function Home() {
       <>
 
           <div>
-              <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
-                  <Suspense fallback={<Loading/>}>
+              <Suspense fallback={<Loading/>}>
+                  <main className={"box-border mx-auto max-w-[85.375rem] pb-4 sp-tablet:py-6 sp-laptop:py-10"}>
                       <CategorySection categories={categories}/>
                       <FoodParty restaurants={restaurants} partyFoods={partyFoods}/>
                       <RestaurantSections restaurants={restaurants}/>
                       <DownloadSection/>
                       <Seller/>
-                  </Suspense>
-              </main>
+                  </main>
+              </Suspense>
               <Cities cities={cities}/>
           </div>
           <Footer/>
