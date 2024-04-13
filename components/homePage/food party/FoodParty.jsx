@@ -7,9 +7,13 @@ import {useSelector} from "react-redux";
 
 export const FoodParty = ({partyFoods}) => {
     const {isShown} = useSelector(state => state.showParty);
+    const {selected} = useSelector(state => state.addressModal);
+
+    const partyFoodsInCity = partyFoods.filter(({resCity}) => resCity === selected.city);
+
 
     if (isShown === false) return null;
-    if (partyFoods === undefined) return null;
+    if (partyFoodsInCity.length < 1) return null;
 
     return (
         <section className={"mx-4 padding-size"}>
@@ -43,7 +47,7 @@ export const FoodParty = ({partyFoods}) => {
                     </Link>
                 </div>
                 <div className={"relative max-[599px]:w-full w-[80%]"}>
-                    <PartySlider partyFoods={partyFoods}/>
+                    <PartySlider partyFoods={partyFoodsInCity}/>
                 </div>
             </div>
         </section>
