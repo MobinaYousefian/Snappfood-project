@@ -3110,6 +3110,7 @@
       "id": 1,
       "resId": 2,
       "resName": "فست فود دیژون",
+      "resCity" : "تهران",
       "resDelivery": {
         "type": "ارسال اکسپرس",
         "express": true,
@@ -3175,6 +3176,7 @@
       "id": 2,
       "resId": 3,
       "resName": "چیکن فامیلی (یوسف آباد)",
+      "resCity" : "تهران",
       "resDelivery": {
         "type": "پیک فروشنده",
         "express": false,
@@ -3240,6 +3242,7 @@
       "id": 3,
       "resId": 5,
       "resName": "کترینگ مدرن",
+      "resCity" : "تهران",
       "resDelivery": {
         "type": "ارسال اکسپرس",
         "express": true,
@@ -3307,6 +3310,7 @@
       "id": 4,
       "resId": 5,
       "resName": "کترینگ مدرن",
+      "resCity" : "تهران",
       "resDelivery": {
         "type": "ارسال اکسپرس",
         "express": true,
