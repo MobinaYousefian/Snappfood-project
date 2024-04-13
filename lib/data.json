@@ -3561,6 +3561,7 @@
       {
         "id" : 1,
         "resName": "فست فود دیژون",
+        "resId" : 2,
         "resAvatar" : "https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/62dab78f514e5.jpg",
         "orderDate": "یکشنبه ۲۷ اسفند",
         "orderTime": "۲۰:۳۱",
@@ -3571,14 +3572,27 @@
             "orderNum": 1
           }
         ],
-        "totalFoodPrice": 260000,
-        "deliveryPrice": 14900,
-        "totalBillPrice": 274900,
-        "clubPoints": 420
+        "costs" : [
+          {
+            "title" : "جمع کل",
+            "price": 260000
+          },
+          {
+            "title" : "هزینه ارسال",
+            "price": 14900
+          },
+          {
+            "title" : "تخفیف",
+            "price" : 52000
+          }
+        ],
+        "totalBillPrice" : 222900,
+        "orderClubPoint": 420
       },
       {
         "id" : 2,
         "resName": "رستوران بقرا (فاطمی)",
+        "resId" : 4,
         "resAvatar" : "https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/64c7d2f384e5c.jpg",
         "orderDate": "جمعه ۵ بهمن",
         "orderTime": "۱۶:۰۷",
@@ -3594,11 +3608,22 @@
             "orderNum": 1
           }
         ],
-        "totalFoodPrice": 225000,
-        "deliveryPrice": 11200,
-        "tax": 6000,
-        "totalBillPrice": 242000,
-        "clubPoints": 560
+        "costs":  [
+          {
+            "title" : "جمع کل",
+            "price": 225000
+          },
+          {
+            "title" : "هزینه ارسال",
+            "price": 11200
+          },
+          {
+            "title" : "مالیات",
+            "price": 24000
+          }
+        ],
+        "totalBillPrice" : 260200,
+        "orderClubPoint": 560
       }
     ],
     "wallet": 0,

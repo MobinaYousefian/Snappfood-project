@@ -6,6 +6,7 @@ import {DeleteCartModal} from "@/components/restaurants/leftAside/DeleteCartModa
 import {getData} from "@/lib/dataFeching";
 import {FoodModal} from "@/components/restaurants/foodModals/FoodModal";
 import {ExtraServiceOnFood} from "@/components/restaurants/leftAside/extraService/ExtraServiceOnFood";
+import {OrdersBillModal} from "@/components/header/orders/OrdersBillModal";
 
 export default async function Modals () {
     const {user, restaurants, resPageCategory} = await getData()
@@ -15,6 +16,7 @@ export default async function Modals () {
             <Address/>
             <Search restaurants={restaurants} resPageCategory={resPageCategory}/>
             <Orders user={user}/>
+            <OrdersBillModal pastOrders={user.pastOrders}/>
             <SupportModal/>
             <DeleteCartModal/>
             <FoodModal restaurants={restaurants}/>
