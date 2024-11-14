@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SnappFood clone (food ordering website)🍔
 
-## Getting Started
+This project is the **Landing page** and **Restaurant section** of SnappFood which I developed by `React` and `Next.js`. Feel free to see the [Demo](https://snappfood-project.vercel.app/)
+<br/> It is fully **responsive** for all devices.
+&nbsp;
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Screenshots and Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Landing:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![Screenshot 2024-11-15 013152](https://github.com/user-attachments/assets/5379e9b9-15ea-4cfd-8f09-aaa965d303bd)
+&nbsp;
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- An **entire application search** (including search in food categories, restaurants and products/foods):
 
-## Learn More
+![Screenshot 2024-11-15 013454](https://github.com/user-attachments/assets/064f80a8-7238-4fb6-b5d9-09d13e1fad30)
+&nbsp;
 
-To learn more about Next.js, take a look at the following resources:
+- Food Party section with **countdown**:
+  
+![Screenshot 2024-11-15 013212](https://github.com/user-attachments/assets/6cf6504b-0d52-435f-a1c4-277e5d163f38)
+&nbsp;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- All **Queries** Supported (including food category, restaurant price range and other):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Screenshot 2024-11-15 013243](https://github.com/user-attachments/assets/3aa1a224-763c-472d-aba0-8137844ffa9b)
+&nbsp;
 
-## Deploy on Vercel
+- Restaurants have full details:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Screenshot 2024-11-15 013313](https://github.com/user-attachments/assets/5ff5e653-abd8-4c07-ace8-5d8a59e0e436)
+&nbsp;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Full **cart logic** (including calculations of discount, tax and delivery costs):
+
+![Screenshot 2024-11-15 013405](https://github.com/user-attachments/assets/1f2d13a3-8412-4718-a26b-76091d2b9cdb)
+&nbsp;
+
+- All foods have details (same as Food Party screenshot) and support comments:
+
+![Screenshot 2024-11-15 013425](https://github.com/user-attachments/assets/e2bcf707-c142-44a1-a303-cfb0411981d7)
+&nbsp;
